@@ -210,25 +210,32 @@ function loadQuestion() {
     const current = randomizedQuestions[index];
     const quizCard = document.querySelector('.quiz-card');
     
-    // Smooth fade-in effect
+    // Capture the text of the correct answer BEFORE shuffling the options
+    const correctAnswerText = current.options[current.ans];
+    
+    // Shuffle the options for THIS specific question
+    const shuffledOptions = shuffleArray([...current.options]);
+    
+    // Find where the correct answer ended up after the shuffle
+    const newCorrectIndex = shuffledOptions.indexOf(correctAnswerText);
+
+    // Smooth transition
     quizCard.style.opacity = "0";
     
     setTimeout(() => {
         document.getElementById('question').innerText = current.q;
         document.getElementById('q-num').innerText = index + 1;
         
-        // Progress bar logic
-        const progress = ((index) / randomizedQuestions.length) * 100;
-        document.getElementById('progress').style.width = `${progress}%`;
-        
         const container = document.getElementById('options');
         container.innerHTML = '';
         
-        current.options.forEach((opt, i) => {
+        shuffledOptions.forEach((opt, i) => {
             const btn = document.createElement('button');
             btn.className = 'option-btn';
             btn.innerText = opt;
-            btn.onclick = () => handleSelection(i, btn);
+            
+            // We pass the newCorrectIndex to the handler
+            btn.onclick = () => handleSelection(i, newCorrectIndex, btn);
             container.appendChild(btn);
         });
         
@@ -236,13 +243,13 @@ function loadQuestion() {
     }, 150);
 }
 
-function handleSelection(choice, btn) {
-    const correct = randomizedQuestions[index].ans;
+function handleSelection(userChoice, correctIdx, btn) {
     const allBtns = document.querySelectorAll('.option-btn');
     
+    // Disable all buttons immediately to prevent double-clicking
     allBtns.forEach(b => b.style.pointerEvents = 'none');
 
-    if (choice === correct) {
+    if (userChoice === correctIdx) {
         btn.classList.add('is-correct');
         playSound('snd-correct');
         score++;
@@ -250,11 +257,14 @@ function handleSelection(choice, btn) {
         btn.classList.add('is-wrong');
         document.querySelector('.quiz-card').classList.add('shake');
         playSound('snd-wrong');
-        allBtns[correct].classList.add('is-correct');
+        
+        // Show the user which one was actually correct
+        allBtns[correctIdx].classList.add('is-correct');
         
         setTimeout(() => document.querySelector('.quiz-card').classList.remove('shake'), 500);
     }
 
+    // Move to next question after 1.2 seconds
     setTimeout(() => {
         index++;
         if (index < randomizedQuestions.length) {
@@ -282,3 +292,4 @@ function finishQuiz() {
 // Start the sequence
 
 initQuiz();
+
