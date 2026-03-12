@@ -209,6 +209,17 @@ function initQuiz() {
 function loadQuestion() {
     const current = randomizedQuestions[index];
     const quizCard = document.querySelector('.quiz-card');
+    const total = randomizedQuestions.length;
+
+    // Calculate progress percentage
+    // (index + 1) makes the bar move as soon as the question loads
+    const progressPercent = ((index + 1) / total) * 100;
+
+    // Update the bar width
+    const progressBar = document.getElementById('progress');
+    if (progressBar) {
+        progressBar.style.width = progressPercent + "%";
+    }
     
     // Capture the text of the correct answer BEFORE shuffling the options
     const correctAnswerText = current.options[current.ans];
@@ -290,6 +301,6 @@ function finishQuiz() {
 }
 
 // Start the sequence
-
 initQuiz();
+
 
