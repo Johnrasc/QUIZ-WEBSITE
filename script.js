@@ -1,41 +1,179 @@
 const questionsData = [
-    { q: "Medieval Literature was developed during Middle Ages, approximately:", options: ["100–400 CE", "500–1500 CE", "1600–1800 CE", "200–900 CE"], ans: 1 },
-    { q: "He was an Italian poet, and was called the 'Father of the Italian language.'", options: ["Geoffrey Chaucer", "Giovanni Boccaccio", "Dante Alighieri", "Francesco Petrarch"], ans: 2 },
-    { q: "He wrote the famous comedy drama 'The Divine Comedy.'", options: ["Geoffrey Chaucer", "William Shakespeare", "Giovanni Boccaccio", "Dante Alighieri"], ans: 3 },
-    { q: "Dante Alighieri is an Italian poet who wrote the:", options: ["The Decameron", "Canterbury Tales", "The Prince", "The Divine Comedy"], ans: 3 },
-    { q: "Dante Alighieri died in:", options: ["1302", "1401", "1321", "1350"], ans: 2 },
-    { q: "He is also called the 'Pearl Poet.'", options: ["Geoffrey Chaucer", "William Langland", "John Gower", "Gawain Poet"], ans: 3 },
-    { q: "One of the most famous literary pieces written by the Gawain Poet is:", options: ["Beowulf", "The Canterbury Tales", "Paradise Lost", "Sir Gawain and the Green Knight"], ans: 3 },
-    { q: "This literary form is also called 'the meaning over meaning,' symbolizing deeper moral or spiritual meanings:", options: ["Satire", "Epic", "Myth", "Allegory"], ans: 3 },
-    // Adding Missing Questions 9-22 to complete the 1-35 set
-    { q: "Which of these is a famous Old English epic poem?", options: ["The Odyssey", "Beowulf", "The Aeneid", "The Iliad"], ans: 1 },
-    { q: "The Canterbury Tales was written by:", options: ["Geoffrey Chaucer", "Thomas More", "John Milton", "William Shakespeare"], ans: 0 },
-    { q: "What language was most Medieval scholarly literature written in?", options: ["English", "French", "Latin", "German"], ans: 2 },
-    { q: "The Black Death, which influenced much Medieval writing, occurred in the:", options: ["12th Century", "13th Century", "14th Century", "15th Century"], ans: 2 },
-    { q: "A 'Sonnet' is a poem consisting of how many lines?", options: ["10", "12", "14", "16"], ans: 2 },
-    { q: "Who is known as the 'Father of Humanism'?", options: ["Dante", "Petrarch", "Erasmus", "Machiavelli"], ans: 1 },
-    { q: "The term 'Renaissance' literally means:", options: ["Revolution", "Rebirth", "Discovery", "Enlightenment"], ans: 1 },
-    { q: "Who wrote 'The Prince'?", options: ["Castiglione", "Machiavelli", "Pico della Mirandola", "Shakespeare"], ans: 1 },
-    { q: "In 'The Divine Comedy', who guides Dante through Hell?", options: ["Beatrice", "Virgil", "Homer", "Petrarch"], ans: 1 },
-    { q: "Which work is a collection of 100 tales told by ten young people?", options: ["The Decameron", "Canterbury Tales", "The Courtier", "Utopia"], ans: 0 },
-    { q: "Johannes Gutenberg's invention that revolutionized literature was the:", options: ["Compass", "Telescope", "Printing Press", "Steam Engine"], ans: 2 },
-    { q: "Who wrote the famous humanist work 'Utopia'?", options: ["John Milton", "Thomas More", "Francis Bacon", "Christopher Marlowe"], ans: 1 },
-    { q: "The 'Chanson de Roland' is a famous epic from which country?", options: ["England", "Italy", "Spain", "France"], ans: 3 },
-    { q: "Which literary period followed the Middle Ages?", options: ["The Enlightenment", "The Renaissance", "The Romantic Era", "The Victorian Era"], ans: 1 },
-    // Resuming your original list (23-35)
-    { q: "Drama during the Renaissance period often focuses on:", options: ["Comedy", "Romance", "Historical narratives", "Tragedy"], ans: 3 },
-    { q: "This poet announced that he would publicly defend 900 philosophical and theological propositions:", options: ["Baldassare Castiglione", "Dante Alighieri", "Francesco Petrarch", "Giovanni Pico della Mirandola"], ans: 3 },
-    { q: "Giovanni Pico della Mirandola is best known for writing the:", options: ["The Prince", "Utopia", "The Book of the Courtier", "Oration on the Dignity of Man"], ans: 3 },
-    { q: "He wrote the first printed book ever universally banned by the Church:", options: ["Giovanni Pico della Mirandola", "Niccolò Machiavelli", "Thomas More", "Baldassare Castiglione"], ans: 0 },
-    { q: "He was an Italian Renaissance courtier best known for writing 'The Book of the Courtier':", options: ["Niccolò Machiavelli", "Giovanni Pico della Mirandola", "Francesco Petrarch", "Baldassare Castiglione"], ans: 3 },
-    { q: "Baldassare Castiglione wrote the famous influential book about manners called:", options: ["The Prince", "The Decameron", "Utopia", "The Book of the Courtier"], ans: 3 },
-    { q: "He was an English playwright widely regarded as the greatest writer in the English language:", options: ["Geoffrey Chaucer", "Christopher Marlowe", "Ben Jonson", "William Shakespeare"], ans: 3 },
-    { q: "How many plays or dramas did Shakespeare write?", options: ["25", "31", "39", "45"], ans: 2 },
-    { q: "Shakespeare wrote these iconic works, EXCEPT:", options: ["Hamlet", "Macbeth", "Romeo and Juliet", "The Book of the Courtier"], ans: 3 },
-    { q: "Which tragedy by Shakespeare is believed to have been written between 1594–1596?", options: ["Hamlet", "Othello", "Macbeth", "Romeo and Juliet"], ans: 3 },
-    { q: "How many years did Shakespeare spend finishing Romeo and Juliet?", options: ["1 year", "2 years", "3 years", "5 years"], ans: 2 },
-    { q: "William Shakespeare died at the age of:", options: ["45", "50", "52", "60"], ans: 2 },
-    { q: "William Shakespeare was married to:", options: ["Mary Arden", "Elizabeth Hall", "Jane Seymour", "Anne Hathaway"], ans: 3 }
+    {
+        q: "Medieval Literature was developed during Middle Ages, approximately:",
+        options: ["100–400 CE", "500–1500 CE", "1600–1800 CE", "200–900 CE"],
+        ans: 1
+    },
+    {
+        q: "He was an Italian poet, and was called the 'Father of the Italian language.'",
+        options: ["Geoffrey Chaucer", "Giovanni Boccaccio", "Dante Alighieri", "Francesco Petrarch"],
+        ans: 2
+    },
+    {
+        q: "He wrote the famous comedy drama 'The Divine Comedy.'",
+        options: ["Geoffrey Chaucer", "William Shakespeare", "Giovanni Boccaccio", "Dante Alighieri"],
+        ans: 3
+    },
+    {
+        q: "Dante Alighieri is an Italian poet who wrote the:",
+        options: ["The Decameron", "Canterbury Tales", "The Prince", "The Divine Comedy"],
+        ans: 3
+    },
+    {
+        q: "Dante Alighieri died on:",
+        options: ["1302", "1401", "1321", "1350"],
+        ans: 2
+    },
+    {
+        q: "He is also called the 'Pearl Poet.'",
+        options: ["Geoffrey Chaucer", "William Langland", "John Gower", "Gawain Poet"],
+        ans: 3
+    },
+    {
+        q: "One of the most famous literary pieces written by the Gawain Poet is:",
+        options: ["Beowulf", "The Canterbury Tales", "Paradise Lost", "Sir Gawain and the Green Knight"],
+        ans: 3
+    },
+    {
+        q: "This literary main form is also called 'the meaning over meaning.' It consists of stories where characters, events, and objects symbolize deeper moral, spiritual, or political meaning.",
+        options: ["Satire", "Epic", "Myth", "Allegory"],
+        ans: 3
+    },
+    {
+        q: "This literary form includes writing that reflects faith, morality, and the influence of the Church on daily life.",
+        options: ["Chivalric Romance", "Religious Theme", "Humanism", "Individualism"],
+        ans: 1
+    },
+    {
+        q: "This literary form focuses on knights, honor, and courtly love.",
+        options: ["Allegory", "Epic", "Chivalric Romance", "Drama"],
+        ans: 2
+    },
+    {
+        q: "The Religious Theme main form often explores questions, EXCEPT:",
+        options: ["What is the meaning of life", "How to achieve salvation", "What is happiness and love", "The nature of good and evil"],
+        ans: 2
+    },
+    {
+        q: "During the Medieval Period, this Religious Theme literary masterpiece evoked emotions.",
+        options: ["The Divine Comedy", "Beowulf", "Everyman", "The Decameron"],
+        ans: 2
+    },
+    {
+        q: "The Divine Comedy, an epic written by Dante Alighieri, is a spiritual journey written in three parts, EXCEPT:",
+        options: ["Inferno", "Purgatorio", "Paradiso", "Forest"],
+        ans: 3
+    },
+    {
+        q: "What did Virgil show Dante in the journey to Inferno?",
+        options: ["7 Terraces", "9 Circles of Hell", "9 Spheres of Heaven", "3 Gates"],
+        ans: 1
+    },
+    {
+        q: "What did Virgil show Dante in the journey to Purgatorio?",
+        options: ["9 Circles of Hell", "7 Terraces", "9 Spheres of Heaven", "The River Styx"],
+        ans: 1
+    },
+    {
+        q: "What did Virgil show Dante in the journey to Paradiso?",
+        options: ["9 Circles of Hell", "7 Terraces", "9 Spheres of Heaven", "The Elysian Fields"],
+        ans: 2
+    },
+    {
+        q: "This literary masterpiece during the Medieval Period was a 15th-century English morality play about a man called by Death to account for his life before God.",
+        options: ["The Canterbury Tales", "Sir Gawain", "Everyman", "The Prince"],
+        ans: 2
+    },
+    {
+        q: "What does 'Everyman' symbolize?",
+        options: ["The King", "The Church", "Mankind", "The Knight"],
+        ans: 2
+    },
+    {
+        q: "Renaissance developed roughly:",
+        options: ["1100–1400 CE", "1300–1600 CE", "1500–1800 CE", "1000–1300 CE"],
+        ans: 1
+    },
+    {
+        q: "This literary form during the Renaissance emphasizes the study of classical texts, moral philosophy, and the potential of humans to reason and shape their world.",
+        options: ["Humanism", "Individualism", "Drama", "Tragedy"],
+        ans: 0
+    },
+    {
+        q: "This literary form during the Renaissance focuses on personal experience, self-expression, and the uniqueness of human character.",
+        options: ["Humanism", "Individualism", "Drama", "Allegory"],
+        ans: 1
+    },
+    {
+        q: "This literary form during the Renaissance includes plays that examine human behavior, social dynamics, and philosophical ideas.",
+        options: ["Epic", "Myth", "Chivalric Romance", "Drama"],
+        ans: 3
+    },
+    {
+        q: "Drama during the Renaissance period often focuses on:",
+        options: ["Comedy", "Romance", "Historical narratives", "Tragedy"],
+        ans: 3
+    },
+    {
+        q: "This poet announced that he would publicly defend 900 philosophical and theological propositions.",
+        options: ["Baldassare Castiglione", "Dante Alighieri", "Francesco Petrarch", "Giovanni Pico della Mirandola"],
+        ans: 3
+    },
+    {
+        q: "Giovanni Pico della Mirandola is best known for writing the:",
+        options: ["The Prince", "Utopia", "The Book of the Courtier", "Oration on the Dignity of Man"],
+        ans: 3
+    },
+    {
+        q: "He wrote the first printed book ever universally banned by the Church.",
+        options: ["Giovanni Pico della Mirandola", "Niccolò Machiavelli", "Thomas More", "Baldassare Castiglione"],
+        ans: 0
+    },
+    {
+        q: "He was an Italian Renaissance courtier, diplomat, soldier, and author best known for writing The Book of the Courtier.",
+        options: ["Niccolò Machiavelli", "Giovanni Pico della Mirandola", "Francesco Petrarch", "Baldassare Castiglione"],
+        ans: 3
+    },
+    {
+        q: "Baldassare Castiglione wrote the famous influential book about manners called:",
+        options: ["The Prince", "The Decameron", "Utopia", "The Book of the Courtier"],
+        ans: 3
+    },
+    {
+        q: "He was an English playwright, poet, and actor widely regarded as the greatest writer in the English language.",
+        options: ["Geoffrey Chaucer", "Christopher Marlowe", "Ben Jonson", "William Shakespeare"],
+        ans: 3
+    },
+    {
+        q: "How many plays or dramas did Shakespeare write?",
+        options: ["25", "31", "39", "45"],
+        ans: 2
+    },
+    {
+        q: "Shakespeare wrote these iconic works, EXCEPT:",
+        options: ["Hamlet", "Macbeth", "Romeo and Juliet", "The Book of the Courtier"],
+        ans: 3
+    },
+    {
+        q: " ______ is a tragedy written by William Shakespeare, believed to have been written between 1594–1596.",
+        options: ["Hamlet", "Othello", "Macbeth", "Romeo and Juliet"],
+        ans: 3
+    },
+    {
+        q: "How many years did Shakespeare spend finishing Romeo and Juliet?",
+        options: ["1 year", "2 years", "3 years", "5 years"],
+        ans: 2
+    },
+    {
+        q: "William Shakespeare died at the age of:",
+        options: ["45", "50", "52", "60"],
+        ans: 2
+    },
+    {
+        q: "William Shakespeare was married to:",
+        options: ["Mary Arden", "Elizabeth Hall", "Jane Seymour", "Anne Hathaway"],
+        ans: 3
+    }
 ];
 
 let randomizedQuestions = [];
@@ -142,4 +280,5 @@ function finishQuiz() {
 }
 
 // Start the sequence
+
 initQuiz();
