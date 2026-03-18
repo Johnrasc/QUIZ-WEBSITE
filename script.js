@@ -1,52 +1,50 @@
 const questionsData = [
-    // --- TRANSISTOR FUNDAMENTALS ---
-    { q: "A transistor is short for 'transfer resistor' and primarily functions as a device that regulates:", options: ["Resistance only", "Current or voltage flow", "Power dissipation", "Magnetic flux"], ans: 1 },
-    { q: "Which type of transistor is considered 'unipolar' because it performs a single-channel operation?", options: ["BJT", "NPN", "PNP", "FET"], ans: 3 },
-    { q: "When a transistor takes a tiny input current and produces a much bigger output current, it is working as a/an:", options: ["Switch", "Amplifier", "Oscillator", "Rectifier"], ans: 1 },
-    { q: "In a Bipolar Junction Transistor (BJT), the three layers of semiconductor material are called:", options: ["Gate, Source, Drain", "Anode, Cathode, Grid", "Emitter, Base, Collector", "Positive, Negative, Neutral"], ans: 2 },
-    { q: "Which BJT configuration is most commonly used because it provides good voltage and current gain?", options: ["Common-Base", "Common-Collector", "Common-Emitter", "Common-Gate"], ans: 2 },
-    { q: "In an NPN transistor, the arrow on the schematic symbol points:", options: ["Inward toward the base", "Outward from the emitter", "Upward toward the collector", "Directly at the base-collector junction"], ans: 1 },
-    { q: "A BJT is a current-controlled device, whereas a FET is controlled by:", options: ["Applied Voltage", "Light Intensity", "Temperature", "Magnetic Field"], ans: 0 },
+    // --- BIPOLAR JUNCTION TRANSISTORS (BJT) ---
+    { q: "A transistor is technically a 'transfer resistor' that operates by having the output current determined by the:", options: ["Output voltage", "Input circuit current", "Supply resistance", "Magnetic field"], ans: 1 },
+    { q: "The BJT is a type of transistor that indicates it has how many junctions between p-type and n-type semiconductors?", options: ["One", "Two", "Three", "Four"], ans: 1 },
+    { q: "Which BJT layer is responsible for 'gathering' the charge carriers?", options: ["Emitter", "Base", "Collector", "Gate"], ans: 2 },
+    { q: "In a PNP transistor, the arrow on the schematic symbol points:", options: ["Inward toward the base", "Outward from the emitter", "Directly to the collector", "Away from the junction"], ans: 0 },
+    { q: "Which BJT configuration is known as a 'Voltage Follower' because it has high input impedance and low output impedance?", options: ["Common-Emitter", "Common-Base", "Common-Collector", "Common-Gate"], ans: 2 },
+    { q: "A transistor works as a 'current booster' when it is functioning as a/an:", options: ["Switch", "Amplifier", "Oscillator", "Rectifier"], ans: 1 },
+    { q: "Which region of BJT operation occurs when both junctions are forward-biased, making the transistor work as a closed switch?", options: ["Active Region", "Cut-off Region", "Saturation Region", "Breakdown Region"], ans: 2 },
+    { q: "The BJT is considered a 'Bipolar' device because its operation involves:", options: ["Only electrons", "Only holes", "Both electrons and holes", "Neither electrons nor holes"], ans: 2 },
 
-    // --- TRANSISTOR BIASING & REGION ---
-    { q: "For a transistor to operate as a linear amplifier, it must be biased in the:", options: ["Saturation Region", "Cutoff Region", "Active Region", "Breakdown Region"], ans: 2 },
-    { q: "When a transistor acts as a closed switch (fully ON), it is operating in the:", options: ["Active Region", "Cutoff Region", "Saturation Region", "Linear Region"], ans: 2 },
-    { q: "In the Cutoff region, the transistor acts as an:", options: ["Open switch", "Closed switch", "Variable resistor", "Voltage source"], ans: 0 },
-    { q: "What is the primary purpose of 'biasing' a transistor?", options: ["To increase heat", "To establish a specific operating point (Q-point)", "To prevent current flow", "To convert DC to AC"], ans: 1 },
-    { q: "The 'Q-point' on a load line represents the:", options: ["Maximum voltage", "Minimum current", "Static operating condition", "Breakdown point"], ans: 2 },
+    // --- FIELD EFFECT TRANSISTORS (FET) ---
+    { q: "Unlike the BJT, the FET is a 'uni-polar' transistor because it performs a:", options: ["Dual-channel operation", "Single-channel operation", "Triple-junction operation", "Zero-current operation"], ans: 1 },
+    { q: "In a FET, the applied voltage controls the size and shape of the channel between the:", options: ["Emitter and Collector", "Base and Emitter", "Source and Drain", "Gate and Base"], ans: 2 },
+    { q: "Which statement is true regarding the gain of a FET compared to a BJT?", options: ["BJT has higher current gain", "FET has higher current gain", "Both have equal gain", "FET has no gain"], ans: 1 },
+    { q: "The three terminals of a Field-Effect Transistor are called:", options: ["Emitter, Base, Collector", "Gate, Source, Drain", "Anode, Cathode, Gate", "Positive, Negative, Neutral"], ans: 1 },
 
     // --- OSCILLATOR FUNDAMENTALS ---
-    { q: "An oscillator is a circuit that generates a repetitive waveform from a:", options: ["AC input source", "DC input source", "Mechanical vibration", "Magnetic field"], ans: 1 },
-    { q: "Which type of feedback is required for a circuit to sustain oscillations?", options: ["Negative Feedback", "Degenerative Feedback", "Positive Feedback", "Neutral Feedback"], ans: 2 },
-    { q: "The two essential conditions for oscillation (Gain = 1 and Phase Shift = 0/360°) are known as:", options: ["Ohm's Law", "The Barkhausen Criterion", "The Miller Effect", "Faraday's Law"], ans: 1 },
-    { q: "The circuit that determines the specific frequency of an oscillator is called the:", options: ["Amplifier circuit", "Tank circuit (Frequency-determining network)", "Power supply", "Biasing network"], ans: 1 },
-    { q: "Which of the following is NOT a basic requirement for an oscillator?", options: ["Amplification", "Positive Feedback", "Negative Feedback", "Frequency-determining network"], ans: 2 },
+    { q: "An oscillator is a circuit that generates a repetitive waveform (like a sine or square wave) using only a:", options: ["AC input", "DC energy source", "Mechanical trigger", "Magnetic resonator"], ans: 1 },
+    { q: "To sustain oscillations, the feedback signal must be in phase with the input signal. This is called:", options: ["Negative Feedback", "Positive Feedback", "Neutral Feedback", "Degenerative Feedback"], ans: 1 },
+    { q: "According to the Barkhausen Criterion, for a circuit to oscillate, the loop gain must be equal to:", options: ["Zero", "Less than one", "One", "Infinity"], ans: 2 },
+    { q: "The specific frequency of an LC oscillator is determined by the components in its:", options: ["Power supply", "Biasing network", "Tank circuit", "Amplifier stage"], ans: 2 },
+    { q: "The 'tank circuit' in an oscillator acts as an electrical resonator, storing energy in the:", options: ["Resistance", "Magnetic and Electric fields of L and C", "Transistor junctions", "DC Source"], ans: 1 },
 
-    // --- TYPES OF OSCILLATORS ---
-    { q: "Which oscillator uses two capacitors and one inductor in its tank circuit?", options: ["Hartley Oscillator", "Colpitts Oscillator", "Armstrong Oscillator", "Clapp Oscillator"], ans: 1 },
-    { q: "A Hartley Oscillator is easily identified because its tank circuit contains:", options: ["Two capacitors", "A tapped inductor (two inductors)", "A quartz crystal", "A transformer only"], ans: 1 },
-    { q: "Which oscillator is known for having the highest frequency stability?", options: ["RC Phase Shift", "Colpitts", "Crystal Oscillator", "Hartley"], ans: 2 },
-    { q: "The 'Piezoelectric Effect' is the operating principle behind which component?", options: ["Inductor", "Transistor", "Quartz Crystal", "Electrolytic Capacitor"], ans: 2 },
-    { q: "Which oscillator is typically used for low-frequency (audio) applications?", options: ["Colpitts", "Hartley", "RC Phase Shift", "Crystal"], ans: 2 },
-    { q: "The Wien-Bridge oscillator is a type of:", options: ["LC Oscillator", "RC Oscillator", "Crystal Oscillator", "Magnetostriction Oscillator"], ans: 1 },
+    // --- OSCILLATOR TYPES & IDENTIFICATION ---
+    { q: "Which oscillator uses a 'tapped' inductor or two inductors and one capacitor in its tank circuit?", options: ["Colpitts Oscillator", "Hartley Oscillator", "Clapp Oscillator", "Crystal Oscillator"], ans: 1 },
+    { q: "The Colpitts oscillator is easily identified by its use of:", options: ["Two inductors", "A center-tapped transformer", "A capacitive voltage divider (two capacitors)", "A quartz crystal"], ans: 2 },
+    { q: "Which oscillator provides the best frequency stability for high-frequency applications?", options: ["Armstrong", "Hartley", "Crystal Oscillator", "RC Phase Shift"], ans: 2 },
+    { q: "A Crystal oscillator operates based on the 'Piezoelectric Effect' found in:", options: ["Silicon", "Germanium", "Quartz", "Copper"], ans: 2 },
+    { q: "Which type of oscillator is typically used for low-frequency or audio-frequency (AF) ranges?", options: ["LC Oscillator", "RC Oscillator", "Crystal Oscillator", "Clapp Oscillator"], ans: 1 },
+    { q: "In an RC Phase Shift oscillator, how many RC networks are typically used to achieve the required 180° phase shift?", options: ["One", "Two", "Three", "Four"], ans: 2 },
 
-    // --- LC & TANK CIRCUITS ---
-    { q: "In an LC tank circuit, energy is continuously swapped between the:", options: ["Resistor and Capacitor", "Inductor and Capacitor", "Transistor and Battery", "Input and Output"], ans: 1 },
-    { q: "What happens to the oscillations in a tank circuit if no power is supplied to overcome losses?", options: ["They increase", "They stay constant", "They are 'damped' and die out", "They change frequency"], ans: 2 },
-    { q: "The frequency at which an LC circuit oscillates naturally is called the:", options: ["Harmonic frequency", "Resonant frequency", "Cutoff frequency", "Damping frequency"], ans: 1 },
+    // --- OPERATING PRINCIPLES & SYMBOLS ---
+    { q: "When a transistor is used as a switch and is 'OFF' (no current flows), it is in the:", options: ["Saturation Region", "Active Region", "Cut-off Region", "Linear Region"], ans: 2 },
+    { q: "The 'Q-point' (Quiescent point) is the point on the load line that represents the transistor's:", options: ["Maximum power", "Steady-state DC operating condition", "AC input peak", "Dynamic range"], ans: 1 },
+    { q: "What is the primary function of the 'Base' terminal in a BJT?", options: ["To emit carriers", "To collect carriers", "To control the flow of carriers", "To provide the output voltage"], ans: 2 },
+    { q: "Which oscillator uses a 'tickler coil' and transformer coupling to provide feedback?", options: ["Armstrong Oscillator", "Wien-Bridge Oscillator", "Colpitts Oscillator", "Hartley Oscillator"], ans: 0 },
+    { q: "The stability of an oscillator's frequency is often measured by its:", options: ["Beta value", "Q-factor (Quality Factor)", "Alpha value", "Resistance"], ans: 1 },
 
-    // --- OPERATIONAL CHARACTERISTICS ---
-    { q: "What is the total phase shift required around the feedback loop to maintain oscillation?", options: ["90 degrees", "180 degrees", "360 degrees (or 0)", "45 degrees"], ans: 2 },
-    { q: "In a Crystal Oscillator, the crystal acts as a very high-Q:", options: ["Resistor", "Tuned LC circuit", "Voltage source", "Amplifier"], ans: 1 },
-    { q: "Which factor describes the 'purity' or 'sharpness' of a resonant circuit?", options: ["Beta factor", "Quality factor (Q)", "Gain factor", "Stability factor"], ans: 1 },
-    { q: "Self-sustaining oscillations are also known as:", options: ["Damped oscillations", "Undamped (Continuous) oscillations", "Parasitic oscillations", "Transient oscillations"], ans: 1 },
-
-    // --- APPLICATIONS & MISC ---
-    { q: "Which device can be used as a 'buffer' to prevent a load from affecting the oscillator frequency?", options: ["A transformer", "A transistor amplifier", "A large resistor", "A capacitor"], ans: 1 },
-    { q: "The main disadvantage of an LC oscillator compared to a Crystal oscillator is:", options: ["Higher cost", "Frequency instability (drift)", "Larger size", "Lower power"], ans: 1 },
-    { q: "The Armstrong oscillator is primarily known for using what to provide feedback?", options: ["A voltage divider", "Transformer coupling (tickler coil)", "A phase-shift network", "A bridge circuit"], ans: 1 },
-    { q: "Transistors used in switching applications (like digital logic) alternate between which two regions?", options: ["Active and Saturation", "Cutoff and Saturation", "Active and Cutoff", "Linear and Breakdown"], ans: 1 },
-    { q: "What is the primary function of the 'Collector' in a BJT?", options: ["To emit charge carriers", "To control the flow", "To collect charge carriers", "To provide feedback"], ans: 2 }
+    // --- COMPARISONS & CHARACTERISTICS ---
+    { q: "Which of the following is a key advantage of FETs over BJTs?", options: ["Lower input impedance", "Higher input impedance", "Higher noise levels", "Smaller size only"], ans: 1 },
+    { q: "In a Hartley oscillator, the frequency can be adjusted by varying the:", options: ["Supply voltage", "Capacitor in the tank circuit", "Transistor gain", "Feedback resistor"], ans: 1 },
+    { q: "What happens to the output of an oscillator if the loop gain falls below 1?", options: ["Oscillations increase", "Oscillations remain constant", "Oscillations die out (damped)", "The frequency changes"], ans: 2 },
+    { q: "The 'Resonant Frequency' is the frequency where:", options: ["Resistance is maximum", "Inductive and capacitive reactances are equal", "The transistor turns off", "The gain is zero"], ans: 1 },
+    { q: "The common-base (CB) configuration is primarily used in:", options: ["Audio amplifiers", "High-frequency applications", "Voltage regulators", "Switching power supplies"], ans: 1 },
+    { q: "A 'Crystal' in an oscillator circuit behaves like a/an:", options: ["Variable Resistor", "Extremely high-Q tuned circuit", "Battery", "Simple wire"], ans: 1 },
+    { q: "Which region of the BJT is used for 'Linear' amplification?", options: ["Saturation", "Cut-off", "Active", "Breakdown"], ans: 2 }
 ];
 
 let randomizedQuestions = [];
