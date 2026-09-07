@@ -1,177 +1,417 @@
-const questionsData = [
-    // --- BIPOLAR JUNCTION TRANSISTORS (BJT) ---
-    { q: "A transistor is technically a 'transfer resistor' that operates by having the output current determined by the:", options: ["Output voltage", "Input circuit current", "Supply resistance", "Magnetic field"], ans: 1 },
-    { q: "The BJT is a type of transistor that indicates it has how many junctions between p-type and n-type semiconductors?", options: ["One", "Two", "Three", "Four"], ans: 1 },
-    { q: "Which BJT layer is responsible for 'gathering' the charge carriers?", options: ["Emitter", "Base", "Collector", "Gate"], ans: 2 },
-    { q: "In a PNP transistor, the arrow on the schematic symbol points:", options: ["Inward toward the base", "Outward from the emitter", "Directly to the collector", "Away from the junction"], ans: 0 },
-    { q: "Which BJT configuration is known as a 'Voltage Follower' because it has high input impedance and low output impedance?", options: ["Common-Emitter", "Common-Base", "Common-Collector", "Common-Gate"], ans: 2 },
-    { q: "A transistor works as a 'current booster' when it is functioning as a/an:", options: ["Switch", "Amplifier", "Oscillator", "Rectifier"], ans: 1 },
-    { q: "Which region of BJT operation occurs when both junctions are forward-biased, making the transistor work as a closed switch?", options: ["Active Region", "Cut-off Region", "Saturation Region", "Breakdown Region"], ans: 2 },
-    { q: "The BJT is considered a 'Bipolar' device because its operation involves:", options: ["Only electrons", "Only holes", "Both electrons and holes", "Neither electrons nor holes"], ans: 2 },
+/* =================================================================
+   CIRCUIT// CpE Quiz Terminal - script.js
+   ================================================================= */
 
-    // --- FIELD EFFECT TRANSISTORS (FET) ---
-    { q: "Unlike the BJT, the FET is a 'uni-polar' transistor because it performs a:", options: ["Dual-channel operation", "Single-channel operation", "Triple-junction operation", "Zero-current operation"], ans: 1 },
-    { q: "In a FET, the applied voltage controls the size and shape of the channel between the:", options: ["Emitter and Collector", "Base and Emitter", "Source and Drain", "Gate and Base"], ans: 2 },
-    { q: "Which statement is true regarding the gain of a FET compared to a BJT?", options: ["BJT has higher current gain", "FET has higher current gain", "Both have equal gain", "FET has no gain"], ans: 1 },
-    { q: "The three terminals of a Field-Effect Transistor are called:", options: ["Emitter, Base, Collector", "Gate, Source, Drain", "Anode, Cathode, Gate", "Positive, Negative, Neutral"], ans: 1 },
+document.addEventListener("DOMContentLoaded", () => {
+  // State variables
+  let currentSubject = null;
+  let activeQuestions = [];
+  let currentIndex = 0;
+  let score = 0;
+  let streak = 0;
+  let peakStreak = 0;
+  let missedQuestions = [];
+  let selectedOptionValue = null;
+  let answeredLocked = false;
+  
+  // Timer vars
+  let timerInterval = null;
+  let timeLeft = 30;
+  let maxTimePerQ = 30;
 
-    // --- OSCILLATOR FUNDAMENTALS ---
-    { q: "An oscillator is a circuit that generates a repetitive waveform (like a sine or square wave) using only a:", options: ["AC input", "DC energy source", "Mechanical trigger", "Magnetic resonator"], ans: 1 },
-    { q: "To sustain oscillations, the feedback signal must be in phase with the input signal. This is called:", options: ["Negative Feedback", "Positive Feedback", "Neutral Feedback", "Degenerative Feedback"], ans: 1 },
-    { q: "According to the Barkhausen Criterion, for a circuit to oscillate, the loop gain must be equal to:", options: ["Zero", "Less than one", "One", "Infinity"], ans: 2 },
-    { q: "The specific frequency of an LC oscillator is determined by the components in its:", options: ["Power supply", "Biasing network", "Tank circuit", "Amplifier stage"], ans: 2 },
-    { q: "The 'tank circuit' in an oscillator acts as an electrical resonator, storing energy in the:", options: ["Resistance", "Magnetic and Electric fields of L and C", "Transistor junctions", "DC Source"], ans: 1 },
+  // DOM Elements
+  const screens = {
+    home: document.getElementById("screen-home"),
+    quiz: document.getElementById("screen-quiz"),
+    results: document.getElementById("screen-results"),
+    review: document.getElementById("screen-review")
+  };
 
-    // --- OSCILLATOR TYPES & IDENTIFICATION ---
-    { q: "Which oscillator uses a 'tapped' inductor or two inductors and one capacitor in its tank circuit?", options: ["Colpitts Oscillator", "Hartley Oscillator", "Clapp Oscillator", "Crystal Oscillator"], ans: 1 },
-    { q: "The Colpitts oscillator is easily identified by its use of:", options: ["Two inductors", "A center-tapped transformer", "A capacitive voltage divider (two capacitors)", "A quartz crystal"], ans: 2 },
-    { q: "Which oscillator provides the best frequency stability for high-frequency applications?", options: ["Armstrong", "Hartley", "Crystal Oscillator", "RC Phase Shift"], ans: 2 },
-    { q: "A Crystal oscillator operates based on the 'Piezoelectric Effect' found in:", options: ["Silicon", "Germanium", "Quartz", "Copper"], ans: 2 },
-    { q: "Which type of oscillator is typically used for low-frequency or audio-frequency (AF) ranges?", options: ["LC Oscillator", "RC Oscillator", "Crystal Oscillator", "Clapp Oscillator"], ans: 1 },
-    { q: "In an RC Phase Shift oscillator, how many RC networks are typically used to achieve the required 180° phase shift?", options: ["One", "Two", "Three", "Four"], ans: 2 },
+  const subjectGrid = document.getElementById("subjectGrid");
+  const clockChip = document.getElementById("clockChip");
+  const questionCountSelect = document.getElementById("questionCount");
+  const timerSelect = document.getElementById("timerSelect");
 
-    // --- OPERATING PRINCIPLES & SYMBOLS ---
-    { q: "When a transistor is used as a switch and is 'OFF' (no current flows), it is in the:", options: ["Saturation Region", "Active Region", "Cut-off Region", "Linear Region"], ans: 2 },
-    { q: "The 'Q-point' (Quiescent point) is the point on the load line that represents the transistor's:", options: ["Maximum power", "Steady-state DC operating condition", "AC input peak", "Dynamic range"], ans: 1 },
-    { q: "What is the primary function of the 'Base' terminal in a BJT?", options: ["To emit carriers", "To collect carriers", "To control the flow of carriers", "To provide the output voltage"], ans: 2 },
-    { q: "Which oscillator uses a 'tickler coil' and transformer coupling to provide feedback?", options: ["Armstrong Oscillator", "Wien-Bridge Oscillator", "Colpitts Oscillator", "Hartley Oscillator"], ans: 0 },
-    { q: "The stability of an oscillator's frequency is often measured by its:", options: ["Beta value", "Q-factor (Quality Factor)", "Alpha value", "Resistance"], ans: 1 },
+  // Quiz UI
+  const quizSubjectLabel = document.getElementById("quizSubjectLabel");
+  const timerValue = document.getElementById("timerValue");
+  const timerBar = document.getElementById("timerBar");
+  const progressBar = document.getElementById("progressBar");
+  const qIndexLabel = document.getElementById("qIndexLabel");
+  const streakLabel = document.getElementById("streakLabel");
+  const questionTag = document.getElementById("questionTag");
+  const questionText = document.getElementById("questionText");
+  const optionsList = document.getElementById("optionsList");
+  const explainBox = document.getElementById("explainBox");
+  const explainLabel = document.getElementById("explainLabel");
+  const explainText = document.getElementById("explainText");
+  const nextBtn = document.getElementById("nextBtn");
+  const quitBtn = document.getElementById("quitBtn");
 
-    // --- COMPARISONS & CHARACTERISTICS ---
-    { q: "Which of the following is a key advantage of FETs over BJTs?", options: ["Lower input impedance", "Higher input impedance", "Higher noise levels", "Smaller size only"], ans: 1 },
-    { q: "In a Hartley oscillator, the frequency can be adjusted by varying the:", options: ["Supply voltage", "Capacitor in the tank circuit", "Transistor gain", "Feedback resistor"], ans: 1 },
-    { q: "What happens to the output of an oscillator if the loop gain falls below 1?", options: ["Oscillations increase", "Oscillations remain constant", "Oscillations die out (damped)", "The frequency changes"], ans: 2 },
-    { q: "The 'Resonant Frequency' is the frequency where:", options: ["Resistance is maximum", "Inductive and capacitive reactances are equal", "The transistor turns off", "The gain is zero"], ans: 1 },
-    { q: "The common-base (CB) configuration is primarily used in:", options: ["Audio amplifiers", "High-frequency applications", "Voltage regulators", "Switching power supplies"], ans: 1 },
-    { q: "A 'Crystal' in an oscillator circuit behaves like a/an:", options: ["Variable Resistor", "Extremely high-Q tuned circuit", "Battery", "Simple wire"], ans: 1 },
-    { q: "Which region of the BJT is used for 'Linear' amplification?", options: ["Saturation", "Cut-off", "Active", "Breakdown"], ans: 2 }
-];
+  // Results UI
+  const resultsScore = document.getElementById("resultsScore");
+  const resultsSummary = document.getElementById("resultsSummary");
+  const statCorrect = document.getElementById("statCorrect");
+  const statWrong = document.getElementById("statWrong");
+  const statStreak = document.getElementById("statStreak");
+  const statBest = document.getElementById("statBest");
+  const reviewBtn = document.getElementById("reviewBtn");
+  const retryBtn = document.getElementById("retryBtn");
+  const homeBtn = document.getElementById("homeBtn");
+  const historySubjectName = document.getElementById("historySubjectName");
+  const historyList = document.getElementById("historyList");
 
-let randomizedQuestions = [];
-let index = 0;
-let score = 0;
+  // Review UI
+  const reviewBackBtn = document.getElementById("reviewBackBtn");
+  const reviewList = document.getElementById("reviewList");
 
-// 2. The Shuffle Function (Fisher-Yates Algorithm)
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
+  // Toast & Confetti
+  const toast = document.getElementById("toast");
+  const confettiCanvas = document.getElementById("confettiCanvas");
+  const ctx = confettiCanvas.getContext("2d");
 
-// 3. Audio Controller
-const playSound = (id) => {
-    const audio = document.getElementById(id);
-    if(audio) {
-        audio.currentTime = 0;
-        audio.play().catch(e => console.log("Interaction required for audio"));
-    }
-};
+  // Initialize Clock
+  function updateClock() {
+    const now = new Date();
+    clockChip.textContent = now.toTimeString().split(" ")[0];
+  }
+  setInterval(updateClock, 1000);
+  updateClock();
 
-// 4. Initialize Quiz
-function initQuiz() {
-    randomizedQuestions = shuffleArray([...questionsData]); // Copy and Shuffle
-    index = 0;
-    score = 0;
-    loadQuestion();
-}
-
-function loadQuestion() {
-    const current = randomizedQuestions[index];
-    const quizCard = document.querySelector('.quiz-card');
-    const total = randomizedQuestions.length;
-
-    // Calculate progress percentage
-    // (index + 1) makes the bar move as soon as the question loads
-    const progressPercent = ((index + 1) / total) * 100;
-
-    // Update the bar width
-    const progressBar = document.getElementById('progress');
-    if (progressBar) {
-        progressBar.style.width = progressPercent + "%";
-    }
-    
-    // Capture the text of the correct answer BEFORE shuffling the options
-    const correctAnswerText = current.options[current.ans];
-    
-    // Shuffle the options for THIS specific question
-    const shuffledOptions = shuffleArray([...current.options]);
-    
-    // Find where the correct answer ended up after the shuffle
-    const newCorrectIndex = shuffledOptions.indexOf(correctAnswerText);
-
-    // Smooth transition
-    quizCard.style.opacity = "0";
-    
-    setTimeout(() => {
-        document.getElementById('question').innerText = current.q;
-        document.getElementById('q-num').innerText = index + 1;
-        
-        const container = document.getElementById('options');
-        container.innerHTML = '';
-        
-        shuffledOptions.forEach((opt, i) => {
-            const btn = document.createElement('button');
-            btn.className = 'option-btn';
-            btn.innerText = opt;
-            
-            // We pass the newCorrectIndex to the handler
-            btn.onclick = () => handleSelection(i, newCorrectIndex, btn);
-            container.appendChild(btn);
-        });
-        
-        quizCard.style.opacity = "1";
-    }, 150);
-}
-
-function handleSelection(userChoice, correctIdx, btn) {
-    const allBtns = document.querySelectorAll('.option-btn');
-    
-    // Disable all buttons immediately to prevent double-clicking
-    allBtns.forEach(b => b.style.pointerEvents = 'none');
-
-    if (userChoice === correctIdx) {
-        btn.classList.add('is-correct');
-        playSound('snd-correct');
-        score++;
-    } else {
-        btn.classList.add('is-wrong');
-        document.querySelector('.quiz-card').classList.add('shake');
-        playSound('snd-wrong');
-        
-        // Show the user which one was actually correct
-        allBtns[correctIdx].classList.add('is-correct');
-        
-        setTimeout(() => document.querySelector('.quiz-card').classList.remove('shake'), 500);
-    }
-
-    // Move to next question after 1.2 seconds
-    setTimeout(() => {
-        index++;
-        if (index < randomizedQuestions.length) {
-            loadQuestion();
-        } else {
-            finishQuiz();
-        }
-    }, 1200);
-}
-
-function finishQuiz() {
-    document.getElementById('quiz').classList.add('hidden');
-    document.getElementById('result').classList.remove('hidden');
-    document.getElementById('score-val').innerText = `${score}/${randomizedQuestions.length}`;
-
-    playSound('snd-tada'); 
-    confetti({
-        particleCount: 200,
-        spread: 90,
-        origin: { y: 0.7 },
-        colors: ['#7000ff', '#00d4ff', '#00ff88']
+  // Render Subject Selection Cards
+  function renderSubjects() {
+    subjectGrid.innerHTML = "";
+    Object.keys(cpeQuestionBank).forEach(subject => {
+      const count = cpeQuestionBank[subject].length;
+      const card = document.createElement("button");
+      card.type = "button";
+      card.className = "subject-card glass";
+      card.innerHTML = `
+        <span class="subject-card__title">${subject}</span>
+        <span class="subject-card__count">${count} items available</span>
+      `;
+      card.addEventListener("click", () => startQuiz(subject));
+      subjectGrid.appendChild(card);
     });
-}
+  }
 
-// Start the sequence
-initQuiz();
+  // Fisher-Yates Shuffle Algorithm
+  function shuffleArray(array) {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
 
+  // Navigation Controller
+  function switchScreen(screenName) {
+    Object.values(screens).forEach(scr => scr.classList.remove("is-active"));
+    if (screens[screenName]) {
+      screens[screenName].classList.add("is-active");
+    }
+  }
 
+  // Toast Notifier
+  function showToast(message) {
+    toast.textContent = message;
+    toast.classList.add("is-visible");
+    setTimeout(() => toast.classList.remove("is-visible"), 2500);
+  }
+
+  // Reset Session State Fully
+  function resetSessionState() {
+    clearInterval(timerInterval);
+    currentSubject = null;
+    activeQuestions = [];
+    currentIndex = 0;
+    score = 0;
+    streak = 0;
+    peakStreak = 0;
+    missedQuestions = [];
+    selectedOptionValue = null;
+    answeredLocked = false;
+  }
+
+  // Start Quiz Run
+  function startQuiz(subject) {
+    resetSessionState();
+    currentSubject = subject;
+    
+    const rawBank = cpeQuestionBank[subject] || [];
+    const limit = parseInt(questionCountSelect.value, 10);
+    maxTimePerQ = parseInt(timerSelect.value, 10);
+
+    const shuffledPool = shuffleArray(rawBank);
+    activeQuestions = limit === 0 ? shuffledPool : shuffledPool.slice(0, limit);
+
+    quizSubjectLabel.textContent = subject;
+    switchScreen("quiz");
+    loadQuestion();
+  }
+
+// Load Current Question
+  function loadQuestion() {
+    clearInterval(timerInterval);
+    answeredLocked = false;
+    selectedOptionValue = null;
+    nextBtn.disabled = true;
+    nextBtn.textContent = "Select an answer";
+    
+    // Explicitly hide the explanation box on new question load
+    explainBox.hidden = true; 
+
+    const qData = activeQuestions[currentIndex];
+    questionTag.textContent = `${currentSubject.toUpperCase()} // Q${currentIndex + 1}`;
+    questionText.textContent = qData.question;
+    qIndexLabel.textContent = `Question ${currentIndex + 1} / ${activeQuestions.length}`;
+    streakLabel.textContent = `🔥 Streak: ${streak}`;
+
+    const progressPct = (currentIndex / activeQuestions.length) * 100;
+    progressBar.style.width = `${progressPct}%`;
+
+    const randomizedOptions = shuffleArray(qData.options);
+    optionsList.innerHTML = "";
+
+    randomizedOptions.forEach(optText => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "option";
+      btn.textContent = optText;
+      btn.addEventListener("click", () => selectOption(btn, optText, qData.answer));
+      optionsList.appendChild(btn);
+    });
+
+    if (maxTimePerQ > 0) {
+      timeLeft = maxTimePerQ;
+      timerValue.textContent = timeLeft;
+      document.getElementById("timerWrap").style.display = "flex";
+      
+      const circumference = 100.5;
+      timerBar.style.strokeDashoffset = 0;
+
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        timerValue.textContent = timeLeft;
+        const offset = circumference - (timeLeft / maxTimePerQ) * circumference;
+        timerBar.style.strokeDashoffset = offset;
+
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          handleTimeout(qData.answer);
+        }
+      }, 1000);
+    } else {
+      document.getElementById("timerWrap").style.display = "none";
+    }
+  }
+
+  // Handle Option Selection
+  function selectOption(btnElement, chosenValue, correctValue) {
+    if (answeredLocked) return;
+    answeredLocked = true;
+    clearInterval(timerInterval);
+
+    selectedOptionValue = chosenValue;
+    const allOptionBtns = optionsList.querySelectorAll("button");
+    allOptionBtns.forEach(b => b.disabled = true);
+
+    const isCorrect = chosenValue === correctValue;
+
+    if (isCorrect) {
+      btnElement.classList.add("is-correct");
+      score++;
+      streak++;
+      if (streak > peakStreak) peakStreak = streak;
+    } else {
+      btnElement.classList.add("is-wrong");
+      streak = 0;
+      missedQuestions.push({
+        question: activeQuestions[currentIndex].question,
+        userChoice: chosenValue,
+        correctChoice: correctValue,
+        explanation: activeQuestions[currentIndex].explanation
+      });
+
+      allOptionBtns.forEach(b => {
+        if (b.textContent === correctValue) {
+          b.classList.add("is-correct");
+        }
+      });
+    }
+
+    streakLabel.textContent = `🔥 Streak: ${streak}`;
+
+    explainLabel.textContent = isCorrect ? "✓ Verified Correct" : "✕ Fault Detected";
+    explainLabel.style.color = isCorrect ? "var(--success)" : "var(--error)";
+    explainText.textContent = activeQuestions[currentIndex].explanation;
+    explainBox.hidden = false;
+
+    nextBtn.disabled = false;
+    nextBtn.textContent = currentIndex === activeQuestions.length - 1 ? "Complete Diagnostic" : "Next Question";
+  }
+
+  // Handle Timeout
+  function handleTimeout(correctValue) {
+    if (answeredLocked) return;
+    answeredLocked = true;
+    streak = 0;
+    streakLabel.textContent = `🔥 Streak: ${streak}`;
+
+    missedQuestions.push({
+      question: activeQuestions[currentIndex].question,
+      userChoice: "Timed out (No selection)",
+      correctChoice: correctValue,
+      explanation: activeQuestions[currentIndex].explanation
+    });
+
+    const allOptionBtns = optionsList.querySelectorAll("button");
+    allOptionBtns.forEach(b => {
+      b.disabled = true;
+      if (b.textContent === correctValue) {
+        b.classList.add("is-correct");
+      }
+    });
+
+    explainLabel.textContent = "⏱ Timeout Expired";
+    explainLabel.style.color = "var(--error)";
+    explainText.textContent = activeQuestions[currentIndex].explanation;
+    explainBox.hidden = false;
+
+    nextBtn.disabled = false;
+    nextBtn.textContent = currentIndex === activeQuestions.length - 1 ? "Complete Diagnostic" : "Next Question";
+  }
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex++;
+    if (currentIndex < activeQuestions.length) {
+      loadQuestion();
+    } else {
+      finishQuiz();
+    }
+  });
+
+  quitBtn.addEventListener("click", () => {
+    resetSessionState();
+    switchScreen("home");
+  });
+
+  // Finish Quiz & Save LocalStorage
+  function finishQuiz() {
+    clearInterval(timerInterval);
+    progressBar.style.width = "100%";
+    switchScreen("results");
+
+    const percentage = Math.round((score / activeQuestions.length) * 100);
+    resultsScore.textContent = `${percentage}%`;
+    resultsSummary.textContent = `Successfully passed ${score} out of ${activeQuestions.length} evaluation points.`;
+
+    statCorrect.textContent = score;
+    statWrong.textContent = activeQuestions.length - score;
+    statStreak.textContent = peakStreak;
+
+    let history = JSON.parse(localStorage.getItem(`cpe_quiz_${currentSubject}`) || "[]");
+    let bestRecord = Math.max(percentage, ...history.map(h => h.percentage), 0);
+    statBest.textContent = `${bestRecord}%`;
+
+    const attemptRecord = {
+      date: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      percentage,
+      score,
+      total: activeQuestions.length
+    };
+    history.unshift(attemptRecord);
+    if (history.length > 10) history.pop();
+    localStorage.setItem(`cpe_quiz_${currentSubject}`, JSON.stringify(history));
+
+    historySubjectName.textContent = currentSubject;
+    historyList.innerHTML = "";
+    history.forEach(item => {
+      const row = document.createElement("div");
+      row.className = "history-item";
+      row.innerHTML = `<span>${item.date}</span><span>Score: ${item.score}/${item.total} (${item.percentage}%)</span>`;
+      historyList.appendChild(row);
+    });
+
+    if (percentage >= 75) {
+      triggerConfetti();
+      showToast("Diagnostic passed with flying colors!");
+    }
+  }
+
+  reviewBtn.addEventListener("click", () => {
+    reviewList.innerHTML = "";
+    if (missedQuestions.length === 0) {
+      reviewList.innerHTML = `<div class="card glass" style="padding:1.5rem; text-align:center;"><p>Zero faults recorded! Flawless diagnostic run.</p></div>`;
+    } else {
+      missedQuestions.forEach((item, idx) => {
+        const div = document.createElement("div");
+        div.className = "card glass review-item";
+        div.innerHTML = `
+          <p class="review-item__q">Q${idx + 1}: ${item.question}</p>
+          <div class="review-item__meta">
+            <span class="review-item__user">Your input: ${item.userChoice}</span>
+            <span class="review-item__correct">Correct standard: ${item.correctChoice}</span>
+          </div>
+          <p class="explain-box__text" style="margin-top:0.35rem;"><strong>Rationale:</strong> ${item.explanation}</p>
+        `;
+        reviewList.appendChild(div);
+      });
+    }
+    switchScreen("review");
+  });
+
+  reviewBackBtn.addEventListener("click", () => switchScreen("results"));
+  retryBtn.addEventListener("click", () => startQuiz(currentSubject));
+  homeBtn.addEventListener("click", () => {
+    resetSessionState();
+    switchScreen("home");
+  });
+
+  function triggerConfetti() {
+    confettiCanvas.width = window.innerWidth;
+    confettiCanvas.height = window.innerHeight;
+    const particles = [];
+    const colors = ["#3b82f6", "#10b981", "#8b5cf6", "#f59e0b", "#ef4444"];
+
+    for (let i = 0; i < 90; i++) {
+      particles.push({
+        x: confettiCanvas.width / 2,
+        y: confettiCanvas.height / 2,
+        vx: (Math.random() - 0.5) * 14,
+        vy: (Math.random() - 0.7) * 14,
+        size: Math.random() * 6 + 4,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        alpha: 1,
+        decay: Math.random() * 0.015 + 0.01
+      });
+    }
+
+    function updateConfetti() {
+      ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+      particles.forEach((p, index) => {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.4;
+        p.alpha -= p.decay;
+        if (p.alpha <= 0) {
+          particles.splice(index, 1);
+          return;
+        }
+        ctx.save();
+        ctx.globalAlpha = p.alpha;
+        ctx.fillStyle = p.color;
+        ctx.fillRect(p.x, p.y, p.size, p.size);
+        ctx.restore();
+      });
+
+      if (particles.length > 0) {
+        requestAnimationFrame(updateConfetti);
+      }
+    }
+    updateConfetti();
+  }
+
+  renderSubjects();
+});
