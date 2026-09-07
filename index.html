@@ -1,53 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reviewer Quiz | 2026 Edition</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>CIRCUIT// CpE Quiz Terminal</title>
+<meta name="description" content="Elite terminal and quiz system for Computer Engineering students." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <div class="bg-animate"></div>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--a" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--b" aria-hidden="true"></div>
 
-    <div class="quiz-card" id="quiz">
-        <div class="progress-container">
-            <div class="progress-bar" id="progress"></div>
-        </div>
-        
-        <div class="header">
-            <span>Reviewer Quiz</span>
-            <br>
-            <br>
-            <span class="badge">Question <span id="q-num">1</span></span>
-            <h1 id="question">Loading Question...</h1>
-        </div>
-
-        <div class="options-grid" id="options">
-            </div>
-
-        <div id="feedback" class="feedback-toast"></div>
+<div class="app" id="app">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand__bracket">&lt;</span>PRELIM UPDATE<span class="brand__bracket">/&gt;</span>
+      <span class="brand__tag">CpE 3rd Year</span>
     </div>
+    <div class="topbar__meta">
+      <span class="chip chip--live" id="clockChip">--:--:--</span>
+    </div>
+  </header>
 
-    <div class="result-card hidden" id="result">
-        <div class="icon-box">🏆</div>
-        <h2>Quiz Complete! NICEEE ONE</h2>
-        <div class="score-circle">
-            <span id="score-val">0</span>
-            <small>Score</small>
+  <main class="stage">
+    <!-- SCREEN: HOME -->
+    <section class="screen screen--home is-active" id="screen-home" data-screen="home">
+      <div class="home__hero">
+        <p class="eyebrow-line"><span class="eyebrow-line__dash"></span>Review your handouts system</p>
+        <h1 class="home__title">New github web quizzes</h1>
+        <p class="home__sub">Select a Computer Engineering module. Every run shuffles questions and option locations dynamically to guarantee cognitive recall.</p>
+      </div>
+
+      <div class="subject-grid" id="subjectGrid" role="list"></div>
+
+      <div class="home__panel glass">
+        <div class="home__panel-row">
+          <label class="field">
+            <span class="field__label">Questions Per Run</span>
+            <select id="questionCount" class="select">
+              <option value="5">5 questions</option>
+              <option value="8" selected>8 questions</option>
+              <option value="15">15 questions</option>
+              <option value="30">30 questions</option>
+              <option value="50">50 questions</option>
+              <option value="0">All available</option>
+            </select>
+          </label>
+          <label class="field">
+            <span class="field__label">Timer Per Question</span>
+            <select id="timerSelect" class="select">
+              <option value="0">No limit</option>
+              <option value="15">15 seconds</option>
+              <option value="30" selected>30 seconds</option>
+              <option value="45">45 seconds</option>
+            </select>
+          </label>
         </div>
+      </div>
+    </section>
 
-        <audio id="snd-correct" src="https://assets.mixkit.co/active_storage/sfx/2013/2013-preview.mp3" preload="auto"></audio>
-        <audio id="snd-wrong" src="https://assets.mixkit.co/active_storage/sfx/2105/2105-preview.mp3" preload="auto"></audio>
-        <audio id="snd-tada" src="https://assets.mixkit.co/active_storage/sfx/1435/1435-preview.mp3" preload="auto"></audio>
-
-        <button class="btn-retro" onclick="location.reload()">
-            <span>RETRY THE QUIZ</span>
+    <!-- SCREEN: QUIZ -->
+    <section class="screen screen--quiz" id="screen-quiz" data-screen="quiz">
+      <div class="quiz__head">
+        <button class="btn btn--ghost btn--sm" id="quitBtn" type="button">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          Abort Run
         </button>
+        <div class="quiz__subject" id="quizSubjectLabel">Subject</div>
+        <div class="timer" id="timerWrap">
+          <svg class="timer__ring" viewBox="0 0 44 44">
+            <circle class="timer__track" cx="22" cy="22" r="19"></circle>
+            <circle class="timer__bar" id="timerBar" cx="22" cy="22" r="19"></circle>
+          </svg>
+          <span class="timer__value" id="timerValue">30</span>
         </div>
+      </div>
 
-    <script src="script.js"></script>
+      <div class="progress">
+        <div class="progress__bar" id="progressBar"></div>
+      </div>
+      <div class="progress__meta">
+        <span id="qIndexLabel">Question 1 / 8</span>
+        <span class="streak" id="streakLabel">🔥 Streak: 0</span>
+      </div>
+
+      <div class="card question-card glass" id="questionCard">
+        <p class="question-card__eyebrow" id="questionTag">MICROPROCESSORS</p>
+        <h2 class="question-card__text" id="questionText">Loading query sequence…</h2>
+
+        <div class="options" id="optionsList" role="list"></div>
+
+        <div class="explain-box" id="explainBox" hidden>
+          <p class="explain-box__label" id="explainLabel">Analysis</p>
+          <p class="explain-box__text" id="explainText"></p>
+        </div>
+      </div>
+
+      <div class="quiz__footer">
+        <button class="btn btn--primary btn--block" id="nextBtn" type="button" disabled>Select an answer</button>
+      </div>
+    </section>
+
+    <!-- SCREEN: RESULTS -->
+    <section class="screen screen--results" id="screen-results" data-screen="results">
+      <div class="results__top">
+        <p class="eyebrow-line"><span class="eyebrow-line__dash"></span>DIAGNOSTIC COMPLETE</p>
+        <h1 class="results__score" id="resultsScore">0%</h1>
+        <p class="results__sub" id="resultsSummary">Run metrics compiled successfully.</p>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card glass">
+          <span class="stat-card__value" id="statCorrect">0</span>
+          <span class="stat-card__label">Correct Hits</span>
+        </div>
+        <div class="stat-card glass">
+          <span class="stat-card__value" id="statWrong">0</span>
+          <span class="stat-card__label">Faults</span>
+        </div>
+        <div class="stat-card glass">
+          <span class="stat-card__value" id="statStreak">0</span>
+          <span class="stat-card__label">Peak Streak</span>
+        </div>
+        <div class="stat-card glass">
+          <span class="stat-card__value" id="statBest">0%</span>
+          <span class="stat-card__label">Best Record</span>
+        </div>
+      </div>
+
+      <div class="results__actions">
+        <button class="btn btn--secondary btn--block" id="reviewBtn" type="button">Review Faults & Explanations</button>
+        <button class="btn btn--primary btn--block" id="retryBtn" type="button">Re-Run Diagnostic</button>
+        <button class="btn btn--ghost btn--block" id="homeBtn" type="button">Return to Terminal Hub</button>
+      </div>
+
+      <div class="history glass" id="historyPanel">
+        <p class="history__title">Attempt Logs — <span id="historySubjectName">Subject</span></p>
+        <div class="history__list" id="historyList"></div>
+      </div>
+    </section>
+
+    <!-- SCREEN: REVIEW -->
+    <section class="screen screen--review" id="screen-review" data-screen="review">
+      <div class="review__head">
+        <button class="btn btn--ghost btn--sm" id="reviewBackBtn" type="button">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          Back to Metrics
+        </button>
+        <h2 class="review__title">Fault Breakdown & Rationale</h2>
+      </div>
+      <div class="review__list" id="reviewList"></div>
+    </section>
+  </main>
+</div>
+
+<canvas id="confettiCanvas" aria-hidden="true"></canvas>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="questions.js"></script>
+<script src="script.js"></script>
 </body>
-
 </html>
