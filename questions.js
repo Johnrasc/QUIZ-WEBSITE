@@ -1911,5 +1911,2588 @@ const cpeQuestionBank = {
     "answer": "Cache (Level 1, Level 2, Level 3)",
     "explanation": "Cache (Level 1, Level 2, and Level 3) sits directly beneath CPU registers as temporary storage areas with direct access to the CPU."
   }
+  ],
+
+
+
+
+
+
+
+
+
+
+
+
+  "Fundamentals of Mixed Signals and Sensors" : 
+    [
+{
+    "question": "What is the primary feature of a differential amplifier when opposite signals are applied to its inputs?",
+    "options": [
+      "Very large gain",
+      "Zero output voltage",
+      "Infinite output impedance",
+      "Unity voltage gain"
+    ],
+    "answer": "Very large gain",
+    "explanation": "The primary feature of a differential amplifier is the very large gain achieved when opposite signals are applied to its inputs[cite: 1]."
+  },
+  {
+    "question": "How does a differential amplifier operate during single-ended operation?",
+    "options": [
+      "A single input signal operates both transistors, yielding outputs from both collectors",
+      "Two separate input signals are subtracted directly at the base terminals",
+      "Both inputs are grounded to produce a balanced output at the emitter",
+      "The circuit automatically disables one transistor to prevent feedback"
+    ],
+    "answer": "A single input signal operates both transistors, yielding outputs from both collectors",
+    "explanation": "In single-ended operation, a single input signal applies and operates both transistors, resulting in output from both collectors[cite: 2]."
+  },
+  {
+    "question": "What is the resulting output signal in a differential amplifier under common-mode operation?",
+    "options": [
+      "Zero",
+      "Maximum positive saturation",
+      "Double the input amplitude",
+      "Negative rail voltage"
+    ],
+    "answer": "Zero",
+    "explanation": "In common-mode operation, the common input signal produces opposite signals at each collector that cancel each other out, making the output signal zero[cite: 4]."
+  },
+  {
+    "question": "When analyzing the DC bias operation of a differential amplifier, what is the assumed DC voltage at each input source?",
+    "options": [
+      "0 V",
+      "+0.7 V",
+      "-0.7 V",
+      "+Vcc"
+    ],
+    "answer": "0 V",
+    "explanation": "With AC inputs obtained from voltage sources, the DC voltage at each input is essentially connected to 0V[cite: 5]."
+  },
+  {
+    "question": "What is the common-emitter DC bias voltage (VE) in a transistor differential amplifier when the base is at 0V?",
+    "options": [
+      "-0.7 V",
+      "0 V",
+      "+0.7 V",
+      "-VEE"
+    ],
+    "answer": "-0.7 V",
+    "explanation": "With base voltage at 0V, the common-emitter DC bias voltage is VE = 0V - VBE = -0.7V[cite: 5]."
+  },
+  {
+    "question": "Assuming well-matched transistors in a differential amplifier, how does the collector current IC1 or IC2 relate to the total emitter current IE?",
+    "options": [
+      "IC1 = IC2 = IE / 2",
+      "IC1 = IC2 = IE",
+      "IC1 = IC2 = 2 * IE",
+      "IC1 = IC2 = IE - VBE"
+    ],
+    "answer": "IC1 = IC2 = IE / 2",
+    "explanation": "When transistors are well-matched, the total emitter current splits equally between them, making IC1 = IC2 = IE / 2[cite: 5]."
+  },
+  {
+    "question": "What is an Operational Amplifier (Op-Amp)?",
+    "options": [
+      "A very high gain differential amplifier with high input impedance and low output impedance",
+      "A low gain amplifier with low input impedance and high output impedance",
+      "A passive variable resistance network used solely for signal attenuation",
+      "A current amplifier designed with zero open-loop gain"
+    ],
+    "answer": "A very high gain differential amplifier with high input impedance and low output impedance",
+    "explanation": "An Op-Amp is a very high gain differential amplifier with high input impedance and low output impedance."
+  },
+  {
+    "question": "Which set of internal components primarily comprises an integrated operational amplifier circuit?",
+    "options": [
+      "Transistors, resistors, and capacitors",
+      "Inductors, transformers, and relays",
+      "Diodes, fuses, and thermistors",
+      "Vacuum tubes and variable inductors"
+    ],
+    "answer": "Transistors, resistors, and capacitors",
+    "explanation": "An op-amp is a low-cost integrated circuit consisting of transistors, resistors, and capacitors."
+  },
+  {
+    "question": "Which of the following is a typical application of operational amplifiers?",
+    "options": [
+      "Providing voltage amplitude changes, filter circuits, and instrumentation circuits",
+      "Converting high-frequency AC power directly into high-voltage DC power transmission",
+      "Replacing physical power transformers in industrial step-down substations",
+      "Storing persistent binary digital data without external electrical power"
+    ],
+    "answer": "Providing voltage amplitude changes, filter circuits, and instrumentation circuits",
+    "explanation": "Typical uses of op-amps include providing voltage amplitude changes, oscillators, filter circuits, and instrumentation circuits."
+  },
+  {
+    "question": "How many primary schematic terminals are identified on a standard op-amp symbol?",
+    "options": [
+      "5",
+      "3",
+      "8",
+      "2"
+    ],
+    "answer": "5",
+    "explanation": "The terminal descriptions outline positive power, negative power, inverting input, non-inverting input, and the fifth terminal: output."
+  },
+  {
+    "question": "How is the inverting input terminal labeled on an op-amp schematic symbol?",
+    "options": [
+      "Minus sign (-)",
+      "Plus sign (+)",
+      "Ground symbol (GND)",
+      "Letter 'O'"
+    ],
+    "answer": "Minus sign (-)",
+    "explanation": "The inverting input is labeled with a minus sign (-) on the schematic symbol."
+  },
+  {
+    "question": "How is the non-inverting input terminal labeled on an op-amp schematic symbol?",
+    "options": [
+      "Plus sign (+)",
+      "Minus sign (-)",
+      "Arrow pointing inward",
+      "Letter 'N'"
+    ],
+    "answer": "Plus sign (+)",
+    "explanation": "The non-inverting input is labeled with a plus sign (+) on the schematic symbol."
+  },
+  {
+    "question": "What is open-loop gain in an ideal operational amplifier?",
+    "options": [
+      "Infinite gain without feedback",
+      "Zero gain with negative feedback",
+      "Unity gain without input connection",
+      "A variable gain that scales with frequency"
+    ],
+    "answer": "Infinite gain without feedback",
+    "explanation": "Open-loop gain is defined as the gain without feedback, which is ideally infinite."
+  },
+  {
+    "question": "What is the ideal value for the input impedance of an operational amplifier?",
+    "options": [
+      "Infinite",
+      "Zero ohms",
+      "50 ohms",
+      "100 k-ohms"
+    ],
+    "answer": "Infinite",
+    "explanation": "An ideal operational amplifier possesses infinite input impedance, resulting in an input current of approximately zero."
+  },
+  {
+    "question": "Why does an ideal operational amplifier have an input current approximately equal to zero?",
+    "options": [
+      "Because it has infinite input impedance",
+      "Because its output impedance is infinite",
+      "Because the power supply terminals are disconnected",
+      "Because the differential gain is zero"
+    ],
+    "answer": "Because it has infinite input impedance",
+    "explanation": "Infinite input impedance means the op-amp has input current that is approximately equal to zero (ii ≈ 0A)."
+  },
+  {
+    "question": "What is the ideal output impedance of an operational amplifier?",
+    "options": [
+      "Zero",
+      "Infinite",
+      "100 ohms",
+      "1 mega-ohm"
+    ],
+    "answer": "Zero",
+    "explanation": "An ideal op-amp has zero output impedance, acting as a perfect internal voltage source."
+  },
+  {
+    "question": "What graph relates the output voltage of an op-amp to its input voltage?",
+    "options": [
+      "Voltage transfer curve",
+      "Bode magnitude plot",
+      "Resonant frequency curve",
+      "Transient response graph"
+    ],
+    "answer": "Voltage transfer curve",
+    "explanation": "The graph that relates the output voltage to the input voltage is called the voltage transfer curve."
+  },
+  {
+    "question": "Which two distinct operational regions are displayed on an op-amp voltage transfer curve?",
+    "options": [
+      "Linear region and saturation region",
+      "Cutoff region and triode region",
+      "Active region and breakdown region",
+      "Resonant region and reactive region"
+    ],
+    "answer": "Linear region and saturation region",
+    "explanation": "The voltage transfer curve highlights two distinct regions: the linear region and the saturation region."
+  },
+  {
+    "question": "What is the slope of the line relating Vo to Vi equal to in the linear region of an op-amp?",
+    "options": [
+      "Open-loop gain A",
+      "Common-mode rejection ratio",
+      "Zero",
+      "Feedback ratio beta"
+    ],
+    "answer": "Open-loop gain A",
+    "explanation": "In the linear region, the slope of the line relating Vo to Vi is equal to the open-loop gain A."
+  },
+  {
+    "question": "What is negative feedback in an amplifier circuit?",
+    "options": [
+      "Connecting the output back to the input so an increase in output causes a decrease in output",
+      "Connecting the power supply to the non-inverting terminal to force maximum saturation",
+      "Shorting the output terminal directly to ground to limit gain to zero",
+      "Applying two identical signals in-phase to both input terminals"
+    ],
+    "answer": "Connecting the output back to the input so an increase in output causes a decrease in output",
+    "explanation": "Feedback is connecting output back to input; when an increase in output is fed back to cause a decrease, it is negative feedback."
+  },
+  {
+    "question": "What self-correcting effect occurs when an op-amp with infinite open-loop gain uses negative feedback?",
+    "options": [
+      "The two inputs are forced to be equal",
+      "The output voltage drops permanently to zero volts",
+      "The input current increases to maximum power levels",
+      "The output frequency doubles automatically"
+    ],
+    "answer": "The two inputs are forced to be equal",
+    "explanation": "When used in negative feedback, infinite gain forces the two inputs of the op-amp to be equal."
+  },
+  {
+    "question": "What condition causes an operational amplifier to enter output saturation?",
+    "options": [
+      "When the implied output voltage exceeds the power supply voltage range",
+      "When the input current exceeds the bias current rating",
+      "When both input terminals are tied directly to ground",
+      "When the feedback loop resistor resistance reaches zero ohms"
+    ],
+    "answer": "When the implied output voltage exceeds the power supply voltage range",
+    "explanation": "An op-amp saturates when the output voltage implied by the circuit would exceed its power supply range."
+  },
+  {
+    "question": "What term describes a signal that is cut off close to the supply rails due to op-amp output saturation?",
+    "options": [
+      "Clipped",
+      "Attenuated",
+      "Integrated",
+      "Inverted"
+    ],
+    "answer": "Clipped",
+    "explanation": "When op-amp output saturation causes the signal to be cut off close to the supply rails, the signal is said to be clipped."
+  },
+  {
+    "question": "Why does an op-amp contain several differential amplifier stages internally?",
+    "options": [
+      "To achieve a very high voltage gain",
+      "To decrease the input impedance to zero",
+      "To eliminate the need for positive power supplies",
+      "To bypass Ohm's law during high frequency operation"
+    ],
+    "answer": "To achieve a very high voltage gain",
+    "explanation": "An op-amp contains several differential amplifier stages specifically to achieve a very high voltage gain."
+  },
+  {
+    "question": "How is a single-ended input operation configured in an operational amplifier?",
+    "options": [
+      "The input signal is connected to one input while the other input is connected to ground",
+      "Both inputs are tied together and connected to a single AC voltage source",
+      "The input signal is applied differentially between the positive and negative power rails",
+      "The input signal is fed directly into the output terminal"
+    ],
+    "answer": "The input signal is connected to one input while the other input is connected to ground",
+    "explanation": "Single-ended input operation results when the input signal is connected to one input with the other input connected to ground."
+  },
+  {
+    "question": "In a single-ended input setup, what output polarity results when the input is applied to the plus (+) terminal with the minus (-) terminal grounded?",
+    "options": [
+      "The same polarity as the applied input signal",
+      "Opposite phase relative to the input signal",
+      "Zero output voltage regardless of input",
+      "Saturated negative supply potential"
+    ],
+    "answer": "The same polarity as the applied input signal",
+    "explanation": "Applying input to the plus input (with minus input at ground) results in an output having the same polarity as the applied input signal."
+  },
+  {
+    "question": "In a single-ended input setup, what output phase results when the input signal is applied to the minus (-) terminal?",
+    "options": [
+      "Opposite in phase to the applied signal",
+      "Same phase as the applied signal",
+      "Shifted by 90 degrees positive",
+      "Constant DC voltage without AC variation"
+    ],
+    "answer": "Opposite in phase to the applied signal",
+    "explanation": "Applying an input signal to the minus input yields an output opposite in phase to the applied signal."
+  },
+  {
+    "question": "What defines double-ended (differential) input operation in an op-amp?",
+    "options": [
+      "Signals are applied at each input terminal",
+      "One input is connected to ground while the output is split",
+      "Both input terminals are connected to the positive supply rail",
+      "The output terminal is connected directly to the inverting input"
+    ],
+    "answer": "Signals are applied at each input terminal",
+    "explanation": "In addition to using only one input, applying signals at each input is known as double-ended operation."
+  },
+  {
+    "question": "When a differential voltage Vd is applied between two input terminals where neither is at ground, how is the output amplified?",
+    "options": [
+      "The amplified output is in-phase and applied between the plus and minus inputs",
+      "The output is forced to zero because of common-mode cancellation",
+      "The output clips instantly to the negative saturation voltage",
+      "The signal is completely converted to a pure DC offset"
+    ],
+    "answer": "The amplified output is in-phase and applied between the plus and minus inputs",
+    "explanation": "An input Vd applied between two input terminals results in an amplified output that is in-phase applied between plus and minus inputs."
+  },
+  {
+    "question": "What is the resulting signal when two separate signals Vi1 and Vi2 are applied to the inputs in double-ended operation?",
+    "options": [
+      "The difference signal (Vi1 - Vi2)",
+      "The sum signal (Vi1 + Vi2)",
+      "The product signal (Vi1 * Vi2)",
+      "The ratio signal (Vi1 / Vi2)"
+    ],
+    "answer": "The difference signal (Vi1 - Vi2)",
+    "explanation": "Applying two separate signals to the inputs produces an action where the effective input is the difference signal Vi1 - Vi2."
+  },
+  {
+    "question": "What is the relationship between the two outputs in a double-ended output op-amp configuration?",
+    "options": [
+      "The outputs are always opposite in polarity",
+      "The outputs are identical in phase and magnitude",
+      "One output is fixed at 0V while the other fluctuates",
+      "The outputs are shifted by 90 degrees relative to each other"
+    ],
+    "answer": "The outputs are always opposite in polarity",
+    "explanation": "An input applied to either input will result in outputs from both output terminals, with these outputs always being opposite in polarity."
+  },
+  {
+    "question": "What is performed when identical input signals are applied simultaneously to both inputs of an op-amp?",
+    "options": [
+      "Common-mode operation",
+      "Single-ended amplification",
+      "Inverting saturation",
+      "Integrator modulation"
+    ],
+    "answer": "Common-mode operation",
+    "explanation": "When the same input signals are applied to both inputs, common-mode operation is performed."
+  },
+  {
+    "question": "Ideally, what output voltage is produced during op-amp common-mode operation?",
+    "options": [
+      "0 V",
+      "+Vsat",
+      "-Vsat",
+      "Half of the supply voltage"
+    ],
+    "answer": "0 V",
+    "explanation": "Ideally, equal inputs produce opposite-polarity signals at the output that cancel, resulting in 0V output."
+  },
+  {
+    "question": "Why is the rejection of unwanted noise signals possible in a differential op-amp configuration?",
+    "options": [
+      "Noise common to both inputs is attenuated while difference signals are amplified",
+      "Noise signals are automatically boosted by the open-loop gain",
+      "The feedback resistor shunts high-frequency noise directly to ground",
+      "Noise triggers output saturation which clips all high frequency waves"
+    ],
+    "answer": "Noise common to both inputs is attenuated while difference signals are amplified",
+    "explanation": "Because unwanted noise is common to both inputs, the differential connection attenuates this input while amplifying the difference signal."
+  },
+  {
+    "question": "What feature allows an op-amp to reject common unwanted noise signals?",
+    "options": [
+      "Common-mode rejection",
+      "Inverting attenuation",
+      "Negative clipping",
+      "Unity follower gain"
+    ],
+    "answer": "Common-mode rejection",
+    "explanation": "The ability to attenuate unwanted common signals while amplifying difference signals is called common-mode rejection."
+  },
+  {
+    "question": "How is the Common-Mode Rejection Ratio (CMRR) defined mathematically?",
+    "options": [
+      "The ratio of differential gain to common-mode gain (|Gd / Gc|)",
+      "The ratio of common-mode gain to differential gain (|Gc / Gd|)",
+      "The sum of differential gain and common-mode gain (Gd + Gc)",
+      "The product of differential gain and output voltage (Gd * Vo)"
+    ],
+    "answer": "The ratio of differential gain to common-mode gain (|Gd / Gc|)",
+    "explanation": "The op-amp CMRR is the ratio of the differential-mode gain to common-mode gain."
+  },
+  {
+    "question": "What is the formula for calculating Differential Voltage (Vd)?",
+    "options": [
+      "Vd = V+ - V-",
+      "Vd = V+ + V-",
+      "Vd = (V+ - V-) / 2",
+      "Vd = V+ * V-"
+    ],
+    "answer": "Vd = V+ - V-",
+    "explanation": "Differential Voltage Vd is defined as Vd = V+ - V-."
+  },
+  {
+    "question": "What is the formula for calculating Common Mode Voltage (Vc)?",
+    "options": [
+      "Vc = (1/2) * (V+ + V-)",
+      "Vc = V+ - V-",
+      "Vc = 2 * (V+ + V-)",
+      "Vc = (V+ - V-) / 2"
+    ],
+    "answer": "Vc = (1/2) * (V+ + V-)",
+    "explanation": "Common Mode Voltage Vc is calculated as Vc = (1/2) * (V+ + V-)."
+  },
+  {
+    "question": "What is the logarithmic expression for CMRR in decibels (dB)?",
+    "options": [
+      "CMRR = 20 log |Gd / Gc|",
+      "CMRR = 10 log |Gc / Gd|",
+      "CMRR = 20 log |Gd * Gc|",
+      "CMRR = 20 log |Vd / Vc|"
+    ],
+    "answer": "CMRR = 20 log |Gd / Gc|",
+    "explanation": "In decibels, CMRR is expressed as 20 log |Gd / Gc|."
+  },
+  {
+    "question": "What formula expresses the overall output voltage Vo of an op-amp using differential gain Gd and common-mode gain Gc?",
+    "options": [
+      "Vo = Gd * Vd + Gc * Vc",
+      "Vo = (Gd / Gc) * (Vd + Vc)",
+      "Vo = Gd * Vc + Gc * Vd",
+      "Vo = Gd * Vd - Gc * Vc"
+    ],
+    "answer": "Vo = Gd * Vd + Gc * Vc",
+    "explanation": "The output voltage of the op-amp is given by Vo = Gd * Vd + Gc * Vc."
+  },
+  {
+    "question": "Which constant-gain op-amp circuit is considered the most widely used?",
+    "options": [
+      "Inverting Amplifier",
+      "Differentiator",
+      "Common-Mode Rejection Circuit",
+      "Unity Follower"
+    ],
+    "answer": "Inverting Amplifier",
+    "explanation": "The inverting amplifier is described as the most widely used constant-gain amplifier circuit."
+  },
+  {
+    "question": "How is the fixed gain set in a basic inverting op-amp amplifier?",
+    "options": [
+      "By the ratio of the feedback resistor (Rf) to the input resistor (R1)",
+      "By the sum of the power supply voltages",
+      "By the internal open-loop gain alone",
+      "By the ratio of the common-mode voltage to the output load"
+    ],
+    "answer": "By the ratio of the feedback resistor (Rf) to the input resistor (R1)",
+    "explanation": "The constant gain of an inverting amplifier is set by input resistor (R1) and feedback resistor (Rf) via Vo = -(Rf / R1) * V1."
+  },
+  {
+    "question": "What is the output voltage equation for a noninverting op-amp amplifier?",
+    "options": [
+      "Vo = (1 + Rf / R1) * V1",
+      "Vo = -(Rf / R1) * V1",
+      "Vo = (R1 / Rf) * V1",
+      "Vo = (1 - Rf / R1) * V1"
+    ],
+    "answer": "Vo = (1 + Rf / R1) * V1",
+    "explanation": "The output voltage equation for a noninverting amplifier is Vo = (1 + Rf / R1) * V1."
+  },
+  {
+    "question": "What is the voltage gain provided by a Unity Follower circuit?",
+    "options": [
+      "1",
+      "0",
+      "100",
+      "Infinite"
+    ],
+    "answer": "1",
+    "explanation": "A unity follower provides a gain of unity (1) with no polarity or phase reversal."
+  },
+  {
+    "question": "How does the output of a unity follower relate to its input in terms of magnitude and polarity?",
+    "options": [
+      "Output is the same polarity and magnitude as the input",
+      "Output is inverted in polarity but equal in magnitude",
+      "Output is double the magnitude with identical polarity",
+      "Output is attenuated to zero volts regardless of input"
+    ],
+    "answer": "Output is the same polarity and magnitude as the input",
+    "explanation": "In a unity follower, Vo = V1, meaning the output is the same polarity and magnitude as the input."
+  },
+  {
+    "question": "Which transistor/FET circuit configuration behaves similarly to an op-amp unity follower?",
+    "options": [
+      "Emitter-follower or source-follower circuit",
+      "Common-emitter amplifier circuit",
+      "Common-base current buffer circuit",
+      "Cross-coupled latch circuit"
+    ],
+    "answer": "Emitter-follower or source-follower circuit",
+    "explanation": "The unity follower operates like an emitter- or source-follower circuit, except that its gain is exactly unity."
+  },
+  {
+    "question": "What function does a summing amplifier perform?",
+    "options": [
+      "Algebraically adding multiple input voltages, each multiplied by a constant-gain factor",
+      "Multiplying input signals together to produce a high-frequency harmonic sum",
+      "Filtering out all high-frequency AC signals while passing DC baseline voltages",
+      "Comparing two inputs and switching output between saturation rails"
+    ],
+    "answer": "Algebraically adding multiple input voltages, each multiplied by a constant-gain factor",
+    "explanation": "A summing amplifier provides a means of algebraically summing (adding) voltages, each multiplied by a constant-gain factor."
+  },
+  {
+    "question": "What component configuration creates an op-amp integrator circuit?",
+    "options": [
+      "Using a resistor as the input component and a capacitor as the feedback component",
+      "Using a capacitor as the input component and a resistor as the feedback component",
+      "Placing inductors in parallel across both input terminals",
+      "Connecting two back-to-back diodes across the feedback loop"
+    ],
+    "answer": "Using a resistor as the input component and a capacitor as the feedback component",
+    "explanation": "When the feedback component is used as a capacitor with an input resistor, the resulting connection is called an integrator."
+  },
+  {
+    "question": "What mathematical operation does an op-amp differentiator perform relative to the input signal?",
+    "options": [
+      "Output is proportional to the time derivative of the input signal",
+      "Output is proportional to the integral of the input signal over time",
+      "Output is equal to the logarithmic square of the input signal",
+      "Output is equal to the constant sum of input voltages"
+    ],
+    "answer": "Output is proportional to the time derivative of the input signal",
+    "explanation": "The differentiator yields the relation Vo(t) = -RC * (dvin/dt), which is proportional to the derivative of the input."
+  },
+  {
+    "question": "In an integrated circuit (IC) operational amplifier, what condition is assumed regarding the matched performance of the internal transistors?",
+    "options": [
+      "The transistors are well-matched",
+      "The transistors operate with completely asymmetrical gain",
+      "One transistor acts exclusively as a diode, the other as a resistor",
+      "The collector-to-emitter resistance is infinite for Q1 and zero for Q2"
+    ],
+    "answer": "The transistors are well-matched",
+    "explanation": "Assuming that the transistors are well-matched (as would occur in an IC unit), symmetric DC biased values are obtained[cite: 5]."
+  },
+  {
+    "question": "What is the typical magnitude of the input current (ii) in a high-grade operational amplifier?",
+    "options": [
+      "Approximately equal to zero",
+      "Several amperes",
+      "Equal to the collector bias current IC",
+      "Directly proportional to the power supply rail voltage"
+    ],
+    "answer": "Approximately equal to zero",
+    "explanation": "High-grade op-amps have an input current approximately equal to zero (ii ≈ 0A) due to very high input impedance."
+  },
+  {
+    "question": "What level of input current is typically observed in a low-grade operational amplifier?",
+    "options": [
+      "Small mA input current",
+      "Zero amperes",
+      "High kA surge current",
+      "Equal to the output rail current"
+    ],
+    "answer": "Small mA input current",
+    "explanation": "Low-grade op-amps exhibit a small mA input current due to non-ideal input impedance."
+  },
+  {
+    "question": "How does output impedance in an operational amplifier affect its output voltage when connected to a load?",
+    "options": [
+      "The output impedance is in series with the load, reducing its output voltage",
+      "The output impedance boosts the voltage transfer ratio above open-loop gain",
+      "The output impedance acts in parallel with the load to increase total current",
+      "It completely insulates the load from noise without affecting voltage level"
+    ],
+    "answer": "The output impedance is in series with the load, reducing its output voltage",
+    "explanation": "The output impedance is in series with the load, thus reducing its output voltage."
+  },
+  {
+    "question": "Why is an ideal op-amp considered a perfect internal voltage source?",
+    "options": [
+      "Because it has zero output impedance",
+      "Because it has zero open-loop gain",
+      "Because it draws infinite input current",
+      "Because its power supply terminals are internally shorted"
+    ],
+    "answer": "Because it has zero output impedance",
+    "explanation": "Zero output impedance means op-amps act as a perfect internal voltage source with no internal resistance."
+  },
+  {
+    "question": "What behavior characterizes the saturation region on an op-amp voltage transfer curve?",
+    "options": [
+      "Changes in input voltage Vi have little effect on output voltage Vo",
+      "The output voltage Vo varies linearly with input voltage Vi",
+      "The slope relating Vo to Vi is equal to infinity",
+      "The output voltage drops instantly to zero volts"
+    ],
+    "answer": "Changes in input voltage Vi have little effect on output voltage Vo",
+    "explanation": "The saturation region is the region where changes in Vi have little effect on Vo (non-linear behavior)."
+  },
+  {
+    "question": "Which of the following describes the operational region where non-linear behavior is exhibited by an op-amp?",
+    "options": [
+      "Saturation region",
+      "Linear region",
+      "Open-loop active region",
+      "Common-mode linear range"
+    ],
+    "answer": "Saturation region",
+    "explanation": "The saturation region is explicitly identified as displaying non-linear behavior."
+  },
+  {
+    "question": "What parameter is zero common-mode gain equal to in an ideal op-amp?",
+    "options": [
+      "Differential gain (or infinite open-loop gain)",
+      "Input offset current",
+      "Total supply rail current",
+      "Closed-loop output resistance"
+    ],
+    "answer": "Differential gain (or infinite open-loop gain)",
+    "explanation": "Infinite open-loop gain is the gain without feedback, equal to differential gain, which is also called zero common-mode gain."
+  },
+  {
+    "question": "In negative feedback, what voltage output will an op-amp produce across its terminals?",
+    "options": [
+      "Whatever voltage is necessary to make the two inputs equal",
+      "A constant DC voltage equal to positive saturation (+Vsat)",
+      "Zero output voltage regardless of input changes",
+      "A signal equal to the supply voltage multiplied by common-mode gain"
+    ],
+    "answer": "Whatever voltage is necessary to make the two inputs equal",
+    "explanation": "The op-amp will output whatever voltage is necessary to make the two inputs equal when used in negative feedback."
+  },
+  {
+    "question": "What maximum or minimum output limit does an operational amplifier output when it saturates?",
+    "options": [
+      "Its maximum or minimum possible power supply voltage",
+      "Exactly 0 V DC",
+      "Infinity",
+      "The average value of the input source voltage"
+    ],
+    "answer": "Its maximum or minimum possible power supply voltage",
+    "explanation": "When an op-amp saturates, it just outputs its maximum or minimum possible voltage instead."
+  },
+  {
+    "question": "According to the general properties of op-amp operational stages, what fundamental law must the output follow?",
+    "options": [
+      "Ohm's Law",
+      "Faraday's Law",
+      "Gauss's Law",
+      "Lenz's Law"
+    ],
+    "answer": "Ohm's Law",
+    "explanation": "The properties state explicitly that the circuit must follow Ohm's Law."
+  },
+  {
+    "question": "In a noninverting amplifier circuit, what voltage appears across the input resistor R1 when Vi = 0V?",
+    "options": [
+      "V1",
+      "VCC",
+      "-VEE",
+      "Vo / 2"
+    ],
+    "answer": "V1",
+    "explanation": "In a noninverting amplifier, the voltage across R1 is V1 since Vi = 0V."
+  },
+  {
+    "question": "What network configuration is formed by resistors R1 and Rf in a noninverting op-amp amplifier?",
+    "options": [
+      "Voltage divider",
+      "Current mirror",
+      "R-2R ladder",
+      "Bridge rectifier"
+    ],
+    "answer": "Voltage divider",
+    "explanation": "The relationship between input and output voltage in a noninverting amplifier works through a voltage divider of R1 and Rf."
+  },
+  {
+    "question": "How does adding more inputs to a summing amplifier affect the output signal?",
+    "options": [
+      "Each additional input adds a component component to the output multiplied by its separate gain multiplier",
+      "It reduces the total output voltage to zero",
+      "It converts the summing amplifier into a unity follower",
+      "It limits the maximum operational frequency to 0 Hz"
+    ],
+    "answer": "Each additional input adds a component component to the output multiplied by its separate gain multiplier",
+    "explanation": "If more inputs are used in a summing amplifier, they each add a component to the output."
+  },
+  {
+    "question": "What is the scaling factor in an op-amp differentiator circuit equation?",
+    "options": [
+      "-RC",
+      "-1 / RC",
+      "1 + (Rf / R1)",
+      "20 log(Gd / Gc)"
+    ],
+    "answer": "-RC",
+    "explanation": "In an op-amp differentiator circuit, the scale factor is -RC."
+  },
+  {
+    "question": "What scale factor is present in the time-domain voltage expression of an op-amp integrator?",
+    "options": [
+      "-1 / (RC)",
+      "-RC",
+      "+(Rf / R1)",
+      "1 / (2 * pi * f * C)"
+    ],
+    "answer": "-1 / (RC)",
+    "explanation": "The time domain expression for an integrator is Vo(t) = -1/(RC) * integral(Vin dt), making the scale factor -1/(RC)."
+  },
+  {
+    "question": "In an unwanted noise signal environment, what term describes any unwanted input signal present on the amplifier lines?",
+    "options": [
+      "Noise",
+      "Feedback",
+      "Saturation",
+      "Offset"
+    ],
+    "answer": "Noise",
+    "explanation": "Noise is explicitly defined as any unwanted input signal in the text."
+  },
+  {
+    "question": "What effect does a differential connection have on noise signals common to both inputs?",
+    "options": [
+      "Provides attenuation of the unwanted input signal",
+      "Provides infinite amplification of the noise signal",
+      "Inverts the noise signal phase by 360 degrees",
+      "Converts unwanted noise into a pure DC bias voltage"
+    ],
+    "answer": "Provides attenuation of the unwanted input signal",
+    "explanation": "The differential connection tends to provide attenuation of this unwanted input noise signal."
+  },
+  {
+    "question": "What term refers to the parameter Gd in op-amp mathematical equations?",
+    "options": [
+      "Differential gain",
+      "Common-mode gain",
+      "Closed-loop distortion",
+      "Decibel gradient"
+    ],
+    "answer": "Differential gain",
+    "explanation": "The variable Gd is explicitly defined as Differential gain."
+  },
+  {
+    "question": "What term refers to the parameter Gc in op-amp mathematical equations?",
+    "options": [
+      "Common-mode gain",
+      "Differential gain",
+      "Collector gain",
+      "Capacitive conductance"
+    ],
+    "answer": "Common-mode gain",
+    "explanation": "The variable Gc is explicitly defined as Common-mode gain."
+  },
+  {
+    "question": "In an op-amp schematic, what terminal is represented by +V?",
+    "options": [
+      "Positive power supply terminal",
+      "Negative power supply terminal",
+      "Inverting input terminal",
+      "Non-inverting input terminal"
+    ],
+    "answer": "Positive power supply terminal",
+    "explanation": "+V represents the positive power supply terminal."
+  },
+  {
+    "question": "In an op-amp schematic, what terminal is represented by -V?",
+    "options": [
+      "Negative power supply terminal",
+      "Positive power supply terminal",
+      "Ground terminal",
+      "Inverting output terminal"
+    ],
+    "answer": "Negative power supply terminal",
+    "explanation": "-V represents the negative power supply terminal."
+  },
+  {
+    "question": "What polarity is the output signal relative to the input signal in an inverting amplifier?",
+    "options": [
+      "Inverted from the input",
+      "Same polarity as the input",
+      "Shifted by 0 degrees",
+      "Quadrature phase (+90 degrees)"
+    ],
+    "answer": "Inverted from the input",
+    "explanation": "In an inverting amplifier, the output is inverted from the input."
+  },
+  {
+    "question": "What is the ratio of feedback resistor Rf to input resistor R1 used for in an inverting amplifier?",
+    "options": [
+      "Setting the fixed or constant gain factor",
+      "Setting the upper saturation supply rail voltage",
+      "Determining the common-mode rejection frequency",
+      "Matching internal transistor collector bias currents"
+    ],
+    "answer": "Setting the fixed or constant gain factor",
+    "explanation": "The output is obtained by multiplying the input by a fixed or constant gain set by input resistor (R1) and feedback resistor (Rf)."
+  },
+  {
+    "question": "In a unity follower circuit, what phase reversal or polarity shift is introduced to the output signal?",
+    "options": [
+      "No polarity or phase reversal",
+      "180-degree phase reversal",
+      "90-degree phase shift",
+      "Complete inversion of polarity"
+    ],
+    "answer": "No polarity or phase reversal",
+    "explanation": "A unity follower provides a gain of unity (1) with no polarity or phase reversal."
+  },
+  {
+    "question": "What happens to the output voltage of an ideal op-amp if the input voltage is zero?",
+    "options": [
+      "Zero output voltage",
+      "Positive saturation voltage (+Vsat)",
+      "Negative saturation voltage (-Vsat)",
+      "Equal to supply rail voltage VCC"
+    ],
+    "answer": "Zero output voltage",
+    "explanation": "The general properties state: Zero output voltage if the input voltage is zero."
+  },
+  {
+    "question": "In common-mode rejection ratio (CMRR) concepts, if a differential input change produces an output change, and a common-mode change produces the same output change, how is CMRR expressed?",
+    "options": [
+      "The ratio of the common-mode change voltage to the differential input change voltage",
+      "The sum of both input change voltages",
+      "The square of the common-mode input change voltage",
+      "The product of common-mode voltage and output voltage"
+    ],
+    "answer": "The ratio of the common-mode change voltage to the differential input change voltage",
+    "explanation": "If a differential input change of Y volts produces 1V change, and a common-mode change of X volts produces 1V, CMRR is X/Y."
+  },
+  {
+    "question": "What operational feature describes an op-amp circuit that multiplies an input signal by +1?",
+    "options": [
+      "Unity Follower",
+      "Inverting Amplifier",
+      "Differentiator",
+      "High Gain Attenuator"
+    ],
+    "answer": "Unity Follower",
+    "explanation": "A unity follower provides a gain of unity (1) with no polarity reversal, functioning as a gain-of-one buffer."
+  },
+  {
+    "question": "In an operational amplifier, what circuit configuration converts differential input signals to a single-ended or double-ended output using a resistor and dual supply bias?",
+    "options": [
+      "Differential Amplifier",
+      "Unity Follower",
+      "Filter Circuit",
+      "Integrator Stage"
+    ],
+    "answer": "Differential Amplifier",
+    "explanation": "The differential amplifier stage utilizes transistors with collector resistors (RC) and an emitter resistor (RE) connected to dual supplies[cite: 1, 5]."
+  },
+  {
+    "question": "What term describes the region on a voltage transfer curve where an op-amp output voltage remains linear relative to the input voltage?",
+    "options": [
+      "Linear region",
+      "Saturation region",
+      "Non-linear region",
+      "Clipped region"
+    ],
+    "answer": "Linear region",
+    "explanation": "The linear region is the region around Vi = 0V where the output changes linearly with respect to the input."
+  },
+  {
+    "question": "Which term describes an op-amp circuit whose output signal is proportional to the accumulation of input signal over time?",
+    "options": [
+      "Integrator",
+      "Differentiator",
+      "Summing Amplifier",
+      "Unity Follower"
+    ],
+    "answer": "Integrator",
+    "explanation": "An op-amp circuit using a capacitor in the feedback path performs integration, creating an integrator circuit."
+  }
+  ],
+
+
+
+
+
+
+
+  "Data and Digital Communications" : 
+  [
+{
+    "question": "Which of the following is considered one of the oldest forms of long-distance communication used by American Indians as a distress signal?",
+    "options": [
+      "Smoke Signals",
+      "Pigeon Courier",
+      "Semaphore Flags",
+      "Pony Express"
+    ],
+    "answer": "Smoke Signals",
+    "explanation": "Smoke signals are one of the oldest forms of long-distance communication and were used by American Indians as a distress signal[cite: 6]."
+  },
+  {
+    "question": "Who developed a messaging system utilizing flags as a communication method in 1792?",
+    "options": [
+      "Claude Chappe",
+      "Claude Shannon",
+      "O. Ibe",
+      "B. Sklar"
+    ],
+    "answer": "Claude Chappe",
+    "explanation": "In 1792, Claude Chappe developed Semaphore Flags, a messaging system that uses flags for communication[cite: 6]."
+  },
+  {
+    "question": "Which mail delivery service operated in 1860 using relays of horse-mounted riders to transport messages and newspapers?",
+    "options": [
+      "Pony Express",
+      "Pigeon Courier",
+      "Electrical Telegraph",
+      "Wireless Telegraphy"
+    ],
+    "answer": "Pony Express",
+    "explanation": "In 1860, the Pony Express delivered messages, newspapers, and mails using relays of horse-mounted riders[cite: 6]."
+  },
+  {
+    "question": "Which technology revolutionized long-distance communication by transmitting electrical signals formatted as Morse code between two stations?",
+    "options": [
+      "Electrical Telegraph",
+      "Telephone",
+      "Wireless Telegraphy",
+      "Semaphore Flags"
+    ],
+    "answer": "Electrical Telegraph",
+    "explanation": "The Electrical Telegraph revolutionized long-distance communication by sending electric signals (Morse code) between two stations[cite: 6]."
+  },
+  {
+    "question": "What is defined as the transmission of electric current projected into space in the form of radio waves?",
+    "options": [
+      "Wireless Telegraphy (Radio)",
+      "Telephone",
+      "Electrical Telegraph",
+      "Pony Express"
+    ],
+    "answer": "Wireless Telegraphy (Radio)",
+    "explanation": "Wireless Telegraphy (Radio) is defined as the transmission of electric current projected into space in the form of radio waves[cite: 6]."
+  },
+  {
+    "question": "Which communication instrument was specifically designed for the simultaneous transmission of human voice?",
+    "options": [
+      "Telephone",
+      "Electrical Telegraph",
+      "Wireless Telegraphy",
+      "Modem"
+    ],
+    "answer": "Telephone",
+    "explanation": "The telephone is an instrument designed for the simultaneous transmission of human voice[cite: 6]."
+  },
+  {
+    "question": "Which cellular technology generation relied purely on analog wireless technology?",
+    "options": [
+      "1st Generation (1G)",
+      "2nd Generation (2G)",
+      "3rd Generation (3G)",
+      "4th Generation (4G)"
+    ],
+    "answer": "1st Generation (1G)",
+    "explanation": "1st Generation (1G) uses analog wireless technology in communications[cite: 6]."
+  },
+  {
+    "question": "In which cellular generation were cellphones upgraded from analog to digital, introducing concepts like CDMA, GSM, SMS, and GPRS?",
+    "options": [
+      "2nd Generation (2G)",
+      "1st Generation (1G)",
+      "3rd Generation (3G)",
+      "5th Generation (5G)"
+    ],
+    "answer": "2nd Generation (2G)",
+    "explanation": "In 2G, cellphones upgraded from analog to digital, implementing CDMA, GSM, SMS, GPRS, and PSN[cite: 6]."
+  },
+  {
+    "question": "Universal Mobile Telecommunication Systems (UMTS) and Evolved High-Speed Packet Access (HSPA+) were established in which cellular generation?",
+    "options": [
+      "3rd Generation (3G)",
+      "2nd Generation (2G)",
+      "4th Generation (4G)",
+      "5th Generation (5G)"
+    ],
+    "answer": "3rd Generation (3G)",
+    "explanation": "3G introduced UMTS for multimedia streaming and established HSPA+[cite: 6]."
+  },
+  {
+    "question": "Which two key technologies are fundamental to the 4th Generation (4G) mobile communication standards like WiMAX and LTE?",
+    "options": [
+      "MIMO and OFDM",
+      "CDMA and GSM",
+      "PAM and PCM",
+      "AM and FM"
+    ],
+    "answer": "MIMO and OFDM",
+    "explanation": "The key technologies that made 4G possible are Multiple Input Multiple Output (MIMO) and Orthogonal Frequency Division Multiplexing (OFDM)[cite: 6]."
+  },
+  {
+    "question": "Which wireless communication generation enables data transfer speeds up to 10 times faster than 4G and supports the Internet of Things (IoT) and beamforming?",
+    "options": [
+      "5th Generation (5G)",
+      "4th Generation (4G)",
+      "3rd Generation (3G)",
+      "2nd Generation (2G)"
+    ],
+    "answer": "5th Generation (5G)",
+    "explanation": "5G rolls out transfer speeds up to 10 times faster than 4G, powering IoT, autonomous smart systems, and beamforming[cite: 6]."
+  },
+  {
+    "question": "What type of data represents continuous information, such as the human voice?",
+    "options": [
+      "Analog data",
+      "Digital data",
+      "Discrete data",
+      "Binary data"
+    ],
+    "answer": "Analog data",
+    "explanation": "Analog data refers to continuous information, with human voice given as a primary example[cite: 6]."
+  },
+  {
+    "question": "What type of data takes on discrete values consisting of binary ones and zeros (1's and 0's)?",
+    "options": [
+      "Digital data",
+      "Analog data",
+      "Continuous data",
+      "Sine wave data"
+    ],
+    "answer": "Digital data",
+    "explanation": "Digital data takes on discrete values consisting of ones and zeros (1's and 0's)[cite: 6]."
+  },
+  {
+    "question": "Which character encoding format is given as an example for translating words into binary code numbers?",
+    "options": [
+      "ASCII code",
+      "Unicode",
+      "UTF-8",
+      "EBCDIC"
+    ],
+    "answer": "ASCII code",
+    "explanation": "Words are translated into binary by giving each letter a number in a defined format such as ASCII code[cite: 6]."
+  },
+  {
+    "question": "Who formulated Information Theory to represent the conditions and parameters affecting information transmission and processing?",
+    "options": [
+      "Claude Shannon",
+      "Claude Chappe",
+      "O. Ibe",
+      "B. Sklar"
+    ],
+    "answer": "Claude Shannon",
+    "explanation": "According to Claude Shannon, information theory represents the conditions and parameters affecting the transmission and processing of information[cite: 6]."
+  },
+  {
+    "question": "What term describes the exchange of data between a source and a receiver across a network regardless of location or content?",
+    "options": [
+      "Data communication",
+      "Modulation",
+      "Quantization",
+      "Line coding"
+    ],
+    "answer": "Data communication",
+    "explanation": "Data communication refers to the exchange of data between a source and a receiver in a network[cite: 6]."
+  },
+  {
+    "question": "In a data communication network model, what component converts original information into an electrical message signal?",
+    "options": [
+      "Source encoder",
+      "Source decoder",
+      "Transmitter",
+      "Sink"
+    ],
+    "answer": "Source encoder",
+    "explanation": "A source encoder converts the information into an electrical form called a message signal[cite: 6]."
+  },
+  {
+    "question": "What component in a communication network model converts the message signal into a form acceptable for transmission over the channel?",
+    "options": [
+      "Transmitter",
+      "Receiver",
+      "Source decoder",
+      "Sink"
+    ],
+    "answer": "Transmitter",
+    "explanation": "A transmitter converts the message signal into a form acceptable to the channel[cite: 6]."
+  },
+  {
+    "question": "What is the path or medium that physically or logically connects the transmitter and the receiver?",
+    "options": [
+      "Channel",
+      "Source encoder",
+      "Sink",
+      "Modem"
+    ],
+    "answer": "Channel",
+    "explanation": "A channel is the path or link that connects the transmitter and the receiver[cite: 6]."
+  },
+  {
+    "question": "Which block in the data communication network model performs the inverse operation of the transmitter to recover the message signal?",
+    "options": [
+      "Receiver",
+      "Source encoder",
+      "Sink",
+      "Channel"
+    ],
+    "answer": "Receiver",
+    "explanation": "A receiver performs an inverse function of that of the transmitter to recover the message signal[cite: 6]."
+  },
+  {
+    "question": "What component converts the received electrical signal back into a form acceptable to the destination receiver or user?",
+    "options": [
+      "Source decoder",
+      "Source encoder",
+      "Channel",
+      "Noise source"
+    ],
+    "answer": "Source decoder",
+    "explanation": "A source decoder converts the electrical signal back to a form acceptable to the receiver[cite: 6]."
+  },
+  {
+    "question": "In a network model, what is the ultimate user or end-device of the generated information called?",
+    "options": [
+      "Sink",
+      "Source",
+      "Transmitter",
+      "Channel"
+    ],
+    "answer": "Sink",
+    "explanation": "A sink is the user of the information generated by the source (e.g., computers, smartphones)[cite: 6]."
+  },
+  {
+    "question": "Which network topology permanently connects exactly two (2) nodes or network devices via a single dedicated link?",
+    "options": [
+      "Point-to-Point (P2P) topology",
+      "Star topology",
+      "Bus topology",
+      "Mesh topology"
+    ],
+    "answer": "Point-to-Point (P2P) topology",
+    "explanation": "Point-to-Point (P2P) topology is a link that permanently connects two nodes or network devices[cite: 6]."
+  },
+  {
+    "question": "In which network topology is one single node connected to multiple individual nodes, each in a P2P manner?",
+    "options": [
+      "Point-to-Multipoint topology",
+      "Ring topology",
+      "Tree topology",
+      "Bus topology"
+    ],
+    "answer": "Point-to-Multipoint topology",
+    "explanation": "In Point-to-Multipoint topology, one node is connected to multiple nodes, each in a P2P manner[cite: 6]."
+  },
+  {
+    "question": "Which network topology connects all nodes to a single shared link where one designated node acts as the master and others as secondary/slave nodes?",
+    "options": [
+      "Multidrop topology",
+      "Bus topology",
+      "Mesh topology",
+      "Star topology"
+    ],
+    "answer": "Multidrop topology",
+    "explanation": "In a multidrop topology, all nodes are interconnected by a single link with one master node and other secondary or slave nodes[cite: 6]."
+  },
+  {
+    "question": "In a Star topology, all individual network nodes connect directly in a P2P manner to what central device?",
+    "options": [
+      "Hub",
+      "Line terminator",
+      "Master node",
+      "Modem"
+    ],
+    "answer": "Hub",
+    "explanation": "In a star topology, each node is connected in a P2P manner to a central node called a hub[cite: 6]."
+  },
+  {
+    "question": "How does a Bus topology differ primarily from a Multidrop topology?",
+    "options": [
+      "There is no master-slave relationship; all nodes are peers",
+      "It requires a central hub to route packets",
+      "It connects devices in a closed circular loop",
+      "It uses wireless radio frequencies instead of cables"
+    ],
+    "answer": "There is no master-slave relationship; all nodes are peers",
+    "explanation": "Bus topology is like multidrop except there is no master-slave relationship; all nodes are peers[cite: 6]."
+  },
+  {
+    "question": "What component is attached to the ends of a transmission line in a Bus topology to prevent signal reflections from corrupting data?",
+    "options": [
+      "Line terminator",
+      "Central hub",
+      "Source encoder",
+      "Attenuator"
+    ],
+    "answer": "Line terminator",
+    "explanation": "The line terminator in a bus topology prevents a signal coming to the end of a transmission line from bouncing back and corrupting other signals[cite: 6]."
+  },
+  {
+    "question": "Which network topology features serially connected nodes in a P2P loop where the last node links directly back to the first node?",
+    "options": [
+      "Ring topology",
+      "Tree topology",
+      "Star topology",
+      "Mesh topology"
+    ],
+    "answer": "Ring topology",
+    "explanation": "In a ring topology, nodes are connected serially in a P2P manner with the last node connected to the first node to form a loop[cite: 6]."
+  },
+  {
+    "question": "Which network topology forms branching links without closed loops by interconnecting multiple bus structures?",
+    "options": [
+      "Tree topology",
+      "Mesh topology",
+      "Star topology",
+      "Multidrop topology"
+    ],
+    "answer": "Tree topology",
+    "explanation": "Tree topology is formed by connecting multiple buses to form a system of branching links with no closed loop[cite: 6]."
+  },
+  {
+    "question": "In which topology are network nodes interconnected arbitrarily, relying on internal switching nodes to move data toward its destination?",
+    "options": [
+      "Mesh topology",
+      "Ring topology",
+      "Star topology",
+      "P2P topology"
+    ],
+    "answer": "Mesh topology",
+    "explanation": "In a mesh topology, network nodes are interconnected arbitrarily, using internal nodes for switching facilities to route data[cite: 6]."
+  },
+  {
+    "question": "What category of geographical network coverage interconnects devices surrounding a single person, usually within a range of 10 meters?",
+    "options": [
+      "Personal Area Network (PAN)",
+      "Local Area Network (LAN)",
+      "Metropolitan Area Network (MAN)",
+      "Wide Area Network (WAN)"
+    ],
+    "answer": "Personal Area Network (PAN)",
+    "explanation": "PANs interconnect devices within the reach of an individual, usually within a 10-meter range[cite: 6]."
+  },
+  {
+    "question": "What network coverage classification spans small physical areas such as a single building, floor, or academic campus?",
+    "options": [
+      "Local Area Network (LAN)",
+      "Personal Area Network (PAN)",
+      "Metropolitan Area Network (MAN)",
+      "Wide Area Network (WAN)"
+    ],
+    "answer": "Local Area Network (LAN)",
+    "explanation": "Local area networks (LANs) cover small geographical areas, typically a building, a floor, or a campus[cite: 6]."
+  },
+  {
+    "question": "Fiber Distributed Data Interface (FDDI) is provided as a classic example for which geographical network classification?",
+    "options": [
+      "Metropolitan Area Network (MAN)",
+      "Personal Area Network (PAN)",
+      "Local Area Network (LAN)",
+      "Wide Area Network (WAN)"
+    ],
+    "answer": "Metropolitan Area Network (MAN)",
+    "explanation": "MANs interconnect LANs across a campus or city; Fiber Distributed Data Interface (FDDI) is an example[cite: 6]."
+  },
+  {
+    "question": "Which network coverage classification spans vast geographical distances such as entire countries or the global expanse of the Internet?",
+    "options": [
+      "Wide Area Network (WAN)",
+      "Metropolitan Area Network (MAN)",
+      "Local Area Network (LAN)",
+      "Personal Area Network (PAN)"
+    ],
+    "answer": "Wide Area Network (WAN)",
+    "explanation": "Wide area networks (WANs) cover much larger areas such as a country or the globe (e.g., the Internet)[cite: 6]."
+  },
+  {
+    "question": "How are continuous analog signals graphically represented?",
+    "options": [
+      "Sine wave",
+      "Square wave",
+      "Triangle wave",
+      "Sawtooth wave"
+    ],
+    "answer": "Sine wave",
+    "explanation": "Analog signals have an infinite number of values and are represented as a sine wave[cite: 6]."
+  },
+  {
+    "question": "How are discrete digital signals containing binary 0s and 1s graphically represented?",
+    "options": [
+      "Square wave",
+      "Sine wave",
+      "Complex exponential wave",
+      "Cosine wave"
+    ],
+    "answer": "Square wave",
+    "explanation": "Digital signals are binary in nature (0s and 1s) and are represented as a square wave[cite: 6]."
+  },
+  {
+    "question": "What type of signal completes a full pattern within a measurable period and continuously repeats that exact pattern over identical time intervals?",
+    "options": [
+      "Periodic signal",
+      "Nonperiodic signal",
+      "Aperiodic signal",
+      "Random signal"
+    ],
+    "answer": "Periodic signal",
+    "explanation": "A periodic signal completes a pattern within a measurable time frame (period) and repeats it over identical periods[cite: 6]."
+  },
+  {
+    "question": "What is the completion of one full repeating pattern in a periodic signal called?",
+    "options": [
+      "Cycle",
+      "Wavelength",
+      "Frequency",
+      "Amplitude"
+    ],
+    "answer": "Cycle",
+    "explanation": "The completion of one full pattern in a periodic signal is called a cycle[cite: 6]."
+  },
+  {
+    "question": "What term defines a signal that changes dynamically over time without exhibiting any repeating pattern or cycle?",
+    "options": [
+      "Nonperiodic signal",
+      "Periodic signal",
+      "Harmonic signal",
+      "Sine wave"
+    ],
+    "answer": "Nonperiodic signal",
+    "explanation": "A nonperiodic signal changes without exhibiting a pattern or cycle that repeats over time[cite: 6]."
+  },
+  {
+    "question": "What signal property is inversely proportional to frequency and directly dictates spatial distance per wave cycle?",
+    "options": [
+      "Wavelength",
+      "Amplitude",
+      "Phase offset",
+      "Power ratio"
+    ],
+    "answer": "Wavelength",
+    "explanation": "Wavelength is directly related to frequency via the formula lambda = c / f[cite: 6]."
+  },
+  {
+    "question": "What mathematical formula represents the relationship to solve for wavelength (λ)?",
+    "options": [
+      "λ = c / f",
+      "λ = f / c",
+      "λ = 1 / T",
+      "λ = c * f"
+    ],
+    "answer": "λ = c / f",
+    "explanation": "Wavelength formula is λ = c / f, where c is wave speed/speed of light and f is frequency[cite: 6]."
+  },
+  {
+    "question": "What metric represents the number of full wave cycles that pass a specific point during a given time period, expressed in Hertz (Hz)?",
+    "options": [
+      "Frequency",
+      "Period",
+      "Wavelength",
+      "Amplitude"
+    ],
+    "answer": "Frequency",
+    "explanation": "Frequency refers to the number of waves that pass a given point in each time period, expressed in Hertz (Hz)[cite: 6]."
+  },
+  {
+    "question": "What formula calculates signal frequency (f) using the time period (T)?",
+    "options": [
+      "f = 1 / T",
+      "f = T / c",
+      "f = c * T",
+      "f = λ * T"
+    ],
+    "answer": "f = 1 / T",
+    "explanation": "Frequency is calculated using the formula f = 1 / T[cite: 6]."
+  },
+  {
+    "question": "What term measures the overall size or intensity of a wave from its equilibrium line to its crest peak or trough bottom?",
+    "options": [
+      "Amplitude",
+      "Frequency",
+      "Wavelength",
+      "Period"
+    ],
+    "answer": "Amplitude",
+    "explanation": "Amplitude is a measure of how big the wave is (height to crest or depth to trough from equilibrium)[cite: 6]."
+  },
+  {
+    "question": "What word is the term 'modem' contracted from?",
+    "options": [
+      "Modulator and Demodulator",
+      "Module and Demodule",
+      "Model and Emulation",
+      "Mode and Modulation"
+    ],
+    "answer": "Modulator and Demodulator",
+    "explanation": "The term 'modem' is a contraction of the words 'modulator' and 'demodulator'[cite: 6]."
+  },
+  {
+    "question": "What is the process of modifying an electronic or optical carrier signal to convert data into radio waves for transmission?",
+    "options": [
+      "Modulation",
+      "Quantization",
+      "Attenuation",
+      "Demultiplexing"
+    ],
+    "answer": "Modulation",
+    "explanation": "Modulation is the process of converting data into radio waves by adding information to a carrier signal[cite: 6]."
+  },
+  {
+    "question": "What type of baseline signal exhibits a steady, unchanging waveform with constant amplitude and frequency?",
+    "options": [
+      "Carrier signal",
+      "Baseband signal",
+      "Noise signal",
+      "Quantized signal"
+    ],
+    "answer": "Carrier signal",
+    "explanation": "A carrier signal is one with a steady waveform—constant height, or amplitude, and frequency[cite: 6]."
+  },
+  {
+    "question": "Which modulation technique varies the carrier height according to the analog baseband information signal?",
+    "options": [
+      "Amplitude Modulation (AM)",
+      "Frequency Modulation (FM)",
+      "Phase Modulation (PM)",
+      "Pulse Code Modulation (PCM)"
+    ],
+    "answer": "Amplitude Modulation (AM)",
+    "explanation": "In Amplitude Modulation (AM), carrier amplitude varies based on the analog baseband information signal[cite: 6]."
+  },
+  {
+    "question": "Which modulation scheme varies the number of wave cycles per second based on the baseband information signal?",
+    "options": [
+      "Frequency Modulation (FM)",
+      "Amplitude Modulation (AM)",
+      "Phase Modulation (PM)",
+      "Pulse Amplitude Modulation (PAM)"
+    ],
+    "answer": "Frequency Modulation (FM)",
+    "explanation": "In Frequency Modulation (FM), carrier frequency varies based on the analog baseband information signal[cite: 6]."
+  },
+  {
+    "question": "Which modulation scheme alters the angular shift of the steady carrier wave in accordance with the baseband signal?",
+    "options": [
+      "Phase Modulation (PM)",
+      "Amplitude Modulation (AM)",
+      "Frequency Modulation (FM)",
+      "Pulse Code Modulation (PCM)"
+    ],
+    "answer": "Phase Modulation (PM)",
+    "explanation": "In Phase Modulation (PM), carrier phase varies based on the analog baseband information signal[cite: 6]."
+  },
+  {
+    "question": "What sampling technique converts continuous analog wave amplitudes into a series of discrete pulses?",
+    "options": [
+      "Pulse Amplitude Modulation (PAM)",
+      "Pulse Code Modulation (PCM)",
+      "Line Coding",
+      "Frequency Shift Keying (FSK)"
+    ],
+    "answer": "Pulse Amplitude Modulation (PAM)",
+    "explanation": "The sampling process converts analog amplitudes to discrete levels in a modulation type called pulse amplitude modulation (PAM)[cite: 6]."
+  },
+  {
+    "question": "In Analog-to-Digital conversion, what step rounds measured pulse amplitudes to the nearest permitted integer value?",
+    "options": [
+      "Quantization",
+      "Sampling",
+      "Encoding",
+      "Modulation"
+    ],
+    "answer": "Quantization",
+    "explanation": "Quantizing means approximating the amplitude value of a pulse to the nearest integer on a set of permitted integers[cite: 6]."
+  },
+  {
+    "question": "Which process converts quantized discrete signals into high (1) and low (0) binary code values?",
+    "options": [
+      "Pulse Code Modulation (PCM)",
+      "Pulse Amplitude Modulation (PAM)",
+      "Frequency Modulation (FM)",
+      "Phase Modulation (PM)"
+    ],
+    "answer": "Pulse Code Modulation (PCM)",
+    "explanation": "Encoding (pulse code modulation [PCM]) converts discrete signals into highs (1) and lows (0)[cite: 6]."
+  },
+  {
+    "question": "What is the process of converting digital binary data into distinct digital waveforms for physical transmission?",
+    "options": [
+      "Line coding",
+      "Sampling",
+      "Quantization",
+      "Attenuation"
+    ],
+    "answer": "Line coding",
+    "explanation": "Line coding is the process of converting digital data into digital signals represented by a digital waveform[cite: 6]."
+  },
+  {
+    "question": "What channel impairment refers to the loss of signal strength or power as a wave travels along a medium over a distance?",
+    "options": [
+      "Attenuation",
+      "Distortion",
+      "Thermal noise",
+      "Shot noise"
+    ],
+    "answer": "Attenuation",
+    "explanation": "Attenuation is the decrease in signal strength as it travels along a transmission medium, increasing with distance[cite: 6]."
+  },
+  {
+    "question": "How is noise defined in data communication systems?",
+    "options": [
+      "An unwanted signal superimposed on a desired signal",
+      "The loss of signal strength over distance",
+      "The deliberate alteration of wave frequency",
+      "The conversion of analog signals to binary"
+    ],
+    "answer": "An unwanted signal superimposed on a desired signal",
+    "explanation": "Noise is usually defined as an unwanted signal that is superimposed on a desired signal[cite: 6]."
+  },
+  {
+    "question": "Lightning discharges during thunderstorms are classified under which category of noise?",
+    "options": [
+      "Atmospheric noise",
+      "Man-made noise",
+      "Extraterrestrial noise",
+      "Shot noise"
+    ],
+    "answer": "Atmospheric noise",
+    "explanation": "Atmospheric noise is caused by natural atmospheric phenomena like lightning discharges in thunderstorms[cite: 6]."
+  },
+  {
+    "question": "Fluorescent lamps and high-voltage power lines generate what specific type of environmental noise?",
+    "options": [
+      "Man-made noise",
+      "Atmospheric noise",
+      "Solar noise",
+      "Cosmic noise"
+    ],
+    "answer": "Man-made noise",
+    "explanation": "Man-made noise is EM noise caused by human activities and electrical equipment like high-voltage wires and fluorescent lamps[cite: 6]."
+  },
+  {
+    "question": "Noise that originates from distant stars outside the Earth is categorized as what type of noise?",
+    "options": [
+      "Cosmic noise",
+      "Solar noise",
+      "Man-made noise",
+      "Thermal noise"
+    ],
+    "answer": "Cosmic noise",
+    "explanation": "Cosmic noise is a subtype of extraterrestrial noise generated by distant stars[cite: 6]."
+  },
+  {
+    "question": "Extraterrestrial noise originating directly from the sun is known as what?",
+    "options": [
+      "Solar noise",
+      "Cosmic noise",
+      "Atmospheric noise",
+      "Shot noise"
+    ],
+    "answer": "Solar noise",
+    "explanation": "Solar noise is extraterrestrial noise that originates specifically from the sun[cite: 6]."
+  },
+  {
+    "question": "What type of noise occurs within electrical conductors due to the natural agitation of internal electrical charges?",
+    "options": [
+      "Thermal noise",
+      "Shot noise",
+      "Man-made noise",
+      "Atmospheric noise"
+    ],
+    "answer": "Thermal noise",
+    "explanation": "Thermal noise occurs in conductors caused by the thermal agitation of charges in the material[cite: 6]."
+  },
+  {
+    "question": "What type of noise stems from discrete time-dependent current fluctuations, particularly noticeable in semiconductor devices?",
+    "options": [
+      "Shot noise",
+      "Thermal noise",
+      "Cosmic noise",
+      "Solar noise"
+    ],
+    "answer": "Shot noise",
+    "explanation": "Shot noise arises from time-dependent fluctuations in current due to discrete electron charges, noticeable in semiconductors[cite: 6]."
+  },
+  {
+    "question": "What term refers to the unwanted change or alteration in the shape or waveform of a transmitted signal?",
+    "options": [
+      "Distortion",
+      "Attenuation",
+      "Sampling",
+      "Quantization"
+    ],
+    "answer": "Distortion",
+    "explanation": "Distortion refers to the change or alteration of an object, meaning a signal changes its original form or shape[cite: 6]."
+  },
+  {
+    "question": "What specific distortion phenomenon is peculiar to guided transmission media due to differing propagation speeds?",
+    "options": [
+      "Delay distortion",
+      "Thermal distortion",
+      "Shot distortion",
+      "Amplitude distortion"
+    ],
+    "answer": "Delay distortion",
+    "explanation": "Delay distortion is a phenomenon that is peculiar to guided transmission media[cite: 6]."
+  },
+  {
+    "question": "What metric quantitative ratio measures signal quality by comparing signal power/voltage magnitude against corrupted noise level?",
+    "options": [
+      "Signal-to-Noise Ratio (SNR)",
+      "Common-Mode Rejection Ratio (CMRR)",
+      "Pulse Code Ratio (PCR)",
+      "Bit Error Rate (BER)"
+    ],
+    "answer": "Signal-to-Noise Ratio (SNR)",
+    "explanation": "Signal-to-noise is the ratio of the magnitude of the signal to that of the noise[cite: 6]."
+  },
+  {
+    "question": "Which logarithmic formula is used to calculate Signal-to-Noise Ratio (SNR) when given power values (Ps and Pn)?",
+    "options": [
+      "SNR = 10 log10(Ps / Pn) dB",
+      "SNR = 20 log10(Ps / Pn) dB",
+      "SNR = 10 log10(Vs / Vn) dB",
+      "SNR = 20 log10(Ps * Pn) dB"
+    ],
+    "answer": "SNR = 10 log10(Ps / Pn) dB",
+    "explanation": "The formula for power SNR is SNR = 10 log10(Ps / Pn) dB[cite: 6]."
+  },
+  {
+    "question": "Which logarithmic formula calculates Signal-to-Noise Ratio (SNR) when using signal voltage (Vs) and noise voltage (Vn)?",
+    "options": [
+      "SNR = 20 log10(Vs / Vn) dB",
+      "SNR = 10 log10(Vs / Vn) dB",
+      "SNR = 20 log10(Vn / Vs) dB",
+      "SNR = 10 log10(Vs * Vn) dB"
+    ],
+    "answer": "SNR = 20 log10(Vs / Vn) dB",
+    "explanation": "When using voltage values, SNR is calculated as 20 log10(Vs / Vn) dB[cite: 6]."
+  },
+  {
+    "question": "In Shannon's Information Theory model, what block generates the original message intended for transmission?",
+    "options": [
+      "Information Source",
+      "Noise Source",
+      "Receiver",
+      "Destination"
+    ],
+    "answer": "Information Source",
+    "explanation": "In Shannon's model, the Information Source creates the initial message before sending it to the transmitter[cite: 6]."
+  },
+  {
+    "question": "In Shannon's Information Theory diagram, where does the Noise Source inject unwanted interference?",
+    "options": [
+      "Into the transmitted signal path between Transmitter and Receiver",
+      "Directly inside the Information Source",
+      "After the Destination terminal",
+      "Inside the Source Decoder"
+    ],
+    "answer": "Into the transmitted signal path between Transmitter and Receiver",
+    "explanation": "According to Shannon's diagram, noise affects the signal after it leaves the Transmitter on its way to the Receiver[cite: 6]."
+  },
+  {
+    "question": "Which cellular network generation introduced General Packet Radio Service (GPRS) and Packet Switching Networks (PSN)?",
+    "options": [
+      "2nd Generation (2G)",
+      "1st Generation (1G)",
+      "3rd Generation (3G)",
+      "4th Generation (4G)"
+    ],
+    "answer": "2nd Generation (2G)",
+    "explanation": "2G introduced GPRS and Packet Switching Networks alongside SMS[cite: 6]."
+  },
+  {
+    "question": "Which cellular standard is explicitly identified as one of the two key 4G standards alongside LTE?",
+    "options": [
+      "WiMAX",
+      "UMTS",
+      "GSM",
+      "GPRS"
+    ],
+    "answer": "WiMAX",
+    "explanation": "The two key 4G standards are WiMAX and LTE[cite: 6]."
+  },
+  {
+    "question": "Public Switched Telephone Networks (PSTN) and the Internet are classified under which geographical network category?",
+    "options": [
+      "Wide Area Networks (WANs)",
+      "Metropolitan Area Networks (MANs)",
+      "Local Area Networks (LANs)",
+      "Personal Area Networks (PANs)"
+    ],
+    "answer": "Wide Area Networks (WANs)",
+    "explanation": "Examples of WANs include public switched telephone networks (PSTN) and the Internet[cite: 6]."
+  },
+  {
+    "question": "What is the primary speed constant (c) used in electromagnetic wave calculations like wavelength and frequency?",
+    "options": [
+      "3 x 10^8 m/s",
+      "3 x 10^5 m/s",
+      "1.5 x 10^8 m/s",
+      "9 x 10^8 m/s"
+    ],
+    "answer": "3 x 10^8 m/s",
+    "explanation": "Wave speed / speed of light (c) is taken as 3 x 10^8 m/s in sample calculations[cite: 6]."
+  },
+  {
+    "question": "What happens during demodulation inside a receiving modem?",
+    "options": [
+      "The incoming modulated signal is converted back into digital data",
+      "Digital data is converted into high-frequency analog radio waves",
+      "The signal power is attenuated to zero",
+      "Discrete pulse values are quantized into integer values"
+    ],
+    "answer": "The incoming modulated signal is converted back into digital data",
+    "explanation": "The receiving modem demodulates the incoming signal back into digital data[cite: 6]."
+  },
+  {
+    "question": "Natural electrical disturbances occurring in the environment belong to which overarching noise category?",
+    "options": [
+      "Atmospheric noise",
+      "Man-made noise",
+      "Thermal noise",
+      "Shot noise"
+    ],
+    "answer": "Atmospheric noise",
+    "explanation": "Atmospheric noise includes natural electrical disturbances that occur in nature[cite: 6]."
+  },
+  {
+    "question": "Which component in the data communication network model represents hardware devices like modems that translate signals at both source and destination?",
+    "options": [
+      "Source encoder and Source decoder",
+      "Source and Sink",
+      "Transmitter and Channel",
+      "Hub and Bus"
+    ],
+    "answer": "Source encoder and Source decoder",
+    "explanation": "Modems serve as examples for both source encoder (converting info to message signal) and source decoder (converting electrical signal back)[cite: 6]."
+  },
+  {
+    "question": "What network topology maintains branching P2P connections starting from a single main central node down through secondary nodes without loops?",
+    "options": [
+      "Tree topology",
+      "Ring topology",
+      "Mesh topology",
+      "Bus topology"
+    ],
+    "answer": "Tree topology",
+    "explanation": "Tree topology forms branching links without closed loops by interconnecting multiple buses or nodes[cite: 6]."
+  },
+  {
+    "question": "What term describes the discrete level modulation obtained immediately after the initial sampling phase of an analog signal?",
+    "options": [
+      "Pulse Amplitude Modulation (PAM)",
+      "Pulse Code Modulation (PCM)",
+      "Frequency Modulation (FM)",
+      "Phase Modulation (PM)"
+    ],
+    "answer": "Pulse Amplitude Modulation (PAM)",
+    "explanation": "Converting analog amplitudes to discrete levels through sampling is called pulse amplitude modulation (PAM)[cite: 6]."
+  },
+  {
+    "question": "Which of the following noise types originates from human activities utilizing electrical devices?",
+    "options": [
+      "Man-made noise",
+      "Solar noise",
+      "Cosmic noise",
+      "Atmospheric noise"
+    ],
+    "answer": "Man-made noise",
+    "explanation": "Man-made noise is EM noise caused by human activities associated with electrical equipment usage[cite: 6]."
+  }
+  ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "FMSS - RANDY" : [
+{
+    "question": "What is the primary feature of a Differential Amplifier when opposite signals are applied to its inputs?",
+    "options": [
+      "Very small current gain",
+      "Very large gain",
+      "Zero output voltage",
+      "Infinite output resistance"
+    ],
+    "answer": "Very large gain",
+    "explanation": "The main feature of a differential amplifier is the very large gain achieved when opposite (differential) signals are applied to the inputs[cite: 7]."
+  },
+  {
+    "question": "In differential amplifier operation, what occurs during 'single-ended' operation?",
+    "options": [
+      "Two separate signals produce a difference output",
+      "Signals at both inputs cancel each other to zero",
+      "A single input signal applies and operates both transistors, resulting in output from both collectors",
+      "Signals are applied only to the power supply terminals"
+    ],
+    "answer": "A single input signal applies and operates both transistors, resulting in output from both collectors",
+    "explanation": "In single-ended operation, a single input signal is applied and operates both transistors, resulting in output from both collectors[cite: 7]."
+  },
+  {
+    "question": "What characterizes 'double-ended' operation in a differential amplifier?",
+    "options": [
+      "Two input signals are applied, resulting in the difference of the signals applied to both inputs",
+      "A single input is grounded to prevent output voltage",
+      "Common signals cancel out to produce double power supply voltage",
+      "Outputs are connected directly to the positive power rail"
+    ],
+    "answer": "Two input signals are applied, resulting in the difference of the signals applied to both inputs",
+    "explanation": "In double-ended operation, two input signals are applied, resulting in the difference of the signals applied to both inputs[cite: 7]."
+  },
+  {
+    "question": "What is the resulting output signal during common-mode operation in an ideal differential amplifier?",
+    "options": [
+      "Maximum positive saturation voltage",
+      "Double the input signal",
+      "Zero output signal",
+      "Inverted sum of both inputs"
+    ],
+    "answer": "Zero output signal",
+    "explanation": "In common-mode operation, the common input signal results in opposite signals at each collector; these signals cancel, resulting in a zero output signal[cite: 7]."
+  },
+  {
+    "question": "What is an Operational Amplifier (Op-Amp)?",
+    "options": [
+      "A low gain amplifier with low input impedance",
+      "A high gain differential amplifier with high input impedance and low output impedance",
+      "A passive circuit containing only resistors and capacitors",
+      "A high gain amplifier with zero input impedance and high output impedance"
+    ],
+    "answer": "A high gain differential amplifier with high input impedance and low output impedance",
+    "explanation": "An Op-Amp is a very high gain differential amplifier with high input impedance and low output impedance[cite: 7]."
+  },
+  {
+    "question": "Which basic internal electronic components compose an integrated circuit (IC) Op-Amp?",
+    "options": [
+      "Transistors, resistors, and capacitors",
+      "Inductors and transformers only",
+      "Diodes and switches only",
+      "Vacuum tubes and inductors"
+    ],
+    "answer": "Transistors, resistors, and capacitors",
+    "explanation": "An Op-Amp is a low-cost integrated circuit consisting of transistors, resistors, and capacitors[cite: 7]."
+  },
+  {
+    "question": "How is the inverting input terminal labeled on an Op-Amp schematic symbol?",
+    "options": [
+      "Labeled with a '+' sign",
+      "Labeled with a '-' sign",
+      "Labeled with a 'GND' symbol",
+      "Labeled with an 'OUT' symbol"
+    ],
+    "answer": "Labeled with a '-' sign",
+    "explanation": "The inverting input terminal is labeled with a minus (-) sign on the schematic symbol[cite: 7]."
+  },
+  {
+    "question": "How is the non-inverting input terminal labeled on an Op-Amp schematic symbol?",
+    "options": [
+      "Labeled with a '-' sign",
+      "Labeled with a '+' sign",
+      "Labeled with a 'VCC' sign",
+      "Labeled with a 'REF' sign"
+    ],
+    "answer": "Labeled with a '+' sign",
+    "explanation": "The non-inverting input terminal is labeled with a plus (+) sign on the schematic symbol[cite: 7]."
+  },
+  {
+    "question": "How many primary active/power terminals are on a standard basic Op-Amp symbol?",
+    "options": [
+      "3 terminals",
+      "4 terminals",
+      "5 terminals",
+      "8 terminals"
+    ],
+    "answer": "5 terminals",
+    "explanation": "A standard basic op-amp schematic symbol has 5 main terminals: +V supply, -V supply, inverting input (-), non-inverting input (+), and the output[cite: 7]."
+  },
+  {
+    "question": "What is defined as 'Open-Loop Gain' of an Op-Amp?",
+    "options": [
+      "The gain achieved when maximum negative feedback is connected",
+      "The gain without feedback",
+      "The ratio of output impedance to input impedance",
+      "The gain when both inputs are tied to ground"
+    ],
+    "answer": "The gain without feedback",
+    "explanation": "Infinite or open-loop gain is defined as the gain of the op-amp without any feedback applied[cite: 7]."
+  },
+  {
+    "question": "What does the 'Infinite Input Impedance' property of an ideal Op-Amp imply regarding input current?",
+    "options": [
+      "Input current is maximum at all times",
+      "Input current is approximately equal to 0 A",
+      "Input current is equal to the output voltage",
+      "Input current flows directly to the negative power rail"
+    ],
+    "answer": "Input current is approximately equal to 0 A",
+    "explanation": "Infinite input impedance means the op-amp draws approximately zero input current (ii ≈ 0A)[cite: 7]."
+  },
+  {
+    "question": "What does the 'Zero Output Impedance' property imply for an ideal Op-Amp?",
+    "options": [
+      "It acts as a perfect internal voltage source with no internal resistance",
+      "It restricts the output current to zero",
+      "It prevents any voltage from reaching the load resistor",
+      "It forces the output voltage to saturate instantly"
+    ],
+    "answer": "It acts as a perfect internal voltage source with no internal resistance",
+    "explanation": "Zero output impedance means the op-amp acts as a perfect internal voltage source with no internal resistance[cite: 7]."
+  },
+  {
+    "question": "What is the graph that relates the output voltage (Vo) to the input voltage (Vi) called?",
+    "options": [
+      "Bode plot",
+      "Frequency response curve",
+      "Voltage transfer curve",
+      "I-V characteristic curve"
+    ],
+    "answer": "Voltage transfer curve",
+    "explanation": "The graph that relates the output voltage to the input voltage is called the voltage transfer curve[cite: 7]."
+  },
+  {
+    "question": "In an Op-Amp's voltage transfer curve, what characterizes the 'linear region'?",
+    "options": [
+      "Region where output remains flat at maximum supply rails",
+      "Region around Vi = 0V where output changes linearly with respect to input",
+      "Region where input changes have no effect on output",
+      "Region where negative feedback is disconnected"
+    ],
+    "answer": "Region around Vi = 0V where output changes linearly with respect to input",
+    "explanation": "The linear region is around Vi = 0V where the output changes linearly with respect to the input[cite: 7]."
+  },
+  {
+    "question": "What parameter is equal to the slope of the line in the linear region of the voltage transfer curve?",
+    "options": [
+      "Input impedance",
+      "Common-mode rejection ratio",
+      "Open-loop gain (A)",
+      "Output saturation voltage"
+    ],
+    "answer": "Open-loop gain (A)",
+    "explanation": "In the linear region, the slope of the line relating Vo to Vi is equal to the open-loop gain A[cite: 7]."
+  },
+  {
+    "question": "What occurs when an Op-Amp enters the 'saturation region'?",
+    "options": [
+      "Output changes linearly with input voltage",
+      "Changes in Vi have little to no effect on Vo",
+      "Input current increases to several amperes",
+      "Open-loop gain increases to infinity"
+    ],
+    "answer": "Changes in Vi have little to no effect on Vo",
+    "explanation": "In the saturation region (non-linear behavior), changes in input voltage Vi have little or no effect on output voltage Vo[cite: 7]."
+  },
+  {
+    "question": "What is 'Negative Feedback' in an Op-Amp circuit?",
+    "options": [
+      "Connecting the positive power rail to the output",
+      "Connecting the output back to the input such that an increase in output causes a decrease in output",
+      "Grounding both input terminals simultaneously",
+      "Connecting the output back to the non-inverting input to increase gain"
+    ],
+    "answer": "Connecting the output back to the input such that an increase in output causes a decrease in output",
+    "explanation": "Negative feedback is when you connect the output of a circuit back to its input so that an increase in the output causes a decrease in the output (self-correction)[cite: 7]."
+  },
+  {
+    "question": "When an Op-Amp is used with negative feedback, what key consequence arises from its infinite gain?",
+    "options": [
+      "The two input voltages will be forced to be equal",
+      "The output voltage drops permanently to zero",
+      "The input current increases exponentially",
+      "The differential gain becomes zero"
+    ],
+    "answer": "The two input voltages will be forced to be equal",
+    "explanation": "When an op-amp is used in negative feedback, the consequence of infinite gain is that the two inputs will be forced to be equal[cite: 7]."
+  },
+  {
+    "question": "When does an Op-Amp experience 'Output Saturation'?",
+    "options": [
+      "When negative feedback is added to the circuit",
+      "When the output voltage implied by the circuit exceeds its power supply limits",
+      "When input voltage drops exactly to zero",
+      "When input impedance drops to zero ohms"
+    ],
+    "answer": "When the output voltage implied by the circuit exceeds its power supply limits",
+    "explanation": "When the output voltage implied by the circuit would exceed the possible range set by its power supply, the op-amp saturates and outputs its max or min possible voltage[cite: 7]."
+  },
+  {
+    "question": "What term describes the phenomenon where output saturation cuts off peak signals close to the supply rails?",
+    "options": [
+      "Attenuation",
+      "Clipping",
+      "Oscillation",
+      "Phase shifting"
+    ],
+    "answer": "Clipping",
+    "explanation": "When op-amp output saturation causes the signal to be cut off close to the rails, we say that the signal is clipped[cite: 7]."
+  },
+  {
+    "question": "If a single-ended input is applied to the plus (+) input with the minus (-) input grounded, what is the output phase?",
+    "options": [
+      "Output has opposite phase (180 degrees flipped) relative to input",
+      "Output has zero voltage",
+      "Output has the same polarity as the applied input signal",
+      "Output saturates immediately to negative rail"
+    ],
+    "answer": "Output has the same polarity as the applied input signal",
+    "explanation": "Applying an input to the plus input (with minus input at ground) results in an output having the same polarity as the applied input signal[cite: 7]."
+  },
+  {
+    "question": "If a single-ended input is applied to the minus (-) input with the plus (+) input grounded, what is the output phase?",
+    "options": [
+      "Output has the same polarity as the applied input",
+      "Output is opposite in phase to the applied signal",
+      "Output remains constant at +Vcc",
+      "Output amplitude is reduced to zero"
+    ],
+    "answer": "Output is opposite in phase to the applied signal",
+    "explanation": "When an input signal is applied to the minus input (with plus input at ground), the output is opposite in phase to the applied signal[cite: 7]."
+  },
+  {
+    "question": "What defines double-ended (differential) input operation in an Op-Amp?",
+    "options": [
+      "Signals are applied to both input terminals without either being grounded",
+      "Both inputs are tied directly to ground",
+      "Input signal is connected only to the power supply pins",
+      "One input is connected to output and the other is grounded"
+    ],
+    "answer": "Signals are applied to both input terminals without either being grounded",
+    "explanation": "Double-ended input operation applies signals to each input terminal (neither input is at ground), producing an output proportional to the difference signal[cite: 7]."
+  },
+  {
+    "question": "In a double-ended output configuration, what is the relationship between the two output terminals?",
+    "options": [
+      "Both outputs have identical voltage and identical polarity",
+      "Outputs always have opposite polarity",
+      "One output is double the voltage of the other",
+      "Both output terminals are grounded"
+    ],
+    "answer": "Outputs always have opposite polarity",
+    "explanation": "Double-ended output operation results in outputs from both output terminals, with these outputs always being opposite in polarity[cite: 7]."
+  },
+  {
+    "question": "What feature allows a differential Op-Amp connection to attenuate unwanted noise while amplifying difference signals?",
+    "options": [
+      "Negative saturation",
+      "Common-mode rejection",
+      "Open-loop clipping",
+      "Voltage division"
+    ],
+    "answer": "Common-mode rejection",
+    "explanation": "Since noise is common to both inputs, the differential connection attenuates unwanted input noise while amplifying the difference signal. This feature is called common-mode rejection[cite: 7]."
+  },
+  {
+    "question": "What is the ideal output voltage when identical common-mode signals are applied to both Op-Amp inputs?",
+    "options": [
+      "+Vsat",
+      "0 V",
+      "-Vsat",
+      "Equal to double the input voltage"
+    ],
+    "answer": "0 V",
+    "explanation": "Ideally, identical inputs are equally amplified into opposite-polarity signals at the output, canceling each other to yield 0 V output[cite: 7]."
+  },
+  {
+    "question": "How is Common-Mode Rejection Ratio (CMRR) defined conceptually?",
+    "options": [
+      "Ratio of input impedance to output impedance",
+      "Ratio of differential-mode gain to common-mode gain",
+      "Ratio of positive supply voltage to negative supply voltage",
+      "Ratio of saturation voltage to open-loop gain"
+    ],
+    "answer": "Ratio of differential-mode gain to common-mode gain",
+    "explanation": "The op-amp's Common-Mode Rejection Ratio (CMRR) is the ratio of the differential-mode gain (Gd) to common-mode gain (Gc)[cite: 7]."
+  },
+  {
+    "question": "How is Differential Voltage (Vd) defined at the inputs of an Op-Amp?",
+    "options": [
+      "Vd = V+ + V-",
+      "Vd = V+ - V-",
+      "Vd = 1/2 (V+ + V-)",
+      "Vd = V+ * V-"
+    ],
+    "answer": "Vd = V+ - V-",
+    "explanation": "Differential voltage Vd is defined as the non-inverting input voltage minus the inverting input voltage (Vd = V+ - V-)[cite: 7]."
+  },
+  {
+    "question": "How is Common-Mode Voltage (Vc) defined mathematically?",
+    "options": [
+      "Vc = V+ - V-",
+      "Vc = V+ / V-",
+      "Vc = 1/2 (V+ + V-)",
+      "Vc = 2 * (V+ - V-)"
+    ],
+    "answer": "Vc = 1/2 (V+ + V-)",
+    "explanation": "Common mode voltage Vc is the average value of the two input voltages: Vc = 1/2 (V+ + V-)[cite: 7]."
+  },
+  {
+    "question": "Which Op-Amp configuration is described as 'the most widely used constant-gain amplifier circuit' where the output is inverted relative to input?",
+    "options": [
+      "Inverting Amplifier",
+      "Non-inverting Amplifier",
+      "Unity Follower",
+      "Differentiator"
+    ],
+    "answer": "Inverting Amplifier",
+    "explanation": "The Inverting Amplifier is the most widely used constant-gain amplifier circuit, where the output is inverted from the input[cite: 7]."
+  },
+  {
+    "question": "Which Op-Amp circuit acts as a constant-gain multiplier yielding an output with the same polarity as the input?",
+    "options": [
+      "Inverting Amplifier",
+      "Non-inverting Amplifier",
+      "Integrator",
+      "Summing Amplifier"
+    ],
+    "answer": "Non-inverting Amplifier",
+    "explanation": "A Non-inverting Amplifier works as a constant-gain multiplier with an output signal having the same polarity as the input[cite: 7]."
+  },
+  {
+    "question": "Which Op-Amp circuit provides a voltage gain of exactly unity (1) with no polarity or phase reversal?",
+    "options": [
+      "Summing Amplifier",
+      "Differentiator",
+      "Unity Follower",
+      "Inverting Amplifier"
+    ],
+    "answer": "Unity Follower",
+    "explanation": "A Unity Follower (Voltage Follower) provides a gain of unity (1) with no polarity or phase reversal[cite: 7]."
+  },
+  {
+    "question": "What type of Op-Amp circuit provides a means of algebraically adding multiple input voltages, each multiplied by a constant-gain factor?",
+    "options": [
+      "Summing Amplifier",
+      "Integrator",
+      "Unity Follower",
+      "Differential Comparator"
+    ],
+    "answer": "Summing Amplifier",
+    "explanation": "A Summing Amplifier provides a means of algebraically summing (adding) multiple input voltages, each multiplied by its separate constant-gain multiplier[cite: 7]."
+  },
+  {
+    "question": "What Op-Amp circuit connection is formed when a capacitor is used as the feedback component?",
+    "options": [
+      "Differentiator",
+      "Integrator",
+      "Unity Follower",
+      "Non-inverting Amplifier"
+    ],
+    "answer": "Integrator",
+    "explanation": "If the feedback component in an op-amp circuit is a capacitor, the resulting connection is called an Integrator[cite: 7]."
+  },
+  {
+    "question": "What Op-Amp circuit connection is formed when a capacitor is used as the input component connected to the inverting input?",
+    "options": [
+      "Integrator",
+      "Differentiator",
+      "Summing Amplifier",
+      "Voltage Follower"
+    ],
+    "answer": "Differentiator",
+    "explanation": "When a capacitor is used as the input component to the op-amp, the circuit operates as a Differentiator[cite: 7]."
+  }
+  ],
+
+
+
+
+
+
+
+
+  "DDC - RANDY" : [
+    {
+    "question": "Which ancient form of long-distance communication was used by American Indians as a distress signal and on the Great Wall of China to relay messages of incoming threats?",
+    "options": [
+      "Pigeon Courier",
+      "Smoke Signals",
+      "Semaphore Flags",
+      "Pony Express"
+    ],
+    "answer": "Smoke Signals",
+    "explanation": "Smoke Signals are one of the oldest forms of long-distance communication. American Indians used it as a distress signal, and it was used along the Great Wall of China to alert defenders of threats[cite: 8]."
+  },
+  {
+    "question": "Which messaging system developed by Claude Chappe in 1792 used flags as a method of communication?",
+    "options": [
+      "Electrical Telegraph",
+      "Pigeon Courier",
+      "Semaphore Flags",
+      "Pony Express"
+    ],
+    "answer": "Semaphore Flags",
+    "explanation": "In 1792, Claude Chappe developed Semaphore Flags, a messaging system that utilized flags to relay visual messages across distances[cite: 8]."
+  },
+  {
+    "question": "Which 1860 mail service delivered messages, newspapers, and mail using relays of horse-mounted riders?",
+    "options": [
+      "Pony Express",
+      "Pigeon Courier",
+      "Wireless Telegraphy",
+      "Electrical Telegraph"
+    ],
+    "answer": "Pony Express",
+    "explanation": "The Pony Express (1860) was a mail service that used relays of horse-mounted riders to deliver messages across long distances[cite: 8]."
+  },
+  {
+    "question": "What invention revolutionized long-distance communication by sending electric signals in Morse code between two stations?",
+    "options": [
+      "Telephone",
+      "Electrical Telegraph",
+      "Wireless Telegraphy",
+      "Semaphore Flags"
+    ],
+    "answer": "Electrical Telegraph",
+    "explanation": "The Electrical Telegraph revolutionized communication by sending electric pulses (Morse code) over wires between fixed stations[cite: 8]."
+  },
+  {
+    "question": "Which communication technology is defined as the transmission of electric current projected into space in the form of radio waves?",
+    "options": [
+      "Telephone",
+      "Electrical Telegraph",
+      "Wireless Telegraphy (Radio)",
+      "Pony Express"
+    ],
+    "answer": "Wireless Telegraphy (Radio)",
+    "explanation": "Wireless Telegraphy (Radio) transmits electric current projected through space as electromagnetic radio waves without connecting wires[cite: 8]."
+  },
+  {
+    "question": "Which instrument is specifically designed for the simultaneous transmission of the human voice?",
+    "options": [
+      "Electrical Telegraph",
+      "Modem",
+      "Telephone",
+      "Semaphore Flag"
+    ],
+    "answer": "Telephone",
+    "explanation": "The Telephone is an instrument specifically engineered for the simultaneous transmission and reception of the human voice[cite: 8]."
+  },
+  {
+    "question": "Which mobile cellular generation was the first to use analog wireless technology?",
+    "options": [
+      "1st Generation (1G)",
+      "2nd Generation (2G)",
+      "3rd Generation (3G)",
+      "4th Generation (4G)"
+    ],
+    "answer": "1st Generation (1G)",
+    "explanation": "1G (First Generation) cellular networks relied entirely on analog wireless transmission technology[cite: 8]."
+  },
+  {
+    "question": "In which generation were cellphones upgraded from analog to digital, introducing CDMA, GSM, and SMS?",
+    "options": [
+      "1G",
+      "2G",
+      "3G",
+      "4G"
+    ],
+    "answer": "2G",
+    "explanation": "2G upgraded cellphones from analog to digital, implementing CDMA and GSM standards and introducing Short Message Service (SMS), GPRS, and Packet Switching[cite: 8]."
+  },
+  {
+    "question": "Which mobile generation introduced Universal Mobile Telecommunication Systems (UMTS) to render multimedia streaming services?",
+    "options": [
+      "2G",
+      "3G",
+      "4G",
+      "5G"
+    ],
+    "answer": "3G",
+    "explanation": "3G introduced UMTS technology, enabling mobile multimedia services, streaming, and HSPA+ advancements[cite: 8]."
+  },
+  {
+    "question": "Which two standards are key components of 4G mobile technology?",
+    "options": [
+      "CDMA and GSM",
+      "AM and FM",
+      "WiMAX and LTE",
+      "IoT and Beamforming"
+    ],
+    "answer": "WiMAX and LTE",
+    "explanation": "4G key standards include WiMAX (Worldwide Interoperability for Microwave Access) and LTE (Long-Term Evolution), utilizing MIMO and OFDM[cite: 8]."
+  },
+  {
+    "question": "Which generation rolls out speeds up to 10 times faster than 4G and supports the Internet of Things (IoT) and beamforming?",
+    "options": [
+      "3G",
+      "4G",
+      "5G",
+      "6G"
+    ],
+    "answer": "5G",
+    "explanation": "5G delivers speeds up to 10x faster than 4G, powering IoT, autonomous systems, and beamforming technology[cite: 8]."
+  },
+  {
+    "question": "How is digital data defined in data representation?",
+    "options": [
+      "Continuous information like human voice",
+      "Discrete values consisting of ones and zeros",
+      "Electromagnetic signals with infinite values",
+      "Modulated carrier waves"
+    ],
+    "answer": "Discrete values consisting of ones and zeros",
+    "explanation": "Digital data takes on discrete values (binary 1s and 0s), whereas analog data represents continuous information[cite: 8]."
+  },
+  {
+    "question": "Who formulated Information Theory to represent the conditions and parameters affecting transmission and processing of information?",
+    "options": [
+      "Claude Chappe",
+      "Claude Shannon",
+      "Alexander Graham Bell",
+      "Bernard Sklar"
+    ],
+    "answer": "Claude Shannon",
+    "explanation": "Claude Shannon developed Information Theory, focusing on fundamental limitations and parameters affecting information processing and transmission[cite: 8]."
+  },
+  {
+    "question": "In a data communication network model, what is the role of a Source Encoder?",
+    "options": [
+      "To convert electrical signals back into original form",
+      "To generate raw information like text or voice",
+      "To convert information into an electrical form called a message signal",
+      "To act as the final user of the transmitted information"
+    ],
+    "answer": "To convert information into an electrical form called a message signal",
+    "explanation": "A Source Encoder converts user information into an electrical form known as a message signal (e.g., a modem encoding data)[cite: 8]."
+  },
+  {
+    "question": "Which block in the data communication network model performs the inverse function of the transmitter to recover the message signal?",
+    "options": [
+      "Source",
+      "Channel",
+      "Receiver",
+      "Sink"
+    ],
+    "answer": "Receiver",
+    "explanation": "The Receiver performs the inverse operation of the transmitter to recover the message signal from the channel (e.g., filters and receiving antennas)[cite: 8]."
+  },
+  {
+    "question": "In data communications, what is a Sink?",
+    "options": [
+      "The physical medium connecting two nodes",
+      "The noise generator in a transmission path",
+      "The user or destination device of the generated information",
+      "The device that modulates carrier waves"
+    ],
+    "answer": "The user or destination device of the generated information",
+    "explanation": "The Sink is the destination or end-user of the information generated by the source (e.g., terminal devices like smartphones or PCs)[cite: 8]."
+  },
+  {
+    "question": "Which network topology features a permanent direct link connecting exactly two nodes?",
+    "options": [
+      "Star Topology",
+      "Point-to-Point (P2P) Topology",
+      "Bus Topology",
+      "Mesh Topology"
+    ],
+    "answer": "Point-to-Point (P2P) Topology",
+    "explanation": "Point-to-Point (P2P) topology provides a permanent, dedicated link connecting strictly two nodes or devices[cite: 8]."
+  },
+  {
+    "question": "Which network topology consists of a single link interconnecting nodes where one node acts as a master and others act as slaves?",
+    "options": [
+      "Multidrop Topology",
+      "Bus Topology",
+      "Ring Topology",
+      "Tree Topology"
+    ],
+    "answer": "Multidrop Topology",
+    "explanation": "In Multidrop topology, all nodes share a single link controlled by one master node, with remaining nodes operating as secondary/slave nodes[cite: 8]."
+  },
+  {
+    "question": "What component is used in a Bus topology to prevent signals from reflecting back and corrupting data on the line?",
+    "options": [
+      "Hub",
+      "Modem",
+      "Line Terminator",
+      "Router"
+    ],
+    "answer": "Line Terminator",
+    "explanation": "A line terminator is placed at the ends of a Bus topology to absorb signals and prevent them from bouncing back and corrupting transmission[cite: 8]."
+  },
+  {
+    "question": "In which network topology is every node connected in a P2P manner to a central node called a hub?",
+    "options": [
+      "Ring Topology",
+      "Mesh Topology",
+      "Star Topology",
+      "Tree Topology"
+    ],
+    "answer": "Star Topology",
+    "explanation": "In a Star topology, each peripheral node is connected directly via a P2P link to a central node known as a hub or switch[cite: 8]."
+  },
+  {
+    "question": "Which topology connects nodes serially in a P2P chain, with the last node connected back to the first node to form a closed loop?",
+    "options": [
+      "Ring Topology",
+      "Tree Topology",
+      "Mesh Topology",
+      "Bus Topology"
+    ],
+    "answer": "Ring Topology",
+    "explanation": "In a Ring topology, nodes are connected serially point-to-point in a continuous circular loop, connecting the last node back to the first[cite: 8]."
+  },
+  {
+    "question": "What type of network interconnects devices within the personal reach of an individual, typically up to a range of 10 meters?",
+    "options": [
+      "LAN",
+      "MAN",
+      "PAN",
+      "WAN"
+    ],
+    "answer": "PAN",
+    "explanation": "Personal Area Networks (PANs) cover a small area surrounding an individual person, typically within 10 meters[cite: 8]."
+  },
+  {
+    "question": "FDDI (Fiber Distributed Data Interface) is an example of which geographical network classification?",
+    "options": [
+      "PAN",
+      "LAN",
+      "MAN",
+      "WAN"
+    ],
+    "answer": "MAN",
+    "explanation": "Metropolitan Area Networks (MANs) span a city or campus area; FDDI is a classic example of a MAN technology[cite: 8]."
+  },
+  {
+    "question": "The Internet and the Public Switched Telephone Network (PSTN) are prime examples of which network type?",
+    "options": [
+      "Wide Area Network (WAN)",
+      "Local Area Network (LAN)",
+      "Personal Area Network (PAN)",
+      "Metropolitan Area Network (MAN)"
+    ],
+    "answer": "Wide Area Network (WAN)",
+    "explanation": "Wide Area Networks (WANs) span large geographical distances, including countries or the entire globe (e.g., PSTN, Internet)[cite: 8]."
+  },
+  {
+    "question": "How are Analog Signals visually and mathematically represented?",
+    "options": [
+      "Square waves with discrete values",
+      "Sine waves with an infinite number of values",
+      "Flat static lines",
+      "Binary pulse streams"
+    ],
+    "answer": "Sine waves with an infinite number of values",
+    "explanation": "Analog signals are continuous waveforms represented as sine waves containing an infinite number of amplitude values over time[cite: 8]."
+  },
+  {
+    "question": "What is a Periodic Signal?",
+    "options": [
+      "A signal that changes randomly without repeating",
+      "A signal that completes a pattern within a measurable time frame and repeats it identically",
+      "A signal that has no frequency or wavelength",
+      "A signal consisting solely of solar noise"
+    ],
+    "answer": "A signal that completes a pattern within a measurable time frame and repeats it identically",
+    "explanation": "A periodic signal completes a distinct pattern within a measurable period and repeats that pattern over subsequent identical time intervals[cite: 8]."
+  },
+  {
+    "question": "How is Amplitude defined in wave terminologies?",
+    "options": [
+      "The time required to complete one full cycle",
+      "The number of waves passing a given point per second",
+      "The distance between two consecutive wave peaks",
+      "The height from the equilibrium point to the crest, or depth to the trough"
+    ],
+    "answer": "The height from the equilibrium point to the crest, or depth to the trough",
+    "explanation": "Amplitude is a measure of wave magnitude—specifically the height from equilibrium to the highest point (crest) or depth to the lowest point (trough)[cite: 8]."
+  },
+  {
+    "question": "What does the term 'Modem' stand for?",
+    "options": [
+      "Mode Demonstrator",
+      "Modulator and Demodulator",
+      "Modern Digital Electronic Media",
+      "Multiplexed Oscillating Demultiplexer"
+    ],
+    "answer": "Modulator and Demodulator",
+    "explanation": "The word 'modem' is a contraction of 'modulator' and 'demodulator'[cite: 8]."
+  },
+  {
+    "question": "Which modulation technique varies the frequency of a carrier wave based on the analog baseband signal?",
+    "options": [
+      "Amplitude Modulation (AM)",
+      "Frequency Modulation (FM)",
+      "Phase Modulation (PM)",
+      "Pulse Code Modulation (PCM)"
+    ],
+    "answer": "Frequency Modulation (FM)",
+    "explanation": "In Frequency Modulation (FM), the frequency of the steady carrier wave is varied in proportion to the modulating baseband signal[cite: 8]."
+  },
+  {
+    "question": "In Analog-to-Digital Conversion, what is Pulse Amplitude Modulation (PAM)?",
+    "options": [
+      "The process of converting discrete signals into binary 1s and 0s",
+      "The result of sampling an analog signal into discrete amplitude levels",
+      "The loss of signal strength over long physical distances",
+      "The alteration of wave shape due to guided media delay"
+    ],
+    "answer": "The result of sampling an analog signal into discrete amplitude levels",
+    "explanation": "Sampling lays out the analog signal onto a graph, converting continuous amplitudes into discrete PAM (Pulse Amplitude Modulation) samples[cite: 8]."
+  },
+  {
+    "question": "What is Quantization in the context of Analog-to-Digital conversion?",
+    "options": [
+      "Converting continuous voice into radio signals directly",
+      "Approximating the amplitude value of a pulse to the nearest integer on a predefined scale",
+      "Transmitting radio waves through space using antennas",
+      "Measuring signal loss in decibels"
+    ],
+    "answer": "Approximating the amplitude value of a pulse to the nearest integer on a predefined scale",
+    "explanation": "Quantization approximates the sampled pulse amplitude to the nearest integer on a predefined set of permitted discrete values[cite: 8]."
+  },
+  {
+    "question": "What process is defined as converting digital data into digital signals represented by a digital waveform?",
+    "options": [
+      "Line Coding",
+      "Sampling",
+      "Attenuation",
+      "Thermal Agitation"
+    ],
+    "answer": "Line Coding",
+    "explanation": "Line Coding is the process of converting digital data into digital signals (digital waveforms) suitable for transmission[cite: 8]."
+  },
+  {
+    "question": "What term describes the loss of signal strength as it travels along a transmission medium?",
+    "options": [
+      "Distortion",
+      "Noise",
+      "Attenuation",
+      "Quantization"
+    ],
+    "answer": "Attenuation",
+    "explanation": "Attenuation is the reduction or loss of signal strength as an electromagnetic signal propagates along a medium over distance[cite: 8]."
+  },
+  {
+    "question": "Which specific type of noise is caused by natural atmospheric electrical disturbances such as lightning?",
+    "options": [
+      "Thermal Noise",
+      "Atmospheric Noise",
+      "Man-Made Noise",
+      "Extraterrestrial Noise"
+    ],
+    "answer": "Atmospheric Noise",
+    "explanation": "Atmospheric Noise is natural noise caused by atmospheric phenomena like lightning discharges in thunderstorms[cite: 8]."
+  },
+  {
+    "question": "Which type of noise arises from time-dependent fluctuations in electrical current due to the discrete nature of electron charges, particularly in semiconductor devices?",
+    "options": [
+      "Shot Noise",
+      "Solar Noise",
+      "Cosmic Noise",
+      "Thermal Noise"
+    ],
+    "answer": "Shot Noise",
+    "explanation": "Shot Noise results from time-dependent random fluctuations of electric current caused by discrete electron charges, prominent in semiconductors[cite: 8]."
+  }
   ]
 };
