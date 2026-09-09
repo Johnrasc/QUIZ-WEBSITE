@@ -4494,5 +4494,1801 @@ const cpeQuestionBank = {
     "answer": "Shot Noise",
     "explanation": "Shot Noise results from time-dependent random fluctuations of electric current caused by discrete electron charges, prominent in semiconductors[cite: 8]."
   }
+  ],
+
+
+
+
+
+
+
+
+
+
+
+
+  "Feedback and Control Systems" : [
+    {
+    "question": "In a feedback control system, which component is defined as the device that directly influences the controlled variable of the process to move it from its current state to the desired state?",
+    "options": [
+      "Sensor",
+      "Actuator",
+      "Input filter",
+      "Disturbance"
+    ],
+    "answer": "Actuator",
+    "explanation": "The actuator is the device that can influence the controlled variable of the process, moving the process from its current state to the desired state[cite: 9]."
+  },
+  {
+    "question": "What combination of components in a control system model constitutes the 'plant'?",
+    "options": [
+      "Process and Actuator",
+      "Controller and Sensor",
+      "Input filter and Disturbance",
+      "Sensor and Actuator"
+    ],
+    "answer": "Process and Actuator",
+    "explanation": "The combination of the process and the actuator is referred to as the plant[cite: 9]."
+  },
+  {
+    "question": "Which component in a control system converts a physical variable (such as temperature) into an electrical signal for use by the controller?",
+    "options": [
+      "Actuator",
+      "Sensor",
+      "Input Filter",
+      "Disturbance"
+    ],
+    "answer": "Sensor",
+    "explanation": "The sensor (e.g., a thermostat) typically converts the physical variable into an electrical signal so the controller can see the current state of the process[cite: 9]."
+  },
+  {
+    "question": "What is the primary role of an input filter in a feedback control system model?",
+    "options": [
+      "To eliminate electrical noise from the sensor",
+      "To convert the reference signal into an electrical form for later manipulation by the controller",
+      "To measure external environmental changes",
+      "To amplify the output power of the actuator"
+    ],
+    "answer": "To convert the reference signal into an electrical form for later manipulation by the controller",
+    "explanation": "The input filter converts the reference signal to an electrical form for later manipulation by the controller[cite: 9]."
+  },
+  {
+    "question": "Which of the following best describes an open-loop control system?",
+    "options": [
+      "A system where the output is constantly fed back to the input to reduce error",
+      "A one-way system where output occurrences can never be automatically corrected",
+      "A system that requires both a sensor and a feedback path",
+      "A system that automatically compensates for component wear and tear"
+    ],
+    "answer": "A one-way system where output occurrences can never be automatically corrected",
+    "explanation": "An open-loop system is a one-way system (left to right) that provides initial instructions but has no feedback path, meaning what happens to the output can never be corrected[cite: 9]."
+  },
+  {
+    "question": "Which of the following is considered a primary advantage of a closed-loop control system over an open-loop system?",
+    "options": [
+      "Lower total component and maintenance cost",
+      "Simpler design process with guaranteed absolute stability",
+      "Reduced sensitivity of the output to disturbances and plant changes",
+      "Elimination of the need for sensors and input filters"
+    ],
+    "answer": "Reduced sensitivity of the output to disturbances and plant changes",
+    "explanation": "Closed-loop systems are less sensitive to disturbances and plant changes (such as component wear and tear) and provide higher accuracy[cite: 9]."
+  },
+  {
+    "question": "What are two major disadvantages associated with closed-loop control systems?",
+    "options": [
+      "High sensitivity to disturbances and lack of accuracy",
+      "Inability to handle mathematical modeling and slow response time",
+      "Higher component/maintenance cost and potential for system instability if improperly designed",
+      "Inability to process electrical signals and high steady-state error"
+    ],
+    "answer": "Higher component/maintenance cost and potential for system instability if improperly designed",
+    "explanation": "The main disadvantages are the cost of adding sensors and controllers, and the risk that the system may become unstable if improperly designed[cite: 9]."
+  },
+  {
+    "question": "In the control system design flowchart, what is the first step?",
+    "options": [
+      "Modeling",
+      "Control Objectives",
+      "Control Architecture",
+      "Model Verification"
+    ],
+    "answer": "Control Objectives",
+    "explanation": "The scientific design process starts at defining the control objectives, which are dictated by the desired output of the physical system[cite: 9]."
+  },
+  {
+    "question": "What process is defined as transforming a physical system into its equivalent mathematical equation counterpart?",
+    "options": [
+      "Prototyping",
+      "Model Verification",
+      "Modeling",
+      "System Optimization"
+    ],
+    "answer": "Modeling",
+    "explanation": "Modeling is the method of transforming the physical system into its equivalent mathematical equation counterpart[cite: 9]."
+  },
+  {
+    "question": "Why is simulation software preferred during the 'Model Verification' step of the design flowchart?",
+    "options": [
+      "Because it eliminates the need for any mathematical equations",
+      "Because it automatically writes the control code",
+      "Because of its flexibility to allow rapid changes without fear of damaging hardware",
+      "Because it replaces the need for defining control objectives"
+    ],
+    "answer": "Because of its flexibility to allow rapid changes without fear of damaging hardware",
+    "explanation": "Simulation software allows designers to quickly test equations and make changes without fear of physical components blowing up[cite: 9]."
+  },
+  {
+    "question": "Which step in the control system design flowchart involves determining the unknown parameters of the controller using tools like Root Locus, Bode plots, or Nyquist analysis?",
+    "options": [
+      "Control Objectives",
+      "Control Architecture",
+      "Control Design",
+      "Control Verification"
+    ],
+    "answer": "Control Design",
+    "explanation": "During Control Design, unknown controller values are calculated using tools like root locus, Bode plots, frequency analysis, or simulation[cite: 9]."
+  },
+  {
+    "question": "If a control engineer finds during Control Verification that the prototype does not meet the specified control objectives, what should be done?",
+    "options": [
+      "Discard the physical system completely",
+      "Return to any of the earlier steps, including re-defining control objectives",
+      "Force the actuator to operate at maximum voltage",
+      "Bypass the controller and switch to an open-loop setup"
+    ],
+    "answer": "Return to any of the earlier steps, including re-defining control objectives",
+    "explanation": "If objectives are not met during verification, the engineer can loop back to earlier steps, even as far back as re-defining the control objectives[cite: 9]."
+  },
+  {
+    "question": "How is a 'verbal model' defined in the categories of system models?",
+    "options": [
+      "A model consisting strictly of differential equations",
+      "A model described purely by words that may be proven over time",
+      "A visual plot of numbers showing process behavior",
+      "A block diagram representation using transfer functions"
+    ],
+    "answer": "A model described purely by words that may be proven over time",
+    "explanation": "A verbal model is described by pure words and may be proven after some time[cite: 9]."
+  },
+  {
+    "question": "What key advantage do graphical models offer over simple tabular data presentations?",
+    "options": [
+      "They generate exact algebraic solutions automatically",
+      "They allow the reader to draw conclusions quickly by depicting scenario curves",
+      "They eliminate the need for time-domain measurements",
+      "They guarantee zero steady-state error"
+    ],
+    "answer": "They allow the reader to draw conclusions quickly by depicting scenario curves",
+    "explanation": "Graphical models depict scenarios using plotted numbers, allowing readers to draw conclusions quickly[cite: 9]."
+  },
+  {
+    "question": "An Ordinary Differential Equation (ODE) is defined as a differential equation that involves how many independent variables?",
+    "options": [
+      "Exactly one",
+      "At least two",
+      "Three or more",
+      "Zero"
+    ],
+    "answer": "Exactly one",
+    "explanation": "Ordinary differential equations (ODEs) are differential equations that involve only ONE independent variable[cite: 9]."
+  },
+  {
+    "question": "How is the order of an ordinary differential equation determined?",
+    "options": [
+      "By the number of dependent variables present",
+      "By the highest differential term involved in the equation",
+      "By the power of the independent variable",
+      "By the number of constant coefficients"
+    ],
+    "answer": "By the highest differential term involved in the equation",
+    "explanation": "The order of a differential equation is the highest differential term involved[cite: 9]."
+  },
+  {
+    "question": "What condition causes a differential equation to be classified as non-linear?",
+    "options": [
+      "When the independent variable is multiplied by a constant",
+      "When the dependent variable or its derivatives appear within non-linear operations or coefficients",
+      "When the right-hand side of the equation equals zero",
+      "When the differential equation contains no constant parameters"
+    ],
+    "answer": "When the dependent variable or its derivatives appear within non-linear operations or coefficients",
+    "explanation": "If the dependent variable or its derivatives appear in a coefficient or inside non-linear functions, the differential equation is non-linear[cite: 9]."
+  },
+  {
+    "question": "To determine whether an ordinary differential equation is homogeneous or non-homogeneous, after placing all terms involving the dependent variable on the left-hand side, what indicates it is homogeneous?",
+    "options": [
+      "There are terms left on the right-hand side involving constants or independent variables",
+      "There is nothing left on the right-hand side (the right-hand side equals zero)",
+      "The left-hand side contains non-linear functions",
+      "The order of the differential equation is equal to one"
+    ],
+    "answer": "There is nothing left on the right-hand side (the right-hand side equals zero)",
+    "explanation": "If all dependent variable terms are moved to the left-hand side and nothing remains on the right-hand side (RHS = 0), the equation is homogeneous[cite: 9]."
+  },
+  {
+    "question": "Which set of properties describes a system whose highest derivative is of the third order, has linear terms for its dependent variable, and has a non-zero input function on the right-hand side?",
+    "options": [
+      "First Order, Linear, Homogeneous",
+      "Third Order, Non-linear, Homogeneous",
+      "Third Order, Linear, Non-homogeneous",
+      "Second Order, Non-linear, Non-homogeneous"
+    ],
+    "answer": "Third Order, Linear, Non-homogeneous",
+    "explanation": "A third derivative sets the order to 3, linear terms maintain linearity, and a non-zero right-hand side makes it non-homogeneous[cite: 9]."
+  },
+  {
+    "question": "What defines a 'dynamic system' in terms of system variables?",
+    "options": [
+      "A system where state variables remain constant over time",
+      "A system where system variables change with respect to time",
+      "A system that contains only passive resistive elements",
+      "A system that operates without any input source"
+    ],
+    "answer": "A system where system variables change with respect to time",
+    "explanation": "Dynamic systems are plants where system variables (state variables) change with respect to time[cite: 9]."
+  },
+  {
+    "question": "In the general dynamic model of a robotic manipulator, what does the inertial matrix represent?",
+    "options": [
+      "Gravitational forces acting on each joint",
+      "Coriolis and centrifugal forces acting during rotation",
+      "The resistance of the joint structure to acceleration (Moment of Inertia)",
+      "The torque output delivered directly by the motor actuators"
+    ],
+    "answer": "The resistance of the joint structure to acceleration (Moment of Inertia)",
+    "explanation": "In robotic manipulator dynamic equations, the first term represents the moment of inertia matrix associated with joint acceleration[cite: 9]."
+  },
+  {
+    "question": "In linear translational mechanical systems, how does viscous friction relate to movement?",
+    "options": [
+      "Friction force is proportional to displacement",
+      "Friction force is proportional to acceleration",
+      "Friction force is proportional to velocity",
+      "Friction force is inversely proportional to mass"
+    ],
+    "answer": "Friction force is proportional to velocity",
+    "explanation": "Viscous friction generates a opposing force proportional to the velocity of the moving object[cite: 9]."
+  },
+  {
+    "question": "In an ideal electrical capacitor, how is the current through the component related to its voltage?",
+    "options": [
+      "Current is directly proportional to the constant voltage",
+      "Current is directly proportional to the rate of change of voltage over time",
+      "Current is inversely proportional to the square of voltage",
+      "Current is equal to voltage multiplied by resistance"
+    ],
+    "answer": "Current is directly proportional to the rate of change of voltage over time",
+    "explanation": "Current flowing through a capacitor is proportional to the time derivative of the voltage across it[cite: 9]."
+  },
+  {
+    "question": "In an ideal electrical inductor, how is the voltage across the component related to its current?",
+    "options": [
+      "Voltage is directly proportional to the rate of change of current over time",
+      "Voltage is directly proportional to total charge accumulated",
+      "Voltage is constant regardless of current variation",
+      "Voltage is inversely proportional to inductance"
+    ],
+    "answer": "Voltage is directly proportional to the rate of change of current over time",
+    "explanation": "Inductor voltage is proportional to the time derivative of the current passing through it[cite: 9]."
+  },
+  {
+    "question": "What main transformation role does the Laplace transform perform in system analysis?",
+    "options": [
+      "Converts non-linear differential equations into partial differential equations",
+      "Converts a time-domain function into a frequency-domain function, making differential equations algebraic",
+      "Converts continuous digital signals into discrete verbal models",
+      "Eliminates initial conditions completely from mechanical systems"
+    ],
+    "answer": "Converts a time-domain function into a frequency-domain function, making differential equations algebraic",
+    "explanation": "The Laplace transform converts a time-domain function to a frequency-domain function, making differential equations approach an algebraic form[cite: 9]."
+  },
+  {
+    "question": "When defining the complex frequency variable used in Laplace transforms, what physical characteristic does the real component represent?",
+    "options": [
+      "Angular oscillation frequency",
+      "Damping factor associated with system stability",
+      "Total steady-state gain",
+      "System overshoot percentage"
+    ],
+    "answer": "Damping factor associated with system stability",
+    "explanation": "In the complex variable s = sigma + j(omega), sigma represents the damping factor related to stability[cite: 9]."
+  },
+  {
+    "question": "What is the primary characteristic of a unit step input signal in control system analysis?",
+    "options": [
+      "It provides an instantaneous infinitely tall pulse at time zero",
+      "It transitions from zero to a constant magnitude of one at time zero and stays constant",
+      "It increases linearly with respect to time starting from origin",
+      "It oscillates as a pure sine wave with constant amplitude"
+    ],
+    "answer": "It transitions from zero to a constant magnitude of one at time zero and stays constant",
+    "explanation": "A unit step signal turns on at time zero and remains at a constant amplitude of one[cite: 9]."
+  },
+  {
+    "question": "How is an impulse signal conceptually described in system testing?",
+    "options": [
+      "A gradual linear increase in signal level over time",
+      "A signal of brief duration with infinite height and unit area",
+      "A constant DC voltage applied indefinitely",
+      "A continuous sinusoidal waveform at a fixed frequency"
+    ],
+    "answer": "A signal of brief duration with infinite height and unit area",
+    "explanation": "The unit impulse (Dirac delta) function is modeled as an infinitely short pulse with an area equal to one[cite: 9]."
+  },
+  {
+    "question": "What shape does a standard ramp test signal take in time domain analysis?",
+    "options": [
+      "A flat horizontal line starting at time zero",
+      "A linearly increasing signal proportional to time",
+      "An exponentially decaying curve approaching zero",
+      "A series of high frequency square pulses"
+    ],
+    "answer": "A linearly increasing signal proportional to time",
+    "explanation": "A ramp function increases linearly with time, representing a constant velocity input[cite: 9]."
+  },
+  {
+    "question": "How does an exponential decay input signal behave over time in physical system response?",
+    "options": [
+      "It remains constant indefinitely",
+      "It starts at an initial value and smoothly decreases toward zero",
+      "It grows rapidly to infinity",
+      "It oscillates endlessly between positive and negative peaks"
+    ],
+    "answer": "It starts at an initial value and smoothly decreases toward zero",
+    "explanation": "An exponential decay signal begins at a peak and drops continuously toward zero over time[cite: 9]."
+  },
+  {
+    "question": "What type of motion is modeled when testing a system with a pure sine wave input?",
+    "options": [
+      "Constant velocity displacement",
+      "Continuous steady harmonic oscillation",
+      "Sudden step offset displacement",
+      "Unbounded exponential acceleration"
+    ],
+    "answer": "Continuous steady harmonic oscillation",
+    "explanation": "Sinusoidal functions represent continuous harmonic oscillations used for frequency response testing[cite: 9]."
+  },
+  {
+    "question": "What type of system excitation is modeled by a pure cosine function?",
+    "options": [
+      "Harmonic oscillation with maximum amplitude at time zero",
+      "Zero initial value with linear continuous growth",
+      "Instantaneous shock force with zero duration",
+      "A constant DC reference input offset"
+    ],
+    "answer": "Harmonic oscillation with maximum amplitude at time zero",
+    "explanation": "A cosine function models harmonic oscillation that starts at its positive peak value at time zero[cite: 9]."
+  },
+  {
+    "question": "According to the Time Differentiation property of Laplace transforms, taking the derivative of a time signal corresponds to what primary operation in the s-domain?",
+    "options": [
+      "Dividing the transformed function by s",
+      "Multiplying the transformed function by s and subtracting initial condition terms",
+      "Adding s directly to the time function",
+      "Integrating the transformed function with respect to s"
+    ],
+    "answer": "Multiplying the transformed function by s and subtracting initial condition terms",
+    "explanation": "Differentiation in time translates to multiplication by s in the frequency domain, minus initial conditions[cite: 9]."
+  },
+  {
+    "question": "According to the Frequency Shifting property, multiplying a time domain function by a decaying exponential results in what effect in the s-domain?",
+    "options": [
+      "A shift along the complex frequency axis",
+      "A direct multiplication of the frequency function by time",
+      "An integration of the frequency function",
+      "No change to the s-domain representation"
+    ],
+    "answer": "A shift along the complex frequency axis",
+    "explanation": "Exponential attenuation in time creates a translation/shift along the frequency axis in the s-domain[cite: 9]."
+  },
+  {
+    "question": "In the s-domain, how does the impedance of an ideal resistor behave?",
+    "options": [
+      "It increases linearly with the complex frequency variable s",
+      "It decreases inversely with the complex frequency variable s",
+      "It remains constant and equal to its resistance value regardless of s",
+      "It becomes zero at all non-zero frequencies"
+    ],
+    "answer": "It remains constant and equal to its resistance value regardless of s",
+    "explanation": "Resistor impedance is purely resistive and independent of frequency in the s-domain[cite: 9]."
+  },
+  {
+    "question": "In the s-domain, how is the impedance of an ideal inductor related to the complex frequency variable s?",
+    "options": [
+      "Inversely proportional to s",
+      "Directly proportional to s",
+      "Independent of s",
+      "Proportional to the square of s"
+    ],
+    "answer": "Directly proportional to s",
+    "explanation": "Inductor impedance in the s-domain increases linearly with s (impedance equals s times L)[cite: 9]."
+  },
+  {
+    "question": "In the s-domain, how is the impedance of an ideal capacitor related to the complex frequency variable s?",
+    "options": [
+      "Directly proportional to s",
+      "Inversely proportional to s",
+      "Independent of s",
+      "Proportional to s squared"
+    ],
+    "answer": "Inversely proportional to s",
+    "explanation": "Capacitor impedance in the s-domain is inversely proportional to s (impedance equals 1 divided by sC)[cite: 9]."
+  },
+  {
+    "question": "When modeling an inductor with stored initial energy in the s-domain as a series equivalent circuit, what component represents the initial condition?",
+    "options": [
+      "A series voltage source proportional to the initial current",
+      "A parallel resistor proportional to time",
+      "An additional series capacitor",
+      "A current source proportional to inductance squared"
+    ],
+    "answer": "A series voltage source proportional to the initial current",
+    "explanation": "Initial inductor current manifests in a series s-domain circuit as a constant voltage source equal to inductance times initial current[cite: 9]."
+  },
+  {
+    "question": "When modeling a capacitor with an initial charge in the s-domain as a series equivalent circuit, how is the initial condition included?",
+    "options": [
+      "As a series voltage source inversely proportional to s and based on initial voltage",
+      "As a series inductor",
+      "As a parallel resistor of infinite value",
+      "As a time-varying frequency shift"
+    ],
+    "answer": "As a series voltage source inversely proportional to s and based on initial voltage",
+    "explanation": "Initial capacitor voltage appears in series as a voltage source equal to initial voltage divided by s[cite: 9]."
+  },
+  {
+    "question": "What is the equivalent overall gain for two transfer function blocks connected in a parallel configuration whose outputs feed a summing junction?",
+    "options": [
+      "The product of the two transfer functions",
+      "The algebraic sum of the two transfer functions",
+      "The quotient of the two transfer functions",
+      "The difference of their inverse values"
+    ],
+    "answer": "The algebraic sum of the two transfer functions",
+    "explanation": "Parallel branches that combine at a summing junction add together algebraically[cite: 9]."
+  },
+  {
+    "question": "For a standard closed-loop system with negative feedback, how is the overall closed-loop transfer function constructed from forward gain and feedback gain?",
+    "options": [
+      "Forward gain multiplied directly by feedback gain",
+      "Forward gain divided by the quantity (1 plus the product of forward and feedback gains)",
+      "Forward gain minus feedback gain",
+      "Feedback gain divided by forward gain"
+    ],
+    "answer": "Forward gain divided by the quantity (1 plus the product of forward and feedback gains)",
+    "explanation": "The canonical negative feedback closed-loop system transfer function is forward gain divided by 1 plus loop gain[cite: 9]."
+  },
+  {
+    "question": "How is the overall transfer function calculated for two system blocks connected in series (cascade)?",
+    "options": [
+      "By adding the two individual transfer functions",
+      "By multiplying the two individual transfer functions together",
+      "By subtracting the second transfer function from the first",
+      "By dividing the first transfer function by the second"
+    ],
+    "answer": "By multiplying the two individual transfer functions together",
+    "explanation": "Cascaded or series blocks combine by multiplying their individual transfer functions[cite: 9]."
+  },
+  {
+    "question": "In a feedback system controlling room temperature, if an open window suddenly lets in cold air, how is this cold air categorized in control terms?",
+    "options": [
+      "Reference Signal",
+      "Disturbance",
+      "Actuator Output",
+      "Sensor Noise"
+    ],
+    "answer": "Disturbance",
+    "explanation": "Disturbances are unwanted inputs or external changes (like an open window or more people in a room) that affect the output state[cite: 9]."
+  },
+  {
+    "question": "What is the desired state of steady-state error in an ideal control system design?",
+    "options": [
+      "Equal to 1",
+      "Approaching zero",
+      "Equal to infinity",
+      "Equal to the sensor gain"
+    ],
+    "answer": "Approaching zero",
+    "explanation": "A key control objective is that steady-state error approaches zero, meaning output state equals desired input state[cite: 9]."
+  },
+  {
+    "question": "What term describes the maximum peak value of the response curve measuring above the desired output level?",
+    "options": [
+      "Rise time",
+      "Settling time",
+      "Percent overshoot",
+      "Damping ratio"
+    ],
+    "answer": "Percent overshoot",
+    "explanation": "Percent overshoot measures how much the system output exceeds its desired steady-state value during transient response[cite: 9]."
+  },
+  {
+    "question": "In a heating control system where a furnace heats a house, what component serves as the 'process'?",
+    "options": [
+      "The Thermostat",
+      "The Gas Valve",
+      "The House",
+      "The Furnace"
+    ],
+    "answer": "The House",
+    "explanation": "The house (whose output is room temperature) represents the process to be controlled[cite: 9]."
+  },
+  {
+    "question": "According to the Time Scaling property of Laplace transforms, scaling time by a constant factor in the time domain results in what change in the frequency domain?",
+    "options": [
+      "Scaling the frequency variable inversely and dividing the overall result by the absolute scale factor",
+      "Adding the scale factor directly to the s variable",
+      "Multiplying the s domain result by s squared",
+      "Shifting the frequency spectrum vertically"
+    ],
+    "answer": "Scaling the frequency variable inversely and dividing the overall result by the absolute scale factor",
+    "explanation": "Compression or expansion in time causes inverse scaling in frequency divided by the magnitude of the scale factor[cite: 9]."
+  },
+  {
+    "question": "What does time-domain convolution convert into when transformed into the complex frequency domain via Laplace transform?",
+    "options": [
+      "Addition in the s-domain",
+      "Simple algebraic multiplication in the s-domain",
+      "Division in the s-domain",
+      "Subtraction in the s-domain"
+    ],
+    "answer": "Simple algebraic multiplication in the s-domain",
+    "explanation": "Convolution in the time domain becomes straightforward multiplication of individual functions in the s-domain[cite: 9]."
+  },
+  {
+    "question": "When applying the Laplace transform to a second-order time derivative, how many initial condition values are required?",
+    "options": [
+      "None",
+      "One initial condition value (initial displacement)",
+      "Two initial condition values (initial value and initial first derivative value)",
+      "Three initial condition values"
+    ],
+    "answer": "Two initial condition values (initial value and initial first derivative value)",
+    "explanation": "Transforming a second derivative requires initial values for both the function itself and its first derivative[cite: 9]."
+  },
+  {
+    "question": "In time-domain analysis, delaying a signal by a constant time interval corresponds to what operation in the s-domain?",
+    "options": [
+      "Multiplying the transformed function by a complex exponential factor",
+      "Dividing the s variable by the time delay value",
+      "Subtracting the delay value directly from s",
+      "Differentiating the frequency function with respect to s"
+    ],
+    "answer": "Multiplying the transformed function by a complex exponential factor",
+    "explanation": "A time shift/delay translates to multiplying the frequency domain representation by a complex exponential decay term[cite: 9]."
+  },
+  {
+    "question": "Which type of differential equation contains partial derivatives because it has MULTIPLE independent variables?",
+    "options": [
+      "Ordinary Differential Equation (ODE)",
+      "Partial Differential Equation (PDE)",
+      "Linear Homogeneous ODE",
+      "First-order ODE"
+    ],
+    "answer": "Partial Differential Equation (PDE)",
+    "explanation": "Unlike ODEs which have only ONE independent variable, equations with multiple independent variables are Partial Differential Equations[cite: 9]."
+  },
+  {
+    "question": "If the highest derivative term present in a dynamic system differential equation is a third derivative, what is the order of the system?",
+    "options": [
+      "1st Order",
+      "2nd Order",
+      "3rd Order",
+      "4th Order"
+    ],
+    "answer": "3rd Order",
+    "explanation": "The order of a differential equation is governed by the order of its highest derivative term[cite: 9]."
+  },
+  {
+    "question": "Why does a differential equation become non-linear if the dependent variable multiplies its own derivative term?",
+    "options": [
+      "Because the derivative's coefficient is no longer independent of the state variable",
+      "Because it forces the right-hand side to equal zero",
+      "Because it removes all constant parameters",
+      "Because it decreases the total differential order by one"
+    ],
+    "answer": "Because the derivative's coefficient is no longer independent of the state variable",
+    "explanation": "When coefficients depend on the dependent variable itself, the linear superposition principle fails, making it non-linear[cite: 9]."
+  },
+  {
+    "question": "Why is a differential equation considered linear if its coefficients depend solely on time (the independent variable)?",
+    "options": [
+      "Because the dependent variable and its derivatives only appear with power equal to one and are not multiplied together",
+      "Because time-varying coefficients force the response to be constant",
+      "Because it eliminates the need for initial conditions",
+      "Because the equation automatically becomes homogeneous"
+    ],
+    "answer": "Because the dependent variable and its derivatives only appear with power equal to one and are not multiplied together",
+    "explanation": "As long as the dependent variable and its derivatives are degree one and isolated, time-varying coefficients do not destroy linearity[cite: 9]."
+  },
+  {
+    "question": "What structural element makes a differential derivative term non-linear when raised to a power greater than one?",
+    "options": [
+      "The derivative term is multiplied by itself, breaking linear superposition",
+      "It converts the ordinary differential equation into a partial differential equation",
+      "It forces the equation order to become zero",
+      "It eliminates the system's independent variable"
+    ],
+    "answer": "The derivative term is multiplied by itself, breaking linear superposition",
+    "explanation": "Squaring or raising derivatives to powers breaks linearity because linear scaling no longer holds[cite: 9]."
+  },
+  {
+    "question": "If a differential equation contains only terms with the dependent variable and its derivatives, with no external forcing function or standalone constants, how is it classified?",
+    "options": [
+      "Homogeneous",
+      "Non-homogeneous",
+      "Non-linear",
+      "Second-order"
+    ],
+    "answer": "Homogeneous",
+    "explanation": "Equations with no independent forcing terms or isolated non-zero right-hand side constants are homogeneous[cite: 9]."
+  },
+  {
+    "question": "If an ordinary differential equation features an external input function dependent only on time on the right-hand side, how is it classified?",
+    "options": [
+      "Homogeneous",
+      "Non-homogeneous",
+      "Non-linear",
+      "3rd Order"
+    ],
+    "answer": "Non-homogeneous",
+    "explanation": "An independent external forcing input creates a non-zero right-hand side, making the differential equation non-homogeneous[cite: 9]."
+  },
+  {
+    "question": "In standard linear ordinary differential equation representations of physical systems, what do non-zero terms isolated on the right-hand side typically represent?",
+    "options": [
+      "Dependent state variables",
+      "External forcing functions or input sources",
+      "System moment of inertia",
+      "Internal structural friction"
+    ],
+    "answer": "External forcing functions or input sources",
+    "explanation": "Terms isolated on the right-hand side represent external drives, sources, or inputs disturbing or controlling the system[cite: 9]."
+  },
+  {
+    "question": "In mechanical systems, what symbol is commonly used to denote viscous friction?",
+    "options": [
+      "k",
+      "M",
+      "B",
+      "f"
+    ],
+    "answer": "B",
+    "explanation": "Viscous friction is typically denoted by B[cite: 9]."
+  },
+  {
+    "question": "In mechanical systems, what symbol is commonly used to represent linear spring stiffness?",
+    "options": [
+      "B",
+      "k",
+      "M",
+      "tau"
+    ],
+    "answer": "k",
+    "explanation": "Spring stiffness coefficient is denoted by k[cite: 9]."
+  },
+  {
+    "question": "According to Hooke's Law for linear mechanical springs, how is restoring force related to position?",
+    "options": [
+      "Force is directly proportional to displacement",
+      "Force is directly proportional to velocity",
+      "Force is directly proportional to acceleration",
+      "Force is inversely proportional to mass"
+    ],
+    "answer": "Force is directly proportional to displacement",
+    "explanation": "Hooke's Law dictates that spring force is directly proportional to structural displacement[cite: 9]."
+  },
+  {
+    "question": "What basic electrical law states that resistor voltage is equal to current multiplied by resistance?",
+    "options": [
+      "Kirchhoff's Current Law",
+      "Ohm's Law",
+      "Kirchhoff's Voltage Law",
+      "Faraday's Law"
+    ],
+    "answer": "Ohm's Law",
+    "explanation": "Ohm's law defines v = i * R for linear resistive components[cite: 9]."
+  },
+  {
+    "question": "When converting an electrical circuit to the s-domain using Laplace transform, what unit do impedances take?",
+    "options": [
+      "Farads",
+      "Henries",
+      "Ohms",
+      "Volts"
+    ],
+    "answer": "Ohms",
+    "explanation": "In the s-domain, all component impedances act as generalized complex resistances measured in Ohms[cite: 9]."
+  },
+  {
+    "question": "What standard operator notation is commonly substituted for time differentiation when expressing differential equations in operational form?",
+    "options": [
+      "Differential operator D",
+      "Integral operator I",
+      "Frequency operator S squared",
+      "Delta constant"
+    ],
+    "answer": "Differential operator D",
+    "explanation": "The differential operator D replaces d/dt when writing operational differential equations[cite: 9]."
+  },
+  {
+    "question": "In s-domain circuit modeling, how is a capacitor with an initial voltage represented when using a parallel current source equivalent circuit?",
+    "options": [
+      "As an impedance in parallel with a current source equal to capacitance multiplied by initial voltage",
+      "As a series inductor",
+      "As an open circuit with zero current flow",
+      "As a voltage source divided by resistance"
+    ],
+    "answer": "As an impedance in parallel with a current source equal to capacitance multiplied by initial voltage",
+    "explanation": "The Norton equivalent s-domain model for a charged capacitor places a current source equal to C times initial voltage in parallel with its impedance[cite: 9]."
+  },
+  {
+    "question": "In s-domain circuit modeling, how is an inductor with initial current represented when using a parallel current source equivalent circuit?",
+    "options": [
+      "As an impedance in parallel with a current source equal to initial current divided by s",
+      "As a series resistance",
+      "As a short circuit to ground",
+      "As a voltage source multiplied by s"
+    ],
+    "answer": "As an impedance in parallel with a current source equal to initial current divided by s",
+    "explanation": "The Norton equivalent s-domain model for an energized inductor uses a parallel current source equal to initial current divided by s[cite: 9]."
+  },
+  {
+    "question": "In system modeling diagrams, how are individual non-interacting components represented?",
+    "options": [
+      "By circles with plus signs",
+      "By boxes containing component transfer functions, connected by directional arrows",
+      "By plain lines without arrows",
+      "By tabular rows and columns"
+    ],
+    "answer": "By boxes containing component transfer functions, connected by directional arrows",
+    "explanation": "Component functions are placed in boxes, and input-output interactions are shown via arrows and lines[cite: 9]."
+  },
+  {
+    "question": "What block diagram symbol is used to combine multiple incoming signals by addition or subtraction?",
+    "options": [
+      "Branch point",
+      "Summing junction (circle with addition or subtraction signs)",
+      "Gain box",
+      "Feedback path"
+    ],
+    "answer": "Summing junction (circle with addition or subtraction signs)",
+    "explanation": "Summing points perform algebraic addition or subtraction of converging signals[cite: 9]."
+  },
+  {
+    "question": "In a closed-loop block diagram, what signal is generated directly at the output of the main summing junction comparing reference input and feedback?",
+    "options": [
+      "Plant Output",
+      "Error / Actuating Signal",
+      "Disturbance Signal",
+      "Sensor Noise"
+    ],
+    "answer": "Error / Actuating Signal",
+    "explanation": "The difference between desired reference and actual feedback at the summing junction produces the error (actuating) signal[cite: 9]."
+  },
+  {
+    "question": "Which tool is NOT typically used by control engineers during the Control Design stage to solve unknown controller parameters?",
+    "options": [
+      "Root Locus",
+      "Bode Plots",
+      "Nyquist plots",
+      "Verbal model essays"
+    ],
+    "answer": "Verbal model essays",
+    "explanation": "Control design relies on quantitative tools like Root Locus, Bode plots, Nyquist analysis, or simulation, not verbal essays[cite: 9]."
+  },
+  {
+    "question": "What parameter directly measures how fast a control system responds to reach its target state?",
+    "options": [
+      "Rise time / Response time",
+      "Steady-state error",
+      "Sensor noise ratio",
+      "Component wear rate"
+    ],
+    "answer": "Rise time / Response time",
+    "explanation": "Response time measures speed of response, which is a key control objective[cite: 9]."
+  },
+  {
+    "question": "Why is constant dialogue between the control engineer and the client essential during step 1 of the design flowchart?",
+    "options": [
+      "To calculate Laplace transforms manually",
+      "To ensure designed control objectives are realistic and achievable",
+      "To select electrical resistors",
+      "To write differential equations"
+    ],
+    "answer": "To ensure designed control objectives are realistic and achievable",
+    "explanation": "Dialogue and experience help determine which control objectives are realizable for the given physical plant[cite: 9]."
+  },
+  {
+    "question": "What is the primary difference between a discrete-time model and a continuous-time model?",
+    "options": [
+      "Discrete-time models use difference equations, whereas continuous-time models use differential equations",
+      "Continuous-time models use no math",
+      "Discrete-time models only apply to thermal systems",
+      "Continuous-time models cannot be transformed via Laplace"
+    ],
+    "answer": "Discrete-time models use difference equations, whereas continuous-time models use differential equations",
+    "explanation": "Dynamic models are differential equations for continuous time or difference equations for discrete-time signals[cite: 9]."
+  },
+  {
+    "question": "In generic integral transform definitions, what functional component inside the integral transforms the domain of the input function?",
+    "options": [
+      "Output signal",
+      "Integral kernel",
+      "Input signal",
+      "Transfer matrix"
+    ],
+    "answer": "Integral kernel",
+    "explanation": "The integral kernel is the function that transforms input data from one domain into another within integral transformations[cite: 9]."
+  },
+  {
+    "question": "In the standard Laplace transform integral definition, what function serves as the integral kernel?",
+    "options": [
+      "The real step function",
+      "The complex exponential decay term",
+      "The continuous delta pulse",
+      "The quadratic polynomial term"
+    ],
+    "answer": "The complex exponential decay term",
+    "explanation": "The complex exponential term inside the Laplace integral acts as the kernel converting time to complex frequency[cite: 9]."
+  },
+  {
+    "question": "When solving an RLC circuit in the frequency domain, what is the first required step?",
+    "options": [
+      "Take the inverse Laplace transform immediately",
+      "Transform the circuit components from the time domain to the complex frequency domain",
+      "Apply Kirchhoff's laws directly in time domain without changing variables",
+      "Set all voltage sources to zero"
+    ],
+    "answer": "Transform the circuit components from the time domain to the complex frequency domain",
+    "explanation": "Step 1 of s-domain circuit analysis is transforming the circuit elements into their complex frequency equivalents[cite: 9]."
+  },
+  {
+    "question": "What step follows solving the algebraic circuit equations in the s-domain?",
+    "options": [
+      "Take the inverse Laplace transform to obtain the time-domain solution",
+      "Convert the circuit into an open-loop system",
+      "Re-calculate the spring constant",
+      "Differentiate the output twice"
+    ],
+    "answer": "Take the inverse Laplace transform to obtain the time-domain solution",
+    "explanation": "Once solved in the s-domain, taking the inverse Laplace transform yields the final time-domain expression[cite: 9]."
+  },
+  {
+    "question": "In a mechanical system where position is tracked over time, what physical quantity is represented by the first time derivative of position?",
+    "options": [
+      "Displacement",
+      "Velocity",
+      "Acceleration",
+      "Jitter"
+    ],
+    "answer": "Velocity",
+    "explanation": "Velocity is defined as the rate of change of position with respect to time (first derivative)[cite: 9]."
+  },
+  {
+    "question": "In a mechanical system where position is tracked over time, what physical quantity is represented by the second time derivative of position?",
+    "options": [
+      "Displacement",
+      "Velocity",
+      "Acceleration",
+      "Mass inertia"
+    ],
+    "answer": "Acceleration",
+    "explanation": "Acceleration is defined as the rate of change of velocity, or second derivative of position with respect to time[cite: 9]."
+  },
+  {
+    "question": "Which of the following describes a non-homogeneous differential equation?",
+    "options": [
+      "A differential equation whose right-hand side consists strictly of zero",
+      "A differential equation that includes an independent external forcing function on the right-hand side",
+      "A differential equation with non-linear powers on its state variable",
+      "A differential equation without any derivative terms"
+    ],
+    "answer": "A differential equation that includes an independent external forcing function on the right-hand side",
+    "explanation": "Non-homogeneous differential equations contain external forcing terms or non-zero functions on the right-hand side[cite: 9]."
+  }
+  ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "Engineering Economics" : [
+    {
+    "question": "According to the Accreditation for Engineering and Technology (ABET), which of the following best defines engineering?",
+    "options": [
+      "The study of economic activities and wealth distribution",
+      "The profession applying knowledge from physics, chemistry, life sciences, and mathematics to make products on a large scale",
+      "The systematic evaluation of the costs and benefits of technical projects",
+      "The creation of utilities and services for direct satisfaction"
+    ],
+    "answer": "The profession applying knowledge from physics, chemistry, life sciences, and mathematics to make products on a large scale",
+    "explanation": "Engineering is the profession in which knowledge gained in physics, chemistry, life sciences, and mathematics is applied to make products on a large scale that increase human prosperity[cite: 7]."
+  },
+  {
+    "question": "How did Eugene Grant define Engineering Economics?",
+    "options": [
+      "The study of human behavior with relation to ends and scarce means",
+      "The discipline concerned with the economic aspects of engineering, involving the systematic evaluation of costs and benefits",
+      "The process of creating utility or value in goods or services",
+      "The excess of production over consumption in an accounting year"
+    ],
+    "answer": "The discipline concerned with the economic aspects of engineering, involving the systematic evaluation of costs and benefits",
+    "explanation": "Eugene Grant defined Engineering Economics as the discipline concerned with the economic aspects of engineering, involving the systematic evaluation of the cost and benefits of proposed technical projects[cite: 7]."
+  },
+  {
+    "question": "Which principle of Engineering Economics suggests using a brainstorming session?",
+    "options": [
+      "Principle 1: Develop the Alternatives",
+      "Principle 2: Focus on the Difference",
+      "Principle 5: Consider All Relevant Criteria",
+      "Principle 7: Revisit Your Decisions"
+    ],
+    "answer": "Principle 1: Develop the Alternatives",
+    "explanation": "Principle 1, 'Develop the Alternatives,' states that alternates can be developed using a brainstorming session[cite: 7]."
+  },
+  {
+    "question": "Principle 2 of Engineering Economics, 'Focus on the Difference,' emphasizes prioritizing what?",
+    "options": [
+      "Past outcomes",
+      "Future outcomes from the alternates",
+      "Sunk costs",
+      "The perspective of the decision-maker"
+    ],
+    "answer": "Future outcomes from the alternates",
+    "explanation": "Under Principle 2, the future outcomes from the alternates are set as a higher priority when differentiating alternates[cite: 7]."
+  },
+  {
+    "question": "Whose perspective is normally used when applying Principle 3: Use a Consistent Viewpoint?",
+    "options": [
+      "The consumer's perspective",
+      "The government's perspective",
+      "The decision-maker, often the owners of the firm",
+      "The competing firm's perspective"
+    ],
+    "answer": "The decision-maker, often the owners of the firm",
+    "explanation": "Principle 3 states that the perspective of the decision-maker, which is often that of the owners of the firm, would normally be used[cite: 7]."
+  },
+  {
+    "question": "What is the primary benefit of using a common unit of measure (Principle 4)?",
+    "options": [
+      "It eliminates sunk costs",
+      "It makes it easier to analyze and compare alternatives",
+      "It completely removes uncertainty",
+      "It forces the decision to be revisited"
+    ],
+    "answer": "It makes it easier to analyze and compare alternatives",
+    "explanation": "Using a common unit of measurement makes easier the analysis and comparison of alternatives by enumerating outcomes in totals like costs or profits[cite: 7]."
+  },
+  {
+    "question": "Which principle emphasizes considering both monetary units and non-monetary criteria when choosing between alternatives?",
+    "options": [
+      "Principle 1: Develop the Alternatives",
+      "Principle 4: Use a Common Unit of Measure",
+      "Principle 5: Consider All Relevant Criteria",
+      "Principle 6: Make Uncertainty Explicit"
+    ],
+    "answer": "Principle 5: Consider All Relevant Criteria",
+    "explanation": "Principle 5 emphasizes that decision-making requires weighing both financial outcomes (monetary units) and non-monetary criteria[cite: 7]."
+  },
+  {
+    "question": "According to Principle 6 (Make Uncertainty Explicit), what are inherent in projecting future outcomes of alternatives?",
+    "options": [
+      "Fixed and variable costs",
+      "Risk and uncertainty",
+      "Supply and demand",
+      "Necessities and luxuries"
+    ],
+    "answer": "Risk and uncertainty",
+    "explanation": "Principle 6 states that risk and uncertainty are inherent in projecting or estimating the future outcomes of alternatives[cite: 7]."
+  },
+  {
+    "question": "Which principle emphasizes learning from and adapting based on experience?",
+    "options": [
+      "Principle 1: Develop the Alternatives",
+      "Principle 3: Use a Consistent Viewpoint",
+      "Principle 5: Consider All Relevant Criteria",
+      "Principle 7: Revisit Your Decisions"
+    ],
+    "answer": "Principle 7: Revisit Your Decisions",
+    "explanation": "Principle 7 involves revisiting decisions, noting that learning from and adapting based on experience are essential[cite: 7]."
+  },
+  {
+    "question": "In economics, what follows 'efforts' in the sequence of human economic activity?",
+    "options": [
+      "Wealth",
+      "Satisfaction",
+      "Scarcity",
+      "Choice"
+    ],
+    "answer": "Wealth",
+    "explanation": "The study flows as wants > efforts > wealth > satisfaction, where efforts lead to getting wealth[cite: 7]."
+  },
+  {
+    "question": "Why does the 'problem of choice' arise in economics?",
+    "options": [
+      "Because resources are abundant",
+      "Because human wants are limited",
+      "Because of scarcity",
+      "Because of the lack of investment"
+    ],
+    "answer": "Because of scarcity",
+    "explanation": "Problems of choice arise because of scarcity; if things were in abundance, there would be no problem of choice[cite: 7]."
+  },
+  {
+    "question": "How did Anatol Murad define 'Production'?",
+    "options": [
+      "The distribution of wealth",
+      "The creation of utilities",
+      "The direct satisfaction of wants",
+      "The accumulation of capital"
+    ],
+    "answer": "The creation of utilities",
+    "explanation": "Anatol Murad defined production as 'the creation of utilities'[cite: 7]."
+  },
+  {
+    "question": "Which factor of production is described as a 'free gift of nature'?",
+    "options": [
+      "Labor",
+      "Capital",
+      "Entrepreneurship",
+      "Land"
+    ],
+    "answer": "Land",
+    "explanation": "Land is the factor of production which is available to humankind as a free gift of nature[cite: 7]."
+  },
+  {
+    "question": "What factor of production encompasses the physical or mental effort of human beings?",
+    "options": [
+      "Labor",
+      "Capital",
+      "Land",
+      "Entrepreneurship"
+    ],
+    "answer": "Labor",
+    "explanation": "Labor is the physical or mental effort of human beings in the process of production[cite: 7]."
+  },
+  {
+    "question": "Which of the following describes 'Capital' in the context of factors of production?",
+    "options": [
+      "A free gift of nature",
+      "The skills to organize a business",
+      "A man-made material used for further production",
+      "The physical effort of a worker"
+    ],
+    "answer": "A man-made material used for further production",
+    "explanation": "Capital is a man-made material and is a source of production used for further production[cite: 7]."
+  },
+  {
+    "question": "Which factor of production combines land, labor, and capital while bearing business risk?",
+    "options": [
+      "Investment",
+      "Entrepreneurship",
+      "Working Capital",
+      "Infrastructure"
+    ],
+    "answer": "Entrepreneurship",
+    "explanation": "Entrepreneurship organizes the other factors of production (land, labor, capital) and assumes the risk of the venture[cite: 7]."
+  },
+  {
+    "question": "What is collective consumption?",
+    "options": [
+      "Consumption that leads to the final satisfaction of the wants of an individual",
+      "The creation of value in goods or services",
+      "Consumption that leads to the final satisfaction of collective wants, such as using roads",
+      "The excess of production over consumption"
+    ],
+    "answer": "Consumption that leads to the final satisfaction of collective wants, such as using roads",
+    "explanation": "Collective consumption leads to the final satisfaction of collective wants, like the uses of roads, dams, bridges, or parks[cite: 7]."
+  },
+  {
+    "question": "What is direct (or individual) consumption?",
+    "options": [
+      "Satisfaction of public needs like infrastructure",
+      "Consumption that leads to the direct, final satisfaction of individual human wants",
+      "The process of transforming raw material into goods",
+      "The accumulation of machinery for factory output"
+    ],
+    "answer": "Consumption that leads to the direct, final satisfaction of individual human wants",
+    "explanation": "Individual consumption leads directly to satisfying individual human wants, such as eating food or wearing personal clothing[cite: 7]."
+  },
+  {
+    "question": "What term refers to the part of production during a year which is not consumed but saved for further production?",
+    "options": [
+      "Distribution",
+      "Investment",
+      "Sunk cost",
+      "Working capital"
+    ],
+    "answer": "Investment",
+    "explanation": "Investment is that part of production during a year which is not consumed but saved as a capital formation for further production[cite: 7]."
+  },
+  {
+    "question": "How did Vera Anstey define demand?",
+    "options": [
+      "The quantity offered for sale at a given price and time",
+      "The effective demand—the desire for a commodity backed by the willingness and ability to pay",
+      "The creation of utilities in goods and services",
+      "The physical quantity of goods consumed in a household"
+    ],
+    "answer": "The effective demand—the desire for a commodity backed by the willingness and ability to pay",
+    "explanation": "Vera Anstey defines demand as effective demand, meaning a desire backed up by the capability and readiness to pay[cite: 7]."
+  },
+  {
+    "question": "How did Charles Ferguson define demand?",
+    "options": [
+      "The relation between prices and quantities that people would be willing and able to purchase",
+      "The quantity of goods stored in a warehouse",
+      "The free gift of nature used in production",
+      "The total output generated by labor"
+    ],
+    "answer": "The relation between prices and quantities that people would be willing and able to purchase",
+    "explanation": "Charles Ferguson defined demand as referring to the quantities of a commodity that consumers will buy at various possible prices[cite: 7]."
+  },
+  {
+    "question": "According to the Law of Demand, what happens when the price of a good falls (other things being equal)?",
+    "options": [
+      "Demand contracts",
+      "Demand extends or increases",
+      "Supply increases",
+      "Investment decreases"
+    ],
+    "answer": "Demand extends or increases",
+    "explanation": "The law of demand states that demand extends (or people will buy more) with a fall in price[cite: 7]."
+  },
+  {
+    "question": "Who stated that 'people will buy more at lower prices and buy less at higher prices, ceteris paribus'?",
+    "options": [
+      "Alfred Marshall",
+      "Thomas Robert Malthus",
+      "Paul Samuelson",
+      "Peter Dooley"
+    ],
+    "answer": "Paul Samuelson",
+    "explanation": "Paul Samuelson stated the Law of Demand as people buying more at lower prices and less at higher prices, ceteris paribus[cite: 7]."
+  },
+  {
+    "question": "What economist defined the supply of goods as the quantity offered for sale in a given market at a given time at various prices?",
+    "options": [
+      "Paul Samuelson",
+      "Thomas Robert Malthus",
+      "Eugene Grant",
+      "Anatol Murad"
+    ],
+    "answer": "Thomas Robert Malthus",
+    "explanation": "Thomas Robert Malthus defined the supply of goods as the quantity offered for sale in a given market at a given time at various prices[cite: 7]."
+  },
+  {
+    "question": "According to the Law of Supply, what happens when the price rises (other things being equal)?",
+    "options": [
+      "Supply contracts",
+      "Supply extends",
+      "Demand extends",
+      "Opportunity cost decreases"
+    ],
+    "answer": "Supply extends",
+    "explanation": "The law of supply states that when the price rises, supply extends[cite: 7]."
+  },
+  {
+    "question": "Which of the following is an example of a necessity for an enterprise?",
+    "options": [
+      "A fur coat for executives",
+      "A luxury tax payment",
+      "Cash supply for a factory to pay employee wages",
+      "High-end decorative artwork in an office"
+    ],
+    "answer": "Cash supply for a factory to pay employee wages",
+    "explanation": "An example of a necessity is the cash supply for a factory to pay its employees their wages[cite: 7]."
+  },
+  {
+    "question": "How are luxury goods defined in economic contexts?",
+    "options": [
+      "Goods essential for human survival and day-to-day work",
+      "Goods or services that are non-essential and consumed for comfort, prestige, or pleasure",
+      "Capital goods used exclusively to build heavy machinery",
+      "Raw materials required for industrial processing"
+    ],
+    "answer": "Goods or services that are non-essential and consumed for comfort, prestige, or pleasure",
+    "explanation": "Luxury goods are items that are not essential for living or basic operations but satisfy desires for comfort or status[cite: 7]."
+  },
+  {
+    "question": "How are consumer goods and services defined?",
+    "options": [
+      "Products used to produce other producer goods",
+      "Products directly used by consumers to satisfy their desire",
+      "Manufacturing infrastructure",
+      "Costs that do not change over a wide range of activities"
+    ],
+    "answer": "Products directly used by consumers to satisfy their desire",
+    "explanation": "Consumer goods and services are products or services directly used by consumers to satisfy their desire[cite: 7]."
+  },
+  {
+    "question": "Which of the following is an example of a producer good?",
+    "options": [
+      "Fast-moving consumer goods",
+      "Mobile phones used by individuals",
+      "Manufacturing infrastructure like building and machinery",
+      "Personal banking services"
+    ],
+    "answer": "Manufacturing infrastructure like building and machinery",
+    "explanation": "Manufacturing infrastructure that includes building, machinery, etc., are examples of producer goods[cite: 7]."
+  },
+  {
+    "question": "Costs that do not change over a wide range of activities of a project are known as:",
+    "options": [
+      "Variable costs",
+      "Fixed costs",
+      "Incremental costs",
+      "Sunk costs"
+    ],
+    "answer": "Fixed costs",
+    "explanation": "Fixed costs are those that do not change over a wide range of activities of the project[cite: 7]."
+  },
+  {
+    "question": "Which of the following is an example of a variable cost?",
+    "options": [
+      "Property insurance",
+      "Rental cost of a warehouse",
+      "Raw material cost",
+      "License fees"
+    ],
+    "answer": "Raw material cost",
+    "explanation": "Examples of variable costs include raw material cost, direct labor cost, power cost, etc.[cite: 7]."
+  },
+  {
+    "question": "What is incremental cost?",
+    "options": [
+      "The inevitable cost paid regardless of output",
+      "The planned cost per unit of output",
+      "The additional cost resulting from increasing the output by one or more units",
+      "A noncash cost such as depreciation"
+    ],
+    "answer": "The additional cost resulting from increasing the output by one or more units",
+    "explanation": "Incremental costs are additional costs that result from increasing the output by one or more units[cite: 7]."
+  },
+  {
+    "question": "What type of cost refers to a past expense that has no impact on future actions?",
+    "options": [
+      "Opportunity cost",
+      "Sunk cost",
+      "Working capital",
+      "Standard cost"
+    ],
+    "answer": "Sunk cost",
+    "explanation": "Sunk cost refers to the cost that has occurred in the past and does not have any impact on the future course of action[cite: 7]."
+  },
+  {
+    "question": "Opportunity cost is also known as:",
+    "options": [
+      "Implicit cost",
+      "Explicit cost",
+      "Book cost",
+      "Sunk cost"
+    ],
+    "answer": "Implicit cost",
+    "explanation": "Opportunity cost or implicit cost refers to the value of the foregone alternative or resources owned and used by a firm[cite: 7]."
+  },
+  {
+    "question": "What is an explicit cost?",
+    "options": [
+      "The foregone opportunity value of self-owned resources",
+      "An actual out-of-pocket cash payment made by a firm",
+      "A past cost that cannot be recovered",
+      "The noncash reduction in asset value over time"
+    ],
+    "answer": "An actual out-of-pocket cash payment made by a firm",
+    "explanation": "Explicit costs are clear, out-of-pocket monetary transactions paid out for wages, rent, materials, etc.[cite: 7]."
+  },
+  {
+    "question": "What cost represents the initial capital required to start a project?",
+    "options": [
+      "Working capital",
+      "Salvage value",
+      "Investment cost (or first cost)",
+      "Indirect cost"
+    ],
+    "answer": "Investment cost (or first cost)",
+    "explanation": "Investment cost, or first cost, refers to the capital required to start a project[cite: 7]."
+  },
+  {
+    "question": "What term describes the trade-in or residual value of equipment after its full service life?",
+    "options": [
+      "Working capital",
+      "Book cost",
+      "Salvage value",
+      "Operation and Maintenance cost"
+    ],
+    "answer": "Salvage value",
+    "explanation": "Salvage Value is the estimated trade-in or market value of equipment after its full economic life[cite: 7]."
+  },
+  {
+    "question": "What expenses cover the day-to-day running and upkeep of engineering facilities or equipment?",
+    "options": [
+      "Investment costs",
+      "First costs",
+      "Operation and Maintenance (O&M) costs",
+      "Sunk costs"
+    ],
+    "answer": "Operation and Maintenance (O&M) costs",
+    "explanation": "Operation and Maintenance (O&M) costs are continuous expenses incurred to operate and maintain equipment or systems over time[cite: 7]."
+  },
+  {
+    "question": "Which type of capital is obtained from lenders for investment and requires periodic interest payments?",
+    "options": [
+      "Equity Capital",
+      "Debt Capital",
+      "Working Capital",
+      "Sunk Capital"
+    ],
+    "answer": "Debt Capital",
+    "explanation": "Debt Capital (Borrowed Capital) is obtained from external lenders for investment[cite: 7]."
+  },
+  {
+    "question": "Which type of capital is provided by business owners or stockholders?",
+    "options": [
+      "Debt Capital",
+      "Equity Capital",
+      "Borrowed Capital",
+      "Working Capital"
+    ],
+    "answer": "Equity Capital",
+    "explanation": "Equity Capital is the funds provided by the owners or investors of an enterprise[cite: 7]."
+  },
+  {
+    "question": "From the perspective of a borrower, how is interest paid calculated?",
+    "options": [
+      "Principal amount minus amount owed now",
+      "Amount owed now minus principal amount",
+      "Total amount now minus principal",
+      "Principal amount multiplied by the final amount"
+    ],
+    "answer": "Amount owed now minus principal amount",
+    "explanation": "From the perspective of the borrower, Interest paid = amount owed now - principal amount[cite: 7]."
+  },
+  {
+    "question": "The time unit of the interest rate is called the:",
+    "options": [
+      "Rate of return",
+      "Interest period",
+      "Net cash flow",
+      "Economic equivalence"
+    ],
+    "answer": "Interest period",
+    "explanation": "The time unit of the rate is called the interest period[cite: 7]."
+  },
+  {
+    "question": "What is the formula for calculating the Rate of Return (%)?",
+    "options": [
+      "(interest accrued per unit time / principal) x 100%",
+      "(principal / interest accrued per unit time) x 100%",
+      "(amount owed now - principal) x 100%",
+      "(total accrued / original deposit) x 100%"
+    ],
+    "answer": "(interest accrued per unit time / principal) x 100%",
+    "explanation": "Rate of return (%) = (interest accrued per unit time / principal) x 100%[cite: 7]."
+  },
+  {
+    "question": "In the formula for simple interest (I = Pni), what does 'n' represent?",
+    "options": [
+      "Principal amount",
+      "Interest rate per interest period",
+      "Total amount to be paid",
+      "Number of interest periods"
+    ],
+    "answer": "Number of interest periods",
+    "explanation": "In the simple interest formula I = Pni, 'n' represents the number of interest periods[cite: 7]."
+  },
+  {
+    "question": "What is the formula for the total amount to be paid (F) under simple interest?",
+    "options": [
+      "F = P(1 + i)^n",
+      "F = P(1 + ni)",
+      "F = Pni",
+      "F = A - P"
+    ],
+    "answer": "F = P(1 + ni)",
+    "explanation": "The total amount to be paid under simple interest is calculated as F = P(1 + ni)[cite: 7]."
+  },
+  {
+    "question": "Which type of interest is based on the remaining principal amount plus any accumulated interest charges?",
+    "options": [
+      "Simple Interest",
+      "Compound Interest",
+      "Sunk Interest",
+      "Implicit Interest"
+    ],
+    "answer": "Compound Interest",
+    "explanation": "Compound Interest is the interest charge based on the remaining principal amount plus any accumulated interest charges[cite: 7]."
+  },
+  {
+    "question": "In a cash flow diagram, what do downward arrows represent?",
+    "options": [
+      "Receipts",
+      "Positive cash flows",
+      "Expenses (negative cash flows)",
+      "The time scale"
+    ],
+    "answer": "Expenses (negative cash flows)",
+    "explanation": "Downward arrows represent expenses (negative cash flows or cash outflows)[cite: 7]."
+  },
+  {
+    "question": "In a cash flow diagram, what do upward arrows represent?",
+    "options": [
+      "Disbursements",
+      "Expenses (outflows)",
+      "Receipts (inflows)",
+      "Compounding periods"
+    ],
+    "answer": "Receipts (inflows)",
+    "explanation": "Upward arrows represent receipts, incomes, or cash inflows[cite: 7]."
+  },
+  {
+    "question": "What does the 'end-of-period convention' mean in a cash flow diagram?",
+    "options": [
+      "All cash flows are assumed to occur at the beginning of an interest period",
+      "All cash flows are assumed to occur in the middle of an interest period",
+      "All cash flows are assumed to occur at the end of an interest period",
+      "Cash flows are continuous throughout the period"
+    ],
+    "answer": "All cash flows are assumed to occur at the end of an interest period",
+    "explanation": "The end-of-period convention means that all cash flows are assumed to occur at the end of an interest period[cite: 7]."
+  },
+  {
+    "question": "How is Net Cash Flow determined?",
+    "options": [
+      "Receipts + Disbursements",
+      "Cash outflows - Cash inflows",
+      "Receipts - Disbursements",
+      "Principal + Interest"
+    ],
+    "answer": "Receipts - Disbursements",
+    "explanation": "Net cash flow = Receipts - Disbursements = Cash inflows - Cash outflows[cite: 7]."
+  },
+  {
+    "question": "In cash flow notations, what does 'P' stand for?",
+    "options": [
+      "Future sum of money",
+      "Present sum of money",
+      "Uniform series of cash flows",
+      "Interest rate"
+    ],
+    "answer": "Present sum of money",
+    "explanation": "Notation P stands for present sum of money; the equivalent value of cash flows at the present time reference point[cite: 7]."
+  },
+  {
+    "question": "In cash flow notations, what does 'F' stand for?",
+    "options": [
+      "First cost",
+      "Future sum of money",
+      "Fixed annual gradient",
+      "Fraction of interest"
+    ],
+    "answer": "Future sum of money",
+    "explanation": "F represents the future sum of money at a specified point in time[cite: 7]."
+  },
+  {
+    "question": "In cash flow notations, what does 'A' represent?",
+    "options": [
+      "Uniform gradient amounts",
+      "Future sum of money",
+      "End-of-period cash flows in a uniform series",
+      "Number of compounding periods"
+    ],
+    "answer": "End-of-period cash flows in a uniform series",
+    "explanation": "A represents end-of-period cash flows in a uniform series continuing for a specified number of periods[cite: 7]."
+  },
+  {
+    "question": "What notation is used for uniform gradient amounts if cash flows increase by a constant amount each period?",
+    "options": [
+      "G",
+      "F",
+      "P",
+      "A"
+    ],
+    "answer": "G",
+    "explanation": "G - uniform gradient amounts are used if cash flows increase by a constant amount in each period[cite: 7]."
+  },
+  {
+    "question": "If you borrow Php 20,000 for 4 years at 5% simple interest, what is the total amount to be paid?",
+    "options": [
+      "Php 20,400",
+      "Php 22,000",
+      "Php 24,000",
+      "Php 24,310"
+    ],
+    "answer": "Php 24,000",
+    "explanation": "Using F = P(1 + ni), F = 20,000(1 + (4 * 0.05)) = Php 24,000[cite: 7]."
+  },
+  {
+    "question": "How much simple interest accumulates on a Php 10,000 loan over 3 years at an annual rate of 6%?",
+    "options": [
+      "Php 600",
+      "Php 1,800",
+      "Php 11,800",
+      "Php 1,910"
+    ],
+    "answer": "Php 1,800",
+    "explanation": "Simple Interest $I = P \times n \times i = 10,000 \times 3 \times 0.06 = \text{Php } 1,800$[cite: 7]."
+  },
+  {
+    "question": "What is the future value of Php 5,000 deposited at 8% compound interest per year for 2 years?",
+    "options": [
+      "Php 5,800",
+      "Php 5,832",
+      "Php 5,400",
+      "Php 6,000"
+    ],
+    "answer": "Php 5,832",
+    "explanation": "Using $F = P(1 + i)^n = 5,000(1 + 0.08)^2 = 5,000(1.1664) = \text{Php } 5,832$[cite: 7]."
+  },
+  {
+    "question": "What term refers to the combination of interest rate and time value of money that makes two different cash flows equal in economic value?",
+    "options": [
+      "Economic equivalence",
+      "Equal marginal utility",
+      "Inflation neutrality",
+      "Breakeven parity"
+    ],
+    "answer": "Economic equivalence",
+    "explanation": "Economic equivalence exists between different cash flows occurring at different times if they have the same economic impact at a given interest rate[cite: 7]."
+  },
+  {
+    "question": "What is depreciation in engineering economics?",
+    "options": [
+      "The physical wear of materials measured in weight loss",
+      "A non-cash cost representing the reduction in monetary value of an asset over time",
+      "The immediate write-off of initial investment cost in year zero",
+      "The interest paid on equity capital"
+    ],
+    "answer": "A non-cash cost representing the reduction in monetary value of an asset over time",
+    "explanation": "Depreciation is the non-cash decrease in value of physical assets over time due to wear, age, or obsolescence[cite: 7]."
+  },
+  {
+    "question": "What is book value?",
+    "options": [
+      "The original purchase price minus accumulated depreciation",
+      "The estimated market resale price at the end of useful life",
+      "The total interest earned over the asset's lifetime",
+      "The sum of all fixed costs"
+    ],
+    "answer": "The original purchase price minus accumulated depreciation",
+    "explanation": "Book value represents the remaining net value of an asset on financial records, calculated as original cost minus total accumulated depreciation[cite: 7]."
+  },
+  {
+    "question": "What is standard cost?",
+    "options": [
+      "The historical cost incurred in previous production cycles",
+      "A predetermined planned cost per unit of output used for control and budgeting",
+      "The highest cost recorded during peak demand",
+      "The sum of all sunk costs"
+    ],
+    "answer": "A predetermined planned cost per unit of output used for control and budgeting",
+    "explanation": "Standard cost is a planned or estimated unit cost established in advance to compare against actual performance[cite: 7]."
+  },
+  {
+    "question": "What does Life-Cycle Costing (LCC) evaluate?",
+    "options": [
+      "Only the initial acquisition cost of an asset",
+      "All costs incurred from initial inception and development through operation to ultimate disposal",
+      "The salvage value at year 10 only",
+      "The tax liabilities accrued in the final year of operations"
+    ],
+    "answer": "All costs incurred from initial inception and development through operation to ultimate disposal",
+    "explanation": "Life-cycle cost includes all expenses associated with an asset over its entire operational lifetime[cite: 7]."
+  },
+  {
+    "question": "Costs that recur regularly in repetitive operational sequences are called:",
+    "options": [
+      "Non-recurring costs",
+      "Recurring costs",
+      "Sunk costs",
+      "First costs"
+    ],
+    "answer": "Recurring costs",
+    "explanation": "Recurring costs are repetitive and occur routinely as long as an operation continues[cite: 7]."
+  },
+  {
+    "question": "A one-time expense incurred at irregular intervals, such as building installation, is classified as a:",
+    "options": [
+      "Recurring cost",
+      "Non-recurring cost",
+      "Variable cost",
+      "Implicit cost"
+    ],
+    "answer": "Non-recurring cost",
+    "explanation": "Non-recurring costs are one-time or infrequent expenses incurred at specific project milestones[cite: 7]."
+  },
+  {
+    "question": "Which of the following describes direct costs?",
+    "options": [
+      "Expenses that can be directly attributed or traced to a specific output or product",
+      "General office utility bills shared across departments",
+      "Legal and administrative overhead expenses",
+      "Depreciation of headquarters building"
+    ],
+    "answer": "Expenses that can be directly attributed or traced to a specific output or product",
+    "explanation": "Direct costs are expenses that can be easily traced directly to a specific unit of production or project[cite: 7]."
+  },
+  {
+    "question": "Indirect costs (or overhead costs) include which of the following?",
+    "options": [
+      "Direct raw materials used in a product",
+      "Direct assembly line labor wages",
+      "General factory lighting, heating, and administrative support",
+      "Custom components ordered for one unit"
+    ],
+    "answer": "General factory lighting, heating, and administrative support",
+    "explanation": "Indirect costs are general costs required for overall operation that cannot be traced to a single unit of output[cite: 7]."
+  },
+  {
+    "question": "What is marginal cost?",
+    "options": [
+      "The total cost divided by the total number of units produced",
+      "The variable cost for producing one additional unit of output",
+      "The initial cost needed to establish a production line",
+      "The remaining salvage value after full usage"
+    ],
+    "answer": "The variable cost for producing one additional unit of output",
+    "explanation": "Marginal cost is the additional cost incurred to produce exactly one more unit of product[cite: 7]."
+  },
+  {
+    "question": "What occurs at the breakeven point?",
+    "options": [
+      "Total Revenue exceeds Total Cost by 50%",
+      "Total Revenue equals Total Cost",
+      "Variable Costs equal Fixed Costs",
+      "Net cash flow reaches maximum profit"
+    ],
+    "answer": "Total Revenue equals Total Cost",
+    "explanation": "At the breakeven point, total revenue equals total cost, resulting in zero net profit or loss[cite: 7]."
+  },
+  {
+    "question": "What is working capital?",
+    "options": [
+      "The total long-term debt owed to commercial banks",
+      "The operational liquid funds required to cover day-to-day operating expenses",
+      "The scrap value of retired plant equipment",
+      "The interest accrued on equity capital"
+    ],
+    "answer": "The operational liquid funds required to cover day-to-day operating expenses",
+    "explanation": "Working capital represents the funds needed to carry out routine day-to-day operations and short-term obligations[cite: 7]."
+  },
+  {
+    "question": "What is a nominal interest rate (r)?",
+    "options": [
+      "The interest rate per year that does not account for compounding within the year",
+      "The actual interest rate earned after annual compounding",
+      "The interest rate adjusted for price inflation",
+      "The tax-adjusted interest rate"
+    ],
+    "answer": "The interest rate per year that does not account for compounding within the year",
+    "explanation": "Nominal interest rate is an annualized stated rate that does not reflect sub-period compounding[cite: 7]."
+  },
+  {
+    "question": "If a nominal interest rate is 12% per year compounded monthly, what is the interest rate per compounding period (i)?",
+    "options": [
+      "12%",
+      "6%",
+      "1%",
+      "0.1%"
+    ],
+    "answer": "1%",
+    "explanation": "The interest rate per period is $i = r / m = 12\% / 12 = 1\%$ per month[cite: 7]."
+  },
+  {
+    "question": "What is the Present Worth (PW) method designed to do?",
+    "options": [
+      "Discount all future cash flows back to a single equivalent value at time t = 0",
+      "Compound all past cash flows to the final year of the project",
+      "Calculate the average annual inflation rate",
+      "Convert a single present payment into a non-uniform gradient"
+    ],
+    "answer": "Discount all future cash flows back to a single equivalent value at time t = 0",
+    "explanation": "The Present Worth method converts all incoming and outgoing cash flows to equivalent values at time zero ($t=0$)[cite: 7]."
+  },
+  {
+    "question": "What is the Future Worth (FW) method?",
+    "options": [
+      "Evaluating cash flows converted to an equivalent amount at a specified future date",
+      "Determining the immediate initial cost at year zero",
+      "A method that ignores the time value of money",
+      "Calculating annual straight-line depreciation"
+    ],
+    "answer": "Evaluating cash flows converted to an equivalent amount at a specified future date",
+    "explanation": "The Future Worth method evaluates equivalent cash flow values at a future time horizon $t = n$[cite: 7]."
+  },
+  {
+    "question": "What does the Annual Worth (AW) method accomplish?",
+    "options": [
+      "It expresses all cash flows as an equivalent uniform annual series over the project period",
+      "It sums all raw receipts without taking interest rates into account",
+      "It calculates the single lumpsum payoff at year 0",
+      "It measures the total years needed to recover the initial investment"
+    ],
+    "answer": "It expresses all cash flows as an equivalent uniform annual series over the project period",
+    "explanation": "The Annual Worth method converts all project cash flows into an equivalent uniform annual amount ($A$)[cite: 7]."
+  },
+  {
+    "question": "How is the Internal Rate of Return (IRR) defined?",
+    "options": [
+      "The interest rate at which Net Present Value (NPV) equals zero",
+      "The maximum interest rate charged by commercial lenders",
+      "The minimum acceptable return determined by the government",
+      "The ratio of variable costs to total receipts"
+    ],
+    "answer": "The interest rate at which Net Present Value (NPV) equals zero",
+    "explanation": "The Internal Rate of Return (IRR) is the discount rate that makes the present worth of cash inflows equal to the present worth of cash outflows (NPV = 0)[cite: 7]."
+  },
+  {
+    "question": "What is the Payback Period?",
+    "options": [
+      "The total useful life of an engineering machine",
+      "The time required for cumulative revenues to recover the initial investment cost",
+      "The interest period required for simple interest to equal compound interest",
+      "The time frame for tax filing"
+    ],
+    "answer": "The time required for cumulative revenues to recover the initial investment cost",
+    "explanation": "Payback period measures the time needed for project earnings to pay back the original capital investment[cite: 7]."
+  },
+  {
+    "question": "For a public project to be considered economically justified using the Benefit-Cost Ratio (B/C), the ratio must be:",
+    "options": [
+      "Less than 0",
+      "Equal to 0",
+      "Greater than or equal to 1.0",
+      "Exactly 0.5"
+    ],
+    "answer": "Greater than or equal to 1.0",
+    "explanation": "A project is considered economically viable under B/C analysis if the Benefit-Cost ratio is 1.0 or greater[cite: 7]."
+  },
+  {
+    "question": "How does inflation affect the purchasing power of money over time?",
+    "options": [
+      "It increases purchasing power",
+      "It decreases purchasing power",
+      "It keeps purchasing power constant",
+      "It eliminates variable costs"
+    ],
+    "answer": "It decreases purchasing power",
+    "explanation": "Inflation reduces purchasing power over time as general price levels rise[cite: 7]."
+  },
+  {
+    "question": "What is Capitalized Cost?",
+    "options": [
+      "The present worth of an asset that has an infinite or perpetual life",
+      "The initial cost minus the first-year revenue",
+      "The salvage value calculated at year 1",
+      "The sum of simple interest over 50 years"
+    ],
+    "answer": "The present worth of an asset that has an infinite or perpetual life",
+    "explanation": "Capitalized cost refers to the present worth of providing for an asset indefinitely ($n \to \infty$)[cite: 7]."
+  },
+  {
+    "question": "In a given year, a firm collects Php 150,000 in cash receipts and pays out Php 90,000 in operational disbursements. What is the Net Cash Flow for the year?",
+    "options": [
+      "Php 240,000",
+      "Php -60,000",
+      "Php 60,000",
+      "Php 135,000"
+    ],
+    "answer": "Php 60,000",
+    "explanation": "Net Cash Flow = Receipts - Disbursements = 150,000 - 90,000 = Php 60,000[cite: 7]."
+  }
   ]
 };
